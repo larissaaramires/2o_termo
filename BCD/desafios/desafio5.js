@@ -6,7 +6,7 @@ const nome = entrada.question("Digite seu nome: ");
 const renda = entrada.questionFloat("Digite sua renda mensal: ");
 const nomeSujo = entrada.keyInYNStrict("Possui nome sujo? ");
 
-if (renda >= 2000 && (nomeSujo === true)) {
+if (renda >= 2000 && (nomeSujo === false)) {
     console.log(`\n${nome}, emprestimo Aprovado!`);
 } else {
     console.log(`\nSinto muito, ${nome}. Emprestimo Negado.`);
