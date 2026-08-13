@@ -38,14 +38,14 @@ Pasta `PBE/Exercicios/`:
 - `ex4.js`: menu interativo de padaria (opções: calcular venda, horário, sair).
 - `ex5.js`: soma de preços até o usuário digitar `0` (subtotal acumulado).
 
-Pasta `PBE/desafios/`:
+Pasta `PBE/Desafios/`:
 - `desafio1.js`: verificador de idade mínima para votar.
 - `desafio2.js`: aplica desconto de 10% para contas >= 100.
 - `desafio3.js`: decide entre abastecer com álcool ou gasolina (relação de preços).
 - `desafio4.js`: classifica categoria por faixa etária (infantil, juvenil, adulto, sênior).
 - `desafio5.js`: simulador simples de empréstimo (checa renda e nome sujo).
 
-Pasta `LIMA/`:
+Pasta `LIMA`:
 - `index.html` e `index2.html`: exemplos introdutórios de tags HTML e navegação.
 - `LIMA/Projeto/`: site exemplo "SmartCoffee" com páginas de produtos (salgados, lanches, doces, bebidas).
 
