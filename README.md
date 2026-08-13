@@ -14,15 +14,15 @@ Repositório com exercícios, desafios e pequenos projetos desenvolvidos durante
 
 ## Estrutura de pastas
 
-- BCD/: arquivos de modelagem (.brM)
-- LIMA/: material e projeto Front‑End (HTML)
+- BCD: arquivos de modelagem (.brM)
+- LIMA: material e projeto Front‑End (HTML)
 	- index.html, index2.html
-	- Projeto/: páginas do projeto SmartCoffee (salgados, lanches, doces, bebidas)
-- PBE/: projetos e scripts em Node
+	- Projeto: páginas do projeto SmartCoffee (salgados, lanches, doces, bebidas)
+- PBE: projetos e scripts em Node
 	- app5.js: exemplo de sistema de análise de crédito
 	- package.json / package-lock.json
-	- Exercicios/: exercícios em JavaScript (loops, arrays, menus)
-	- desafios/: pequenos desafios/algoritmos em JavaScript
+	- Exercicios: exercícios em JavaScript (loops, arrays, menus)
+	- Desafios: pequenos desafios/algoritmos em JavaScript
 
 ## Resumo dos exercícios e arquivos
 
@@ -87,5 +87,3 @@ git push -u origin main
 
 Larissa Ramires de Souza
 
----
-> Observação: Resumos dos exercícios foram gerados a partir dos arquivos presentes nas pastas `PBE` e `LIMA`. Se desejar que eu detalhe cada exercício (comentários, melhores práticas ou testes), posso expandir o README com seções adicionais.
