@@ -1,14 +1,10 @@
 const entrada = require('readline-sync');
 
-console.log("---O MAO DE VACA---");
+const valorTotal = entrada.questionFloat("Digite o valor total da compra: ");
+const parcela = entrada.questionInt("Digite quantas parcelas voce deseja fazer (ate 12): ");
 
-const valor_conta = entrada.questionFloat('Digite o valor total da sua conta: ');
+const valorParcela = valorTotal / parcela
 
-const desconto = (10 / 100) * valor_conta
-const valor_final = valor_conta - desconto
-
-if (valor_conta >= 100) {
-    console.log(`\nO valor da sua cota com o desconto de 10% é de: R$ ${valor_final}`);
-} else {
-    console.log(`\nSinto muito mas voce gastou menos de 100 reais, entao nao tem desconto. O valor da sua conta é de: R$ ${valor_conta}`);
-}
+for (let i = 1; i <= parcela; i++) {
+    console.log(`Parcela ${i}: R$ ${valorParcela.toFixed(2)}`);
+} 
