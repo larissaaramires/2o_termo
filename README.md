@@ -1,190 +1,143 @@
-# 2º Termo - Repositório de Exercícios e Projetos
+# 2º Termo
 
-## Descrição
-
-Este repositório reúne atividades desenvolvidas durante o 2º termo, incluindo exercícios de lógica e programação em JavaScript, projetos front-end em HTML/CSS e materiais de modelagem de dados e banco de dados. O objetivo é organizar os estudos e práticas realizadas nas disciplinas BCD, LIMA e PBE.
+Repositório com atividades práticas desenvolvidas durante o segundo termo, envolvendo desenvolvimento web, programação com Node.js e modelagem de bancos de dados.
 
 ## Tecnologias utilizadas
 
-- Node.js
-- JavaScript (ES6)
 - HTML5
-- CSS
+- CSS3
+- JavaScript
+- Node.js
+- `readline-sync`
 - SQL
-- Modelagem conceitual em arquivos .brM
+- brModelo
 - Git e GitHub
-- Biblioteca Node.js: readline-sync
 
 ## Estrutura de pastas
 
 ```text
 2o_termo/
-├── README.md
-├── texto_para_gerar_readme
-├── BCD/
-│   ├── MODELOS_RELACIONAMENTOS_CONCEITUAL.brM
-│   └── Aula04/
-│       ├── DOCUMENTACAO_CLINICA_MEDICA_PROJETO.brM
-│       ├── SMARTCOFFEE_CONCEITUAL.brM
-│       └── Tabelas_clinica_medica.sql
-├── LIMA/
-│   ├── index.html
-│   ├── index2.html
+├── BCD/                  # Banco de Dados
 │   ├── Aula04/
-│   │   ├── index.html
-│   │   ├── index2.html
-│   │   └── Imagens/
-│   └── Projeto/
-│       ├── index.html
-│       ├── lanches.html
-│       ├── salgados.html
-│       ├── doces.html
-│       ├── bebidas_geladas.html
-│       ├── bebidas_quentes.html
-│       └── Imagens/
-└── PBE/
-    ├── app5.js
-    ├── package.json
-    ├── package-lock.json
-    ├── Aula10/
-    │   ├── Logística/
-    │   │   ├── calculadoraFrete.js
-    │   │   └── sistemaEntrega.js
-    │   └── Oficina/
-    │       ├── app.js
-    │       └── funcoesOficina.js
-    ├── Exercicios/
-    │   ├── array.js
-    │   ├── array2.js
-    │   ├── ex1.js
-    │   ├── ex2.js
-    │   ├── ex3.js
-    │   ├── ex4.js
-    │   ├── ex5.js
-    │   ├── exercicio.js
-    │   ├── exercicio2.js
-    │   ├── exercicio3.js
-    │   ├── exercicio4.js
-    │   └── exercicio5.js
-    └── Desafios/
-        ├── desafio.js
-        ├── desafio1.js
-        ├── desafio2.js
-        ├── desafio3.js
-        ├── desafio4.js
-        └── desafio5.js
+│   ├── Aula05/
+│   └── Somativa/
+├── LIMA/                 # Desenvolvimento Web
+│   ├── Aula02/
+│   ├── Aula04/
+│   ├── Aula05/
+│   ├── Aula06/
+│   ├── Projeto/
+│   └── Somativa/
+├── PBE/                  # Programação Back-End
+│   ├── Aula01/
+│   ├── Aula02/
+│   ├── Aula03/
+│   ├── Aula04/
+│   ├── Aula05/
+│   ├── Aula06/
+│   ├── Aula08/
+│   ├── Aula10/
+│   ├── Desafios/
+│   └── Exercicios/
+└── README.md
 ```
 
-## Resumo dos exercícios e projetos por aula
+## Resumo das atividades
 
-### BCD
+### BCD — Banco de Dados
 
-A pasta BCD contém materiais de modelagem de banco de dados e documentação de projetos.
+- **Aula 04:** criação de modelos conceituais e scripts SQL para uma clínica médica e para o projeto SmartCoffee.
+- **Aula 05:** elaboração de atividades de modelagem e scripts SQL relacionados à clínica médica e ao SmartCoffee.
+- **Somativa:** desenvolvimento de uma oficina com dicionário de dados, modelo conceitual e script SQL.
 
-- `MODELOS_RELACIONAMENTOS_CONCEITUAL.brM`: modelo conceitual com relacionamentos entre entidades.
-- `Aula04/DOCUMENTACAO_CLINICA_MEDICA_PROJETO.brM`: documentação do projeto de clínica médica.
-- `Aula04/SMARTCOFFEE_CONCEITUAL.brM`: diagrama conceitual do projeto SmartCoffee.
-- `Aula04/Tabelas_clinica_medica.sql`: script SQL com tabelas e estrutura do banco da clínica.
+### LIMA — Desenvolvimento Web
 
-### LIMA
+- **Aula 02:** criação de páginas HTML básicas.
+- **Aula 04:** desenvolvimento de páginas com imagens e elementos visuais.
+- **Aula 05:** criação de páginas semânticas, currículo, notícias, artigos e postagens.
+- **Aula 06:** exercícios sobre listas, estilos CSS inline, internos e externos.
+- **Projeto:** desenvolvimento de um site de cafeteria com páginas de bebidas, doces, lanches e salgados.
+- **Somativa:** criação de um site relacionado a soluções digitais, com apresentação de serviços, sistema de vendas e equipe.
 
-A pasta LIMA contém exercícios e páginas HTML/CSS, com foco em estruturação de páginas web.
+### PBE — Programação Back-End
 
-- `index.html` e `index2.html`: exemplos de tags HTML, CSS, abreviações, blocos de texto e elementos semânticos.
-- `Aula04/index.html` e `Aula04/index2.html`: atividades complementares da aula de HTML.
-- `Projeto/`: site exemplar com páginas para menu de produtos do SmartCoffee, incluindo salgados, lanches, doces e bebidas.
+- **Aula 01:** fundamentos de JavaScript, variáveis, mensagens, produtos, padaria e cálculo de IMC.
+- **Aula 02:** manipulação de strings e aprimoramento de exercícios.
+- **Aula 03:** estruturas condicionais aplicadas a balada, notas e controle de velocidade.
+- **Aula 04:** estruturas de repetição, contadores, tabuada, menus e desafios.
+- **Aula 05:** criação e manipulação de arrays.
+- **Aula 06:** resolução de exercícios práticos com JavaScript.
+- **Aula 08:** funções e tratamento de erros com `try...catch`.
+- **Aula 10:** desenvolvimento de funções para oficina e sistemas de logística, incluindo cálculo de frete e entrega.
+- **Desafios e Exercícios:** conjunto de atividades de revisão e aplicação dos conteúdos estudados.
 
-### PBE
+## Como executar os arquivos Node.js
 
-A pasta PBE reúne exercícios de lógica, algoritmos e desafios em JavaScript com uso de Node.js.
+1. Instale o [Node.js](https://nodejs.org/).
+2. Abra o terminal na pasta do projeto.
+3. Entre na pasta `PBE` e instale as dependências:
 
-#### Arquivos principais
-
-- `app5.js`: sistema de análise de crédito com validação de idade, renda e propriedade.
-- `package.json`: configura as dependências do projeto, incluindo `readline-sync`.
-
-#### Exercícios
-
-- `Exercicios/array.js`: uso básico de arrays.
-- `Exercicios/array2.js`: armazenamento de dados em arrays e cálculo de média.
-- `Exercicios/ex1.js`: aprovação de crédito com entrada de dados.
-- `Exercicios/ex2.js`: laço de repetição que conta de 0 a 100 em passos de 5.
-- `Exercicios/ex3.js`: tabuada de um número.
-- `Exercicios/ex4.js`: menu interativo de padaria.
-- `Exercicios/ex5.js`: soma acumulada de preços até informar 0.
-- `Exercicios/exercicio.js`, `exercicio2.js`, `exercicio3.js`, `exercicio4.js`, `exercicio5.js`: exercícios complementares de lógica e manipulação de dados.
-
-#### Desafios
-
-- `Desafios/desafio.js`: desafio inicial de lógica.
-- `Desafios/desafio1.js`: verificação de idade mínima para votar.
-- `Desafios/desafio2.js`: cálculo com desconto de 10%.
-- `Desafios/desafio3.js`: comparação entre álcool e gasolina para abastecimento.
-- `Desafios/desafio4.js`: classificação por faixa etária.
-- `Desafios/desafio5.js`: simulação de empréstimo com validação de renda e nome.
-
-#### Aula 10
-
-- `Aula10/Logística/calculadoraFrete.js`: cálculo de frete.
-- `Aula10/Logística/sistemaEntrega.js`: sistema de entrega e logística.
-- `Aula10/Oficina/app.js`: aplicação da oficina.
-- `Aula10/Oficina/funcoesOficina.js`: funções auxiliares da oficina.
-
-## Instruções para executar os arquivos com Node.js
-
-1. Instale o Node.js LTS em seu computador.
-2. Abra o terminal no diretório raiz do projeto.
-3. Acesse a pasta PBE:
-
-```bash
+```powershell
 cd PBE
-```
-
-4. Instale as dependências do projeto:
-
-```bash
 npm install
 ```
 
-5. Execute um arquivo JavaScript com o comando:
+4. Execute um arquivo JavaScript:
 
-```bash
-node app5.js
+```powershell
+node Aula01\olaMundo.js
 ```
 
-Exemplos adicionais:
+Exemplos:
 
-```bash
-node Exercicios/ex3.js
-node Exercicios/ex4.js
-node Desafios/desafio3.js
+```powershell
+node Aula01\imc.js
+node Aula03\notas.js
+node Aula04\tabuada.js
+node Aula10\Logística\calculadoraFrete.js
 ```
 
-> Alguns exercícios usam a biblioteca `readline-sync` para leitura de dados no terminal.
+Os arquivos HTML podem ser abertos diretamente no navegador ou executados pelo recurso **Open with Live Server** do VS Code.
 
-## Instruções de Git
+## Comandos Git
 
-```bash
-# Inicializar o repositório
-git init
+Clonar o repositório:
 
-# Adicionar arquivos ao controle de versionamento
+```powershell
+git clone URL_DO_REPOSITORIO
+cd 2o_termo
+```
+
+Verificar alterações:
+
+```powershell
+git status
+```
+
+Adicionar arquivos:
+
+```powershell
 git add .
-
-# Registrar a alteração
-git commit -m "Adicionar projeto e exercícios do 2º termo"
-
-# Criar branch principal
-git branch -M main
-
-# Vincular ao repositório remoto
-git remote add origin <URL_DO_REPOSITORIO>
-
-# Enviar para o GitHub
-git push -u origin main
 ```
 
-## Autor
+Criar um commit:
 
-Larissa Ramires
+```powershell
+git commit -m "Atualiza atividades e README"
+```
 
+Enviar alterações:
+
+```powershell
+git push origin master
+```
+
+Atualizar o repositório local:
+
+```powershell
+git pull origin master
+```
+
+## Autora
+
+**Larissa Ramires**
