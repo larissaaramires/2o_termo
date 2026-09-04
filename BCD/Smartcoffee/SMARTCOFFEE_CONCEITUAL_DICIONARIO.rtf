@@ -1,0 +1,341 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Atributo: \cf2\b0 CEP\cf1\b 
+\par \cf0\b0 Tipo de dados:: CHAR(9)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par Campo \'fanico - UNIQUE
+\par \f0 
+\par \cf1\b 002 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Tipo de dados:: CHAR(14)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par Campo \'fanico - UNIQUE
+\par \f0 
+\par \cf1\b 003 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Tipo de dados:: CHAR(14)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par Campo \'fanico - UNIQUE
+\par \f0 
+\par \cf1\b 004 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Tipo de dados:: CHAR(14)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par Campo \'fanico - UNIQUE
+\par \f0 
+\par \cf1\b 005 - Entidade: \cf2\b0 Categoria\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Categoria
+\par Possui rela\'e7\'e3o entre com a entidade Produtos
+\par \f0 
+\par \cf1\b 006 - Entidade: \cf2\b0 Clientes\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Clientes
+\par Possui rela\'e7\'e3o entre as entidades Pedidos, Programa de fidelidade
+\par \f0 
+\par \cf1\b 007 - Rela\f1\'e7\'e3o: \cf2\b0 Cont\'e9m\cf1\b 
+\par \cf0\b0\f0 Cont\f1\'e9m est\'e1 relacionando Produtos com Pedidos
+\par 1 Produto pode conter em N  Pedidos
+\par 1 Pedido cont\'e9m N Produtos
+\par \f0 
+\par \cf1\b 008 - Atributo: \cf2\b0 Cr\f1\'e9dito\cf1\b 
+\par \cf0\b0\f0 
+\par \cf1\b 009 - Atributo: \cf2\b0 Cupom_desconto\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(20) 
+\par \cf1\b 010 - Atributo: \cf2\b0 Data_cadastro\cf1\b 
+\par \cf0\b0 Tipo de dados:: TIMESTAMP
+\par Dado padr\f1\'e3o - DEFAULT
+\par Data/Hora/Local padr\'e3o - CURRENT_TIMESTAMP \f0 
+\par \cf1\b 011 - Atributo: \cf2\b0 Data_entrega \cf1\b 
+\par \cf0\b0 Tipo de dados:: DATE
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 012 - Atributo: \cf2\b0 Data_nascimento\cf1\b 
+\par \cf0\b0 Tipo de dados:: DATE
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 013 - Atributo: \cf2\b0 Data_nascimento\cf1\b 
+\par \cf0\b0 Tipo de dados:: DATE
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 014 - Atributo: \cf2\b0 Data_pedido\cf1\b 
+\par \cf0\b0 Tipo de dados:: TIMESTAMP
+\par Dado padr\f1\'e3o - DEFAULT
+\par Data/Hora/Local padr\'e3o - CURRENT_TIMESTAMP \f0 
+\par \cf1\b 015 - Entidade: \cf2\b0 Delivery\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Delivery
+\par Possui rela\'e7\'e3o entre as entidades Pedidos, Funcion\'e1rios
+\par \f0 
+\par \cf1\b 016 - Atributo: \cf2\b0 Desconto_cupom\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(30) 
+\par \cf1\b 017 - Atributo: \cf2\b0 D\f1\'e9bito\cf1\b 
+\par \cf0\b0\f0 
+\par \cf1\b 018 - Rela\f1\'e7\'e3o: \cf2\b0 Efetua\cf1\b 
+\par \cf0\b0\f0 Efetua est\f1\'e1 relacionando Clientes com Pagamentos
+\par 1 Cliente efetua 1 Pagamento
+\par 1 Pagamento \'e9 efetuado por 1 Cliente
+\par \f0 
+\par \cf1\b 019 - Atributo: \cf2\b0 Email_cliente\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(100) 
+\par \cf1\b 020 - Atributo: \cf2\b0 Endereco\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(100)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 021 - Atributo: \cf2\b0 Endereco\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(100)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 022 - Atributo: \cf2\b0 Endereco\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(100)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 023 - Atributo: \cf2\b0 Endereco\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(100)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 024 - Entidade: \cf2\b0 Estoque\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Estoque
+\par Possui rela\'e7\'e3o entre com a entidade Produtos
+\par \f0 
+\par \cf1\b 025 - Atributo: \cf2\b0 Forma_pagamento\cf1\b 
+\par \cf0\b0 Tipo de dados:: ENUM('PARCELADO', 'CR\f1\'c9DITO', 'D\'c9BITO', 'PIX')
+\par Compo obrigat\'f3rio - NOT NULL \f0 
+\par \cf1\b 026 - Rela\f1\'e7\'e3o: \cf2\b0 Fornece\cf1\b 
+\par \cf0\b0\f0 Fornece est\f1\'e1 relacionando Produtos com Fornecedor
+\par 1 Produto \'e9 fornecido por 1 Fornecedor
+\par 1 Fornecedor fornece N Produtos
+\par \f0 
+\par \cf1\b 027 - Entidade: \cf2\b0 Fornecedor\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Fornecedor
+\par Possui rela\'e7\'e3o entre com a entidade Produtos
+\par \f0 
+\par \cf1\b 028 - Atributo: \cf2\b0 Frete_CEP\cf1\b 
+\par \cf0\b0 Tipo de dados:: CHAR(9)
+\par Campo \f1\'fanico - UNIQUE
+\par \f0 
+\par \cf1\b 029 - Entidade: \cf2\b0 Funcion\f1\'e1rios\cf1\b 
+\par \cf0\b0\f0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Funcion\'e1rios
+\par Possui rela\'e7\'e3o entre as entidades Pedidos, Delivery
+\par \f0 
+\par \cf1\b 030 - Atributo: \cf2\b0 Id_categoria\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 031 - Atributo: \cf2\b0 Id_cliente\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 032 - Atributo: \cf2\b0 Id_delivery\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 033 - Atributo: \cf2\b0 Id_estoque\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 034 - Atributo: \cf2\b0 Id_fidelidade\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 035 - Atributo: \cf2\b0 Id_fornecedor\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 036 - Atributo: \cf2\b0 Id_funcionario\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 037 - Atributo: \cf2\b0 Id_pagamento\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 038 - Atributo: \cf2\b0 Id_pedido\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 039 - Atributo: \cf2\b0 Id_produto\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 040 - Atributo: \cf2\b0 Marca\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 041 - Atributo: \cf2\b0 Marca\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 042 - Atributo: \cf2\b0 Marca_produto\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 043 - Atributo: \cf2\b0 Na entrega\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 044 - Atributo: \cf2\b0 No site\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 045 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 046 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 047 - Atributo: \cf2\b0 Nome_cliente\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 048 - Atributo: \cf2\b0 Nome_fornecedor\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 049 - Atributo: \cf2\b0 Nome_motoboy\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 050 - Atributo: \cf2\b0 Nome_produto\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 051 - Atributo: \cf2\b0 Nome_produto\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 052 - Atributo: \cf2\b0 Nome_produto\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 053 - Atributo: \cf2\b0 Observacoes\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(100) 
+\par \cf1\b 054 - Entidade: \cf2\b0 Pagamento\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Pagamento
+\par Possui rela\'e7\'e3o entre com a entidade Pedidos
+\par \f0 
+\par \cf1\b 055 - Atributo: \cf2\b0 Pagar_forma\cf1\b 
+\par \cf0\b0 Tipo de dados:: ENUM('NO SITE', 'NA ENTREGA')
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 056 - Atributo: \cf2\b0 Parcelado\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 057 - Rela\f1\'e7\'e3o: \cf2\b0 Participa\cf1\b 
+\par \cf0\b0\f0 Participa est\f1\'e1 relacionando Clientes com Programa de fidelidade
+\par 1 Cliente participa de 1 Programa de fidelidade
+\par 1 Programa de fidelidade \'e9 participado por 1 Cliente
+\par \f0 
+\par \cf1\b 058 - Entidade: \cf2\b0 Pedidos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Pedidos
+\par Possui rela\'e7\'e3o entre as entidades Produtos, Funcion\'e1rios, Pagamento, Delivery, Clientes \f0 
+\par \cf1\b 059 - Rela\f1\'e7\'e3o: \cf2\b0 Pertence\cf1\b 
+\par \cf0\b0\f0 Pertence est\f1\'e1 relacionando Produtos com Categoria
+\par 1 Produto pertence a N Categorias
+\par 1 Categoria pertence a N Produtos
+\par \f0 
+\par \cf1\b 060 - Atributo: \cf2\b0 Pix\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 061 - Atributo: \cf2\b0 Pontos_obtidos\cf1\b 
+\par \cf0\b0 Tipo de dados:: INT
+\par 
+\par \cf1\b 062 - Rela\f1\'e7\'e3o: \cf2\b0 Possui\cf1\b 
+\par \cf0\b0\f0 Possui est\f1\'e1 relacionando Produtos com Estoque
+\par 1 Produto possui 1 Estoque
+\par 1 Estoque possui 1 Produto
+\par \f0 
+\par \cf1\b 063 - Atributo: \cf2\b0 Preco\cf1\b 
+\par \cf0\b0 Tipo de dados:: FLOAT 
+\par \cf1\b 064 - Atributo: \cf2\b0 Preco\cf1\b 
+\par \cf0\b0 Tipo de dados:: FLOAT
+\par 
+\par \cf1\b 065 - Rela\f1\'e7\'e3o: \cf2\b0 Processa\cf1\b 
+\par \cf0\b0\f0 Processa est\f1\'e1 relacionando Pedidos com Funcion\'e1rios
+\par 1 Pedido \'e9 processado por 1 Funcion\'e1rio
+\par 1 Funcion\'e1rio pode processar N Pedidos
+\par \f0 
+\par \cf1\b 066 - Atributo: \cf2\b0 Produtos\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(300)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 067 - Atributo: \cf2\b0 Produtos\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(300)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 068 - Atributo: \cf2\b0 Produtos\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(300)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 069 - Entidade: \cf2\b0 Produtos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Produtos
+\par Possui rela\'e7\'e3o entre as entidades Estoque, Fornecedor, Categoria, Pedidos
+\par \f0 
+\par \cf1\b 070 - Entidade: \cf2\b0 Programa de fidelidade\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Programa de fidelidade
+\par Possui rela\'e7\'e3o entre com a entidade Clientes
+\par \f0 
+\par \cf1\b 071 - Atributo: \cf2\b0 Quantidade\cf1\b 
+\par \cf0\b0 Tipo de dados:: INT
+\par 
+\par \cf1\b 072 - Atributo: \cf2\b0 Quantidade\cf1\b 
+\par \cf0\b0 Tipo de dados:: INT
+\par 
+\par \cf1\b 073 - Atributo: \cf2\b0 Quantidade\cf1\b 
+\par \cf0\b0 Tipo de dados:: INT
+\par 
+\par \cf1\b 074 - Atributo: \cf2\b0 Quantidade_estoque\cf1\b 
+\par \cf0\b0 Tipo de dados:: INT
+\par 
+\par \cf1\b 075 - Atributo: \cf2\b0 Quantidade_produtos\cf1\b 
+\par \cf0\b0 Tipo de dados:: INT
+\par 
+\par \cf1\b 076 - Atributo: \cf2\b0 Quanto_repor\cf1\b 
+\par \cf0\b0 Tipo de dados:: INT
+\par 
+\par \cf1\b 077 - Rela\f1\'e7\'e3o: \cf2\b0 Realiza\cf1\b 
+\par \cf0\b0\f0 Realiza est\f1\'e1 relacionando Funcion\'e1rios com Delivery
+\par 1 Funcion\'e1rio realiza N Delivery
+\par 1 Delivery \'e9 realizado por 1 Funcion\'e1rio
+\par \f0 
+\par \cf1\b 078 - Rela\f1\'e7\'e3o: \cf2\b0 Realiza\cf1\b 
+\par \cf0\b0\f0 Realiza est\f1\'e1 relacionando Clientes com Pedidos
+\par 1 Cliente pode realizar N Pedidos
+\par 1 Pedido \'e9 e realizado por 1 Cliente
+\par \f0 
+\par \cf1\b 079 - Atributo: \cf2\b0 Setor\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(20)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 080 - Observa\f1\'e7\'e3o: \cf2\b0 Smartcoffee - Larissa\cf1\b 
+\par \cf0\b0\f0 
+\par \cf1\b 081 - Rela\f1\'e7\'e3o: \cf2\b0 Solicita\cf1\b 
+\par \cf0\b0\f0 Solicita est\f1\'e1 relacionando Pedidos com Delivery
+\par 1 Pedido solicita 1 Delivery
+\par 1 Delivery \'e9 solicitado por N Pedidos
+\par \f0 
+\par \cf1\b 082 - Atributo: \cf2\b0 Tamanho\cf1\b 
+\par \cf0\b0 Tipo de dados:: FLOAT
+\par 
+\par \cf1\b 083 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 Tipo de dados:: CHAR(15)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 084 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 Tipo de dados:: CHAR(15)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 085 - Atributo: \cf2\b0 Telefone_motoboy\cf1\b 
+\par \cf0\b0 Tipo de dados:: CHAR(15)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 086 - Atributo: \cf2\b0 Tempo_estimado_acabar\cf1\b 
+\par \cf0\b0 Tipo de dados:: DATE
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 087 - Atributo: \cf2\b0 Tempo_estimado_entrega\cf1\b 
+\par \cf0\b0 Tipo de dados:: TIME
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 088 - Atributo: \cf2\b0 Tipo\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 089 - Atributo: \cf2\b0 Valor\cf1\b 
+\par \cf0\b0 Tipo de dados:: FLOAT
+\par 
+\par 
+\par }
+ 
