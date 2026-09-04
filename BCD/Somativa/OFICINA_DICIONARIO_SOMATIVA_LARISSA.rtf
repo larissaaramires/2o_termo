@@ -1,0 +1,330 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Rela\f1\'e7\'e3o: \cf2\b0 Ajudam\cf1\b 
+\par \cf0\b0\f0 Ajudam est\f1\'e1 relacionando Clientes com Funcionarios
+\par 1 Cliente pode ser ajudado por N Funcionarios
+\par 1 Funcionario pode ajudar N Clientes
+\par \f0 
+\par \cf1\b 002 - Atributo: \cf2\b0 Ano_lancamento\cf1\b 
+\par \cf0\b0 Tipo de dados:: YEAR
+\par 
+\par \cf1\b 003 - Atributo: \cf2\b0 Ano_lancamento\cf1\b 
+\par \cf0\b0 Tipo de dados:: YEAR 
+\par \cf1\b 004 - Atributo: \cf2\b0 CEP\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(10)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par Campo \'fanico - UNIQUE
+\par \f0 
+\par \cf1\b 005 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(14)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par Campo \'fanico - UNIQUE
+\par \f0 
+\par \cf1\b 006 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(14)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par Campo \'fanico - UNIQUE
+\par \f0 
+\par \cf1\b 007 - Entidade: \cf2\b0 Clientes\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Clientes
+\par Possui rela\'e7\'e3o entre as entidades Funcionarios, Pagamentos, Veiculos, Ordem de Servico
+\par \f0 
+\par \cf1\b 008 - Rela\f1\'e7\'e3o: \cf2\b0 Contem\cf1\b 
+\par \cf0\b0\f0 Contem est\f1\'e1 relacionando Marcas com Modelos
+\par 1 Marca pode conter N Modelos
+\par 1 Modelo contem 1 Marca
+\par \f0 
+\par \cf1\b 009 - Atributo: \cf2\b0 Credito\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 010 - Atributo: \cf2\b0 Data_cadastro\cf1\b 
+\par \cf0\b0 Tipo de dados:: TIMESTAMP
+\par Dado padr\f1\'e3o - DEFAULT
+\par Data/Hora/Local padr\'e3o - CURRENT_TIMESTAMP \f0 
+\par \cf1\b 011 - Atributo: \cf2\b0 Data_entrega\cf1\b 
+\par \cf0\b0 Tipo de dados:: DATE
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 012 - Atributo: \cf2\b0 Data_nascimento\cf1\b 
+\par \cf0\b0 Tipo de dados:: DATE
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 013 - Atributo: \cf2\b0 Debito\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 014 - Atributo: \cf2\b0 Dono_marca\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 015 - Atributo: \cf2\b0 Dono_modelo\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 016 - Rela\f1\'e7\'e3o: \cf2\b0 Efetua\cf1\b 
+\par \cf0\b0\f0 Efetua est\f1\'e1 relacionando Clientes com Pagamentos
+\par 1 Cliente efetua 1 Pagamento
+\par 1 Pagamento \'e9 efetuado por 1 Cliente
+\par \f0 
+\par \cf1\b 017 - Atributo: \cf2\b0 Email\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(100) 
+\par \cf1\b 018 - Atributo: \cf2\b0 Endereco\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(100)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 019 - Atributo: \cf2\b0 Forma_pagamento\cf1\b 
+\par \cf0\b0 Tipo de dados:: CHAR(10)
+\par Padr\f1\'e3o - DEFAULT "PIX"
+\par \f0 
+\par \cf1\b 020 - Entidade: \cf2\b0 Fornecedores\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Fornecedores
+\par Possui rela\'e7\'e3o entre as entidades Pecas
+\par \f0 
+\par \cf1\b 021 - Rela\f1\'e7\'e3o: \cf2\b0 Fornecem\cf1\b 
+\par \cf0\b0\f0 Fornecem est\f1\'e1 relacionando Pecas com Fornecedores
+\par 1 Peca \'e9 fornecida por 1 Fornecedor
+\par 1 Fornecedor pode fornecer N Pecas
+\par \f0 
+\par \cf1\b 022 - Entidade: \cf2\b0 Funcionarios\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Funcionarios
+\par Possui rela\'e7\'e3o entre as entidades Clientes, Servicos
+\par \f0 
+\par \cf1\b 023 - Rela\f1\'e7\'e3o: \cf2\b0 Geram\cf1\b 
+\par \cf0\b0\f0 Geram est\f1\'e1 relacionando Servicos com Pagamentos
+\par 1 Servico gera 1 Pagamento
+\par 1 Pagamento \'e9 geradopor 1 Servico
+\par \f0 
+\par \cf1\b 024 - Atributo: \cf2\b0 Horario_trabalhado\cf1\b 
+\par \cf0\b0 Tipo de dados:: TIME
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 025 - Atributo: \cf2\b0 Id_cliente\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 026 - Atributo: \cf2\b0 Id_fornecedor\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 027 - Atributo: \cf2\b0 Id_funcionario\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 028 - Atributo: \cf2\b0 Id_marca\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 029 - Atributo: \cf2\b0 Id_modelo\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 030 - Atributo: \cf2\b0 Id_ordem\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 031 - Atributo: \cf2\b0 Id_pagamento\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 032 - Atributo: \cf2\b0 Id_peca\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 033 - Atributo: \cf2\b0 Id_servico\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 034 - Atributo: \cf2\b0 Id_veiculo\cf1\b 
+\par \cf0\b0 Campo atributo chave prim\f1\'e1ria - PK
+\par Tipo de dados: INT
+\par Possui auto incremento
+\par \f0 
+\par \cf1\b 035 - Atributo: \cf2\b0 Internacional\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 036 - Atributo: \cf2\b0 Internacional\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 037 - Atributo: \cf2\b0 Marca\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(40)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 038 - Atributo: \cf2\b0 Marca\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(40)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 039 - Atributo: \cf2\b0 Marca_veiculo\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(40)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 040 - Atributo: \cf2\b0 Marca_veiculo\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(40)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 041 - Entidade: \cf2\b0 Marcas\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Marcas
+\par Possui rela\'e7\'e3o entre as entidades Vaiculos, Modelos
+\par \f0 
+\par \cf1\b 042 - Atributo: \cf2\b0 Media_preco\cf1\b 
+\par \cf0\b0 Tipo de dados:: FLOAT
+\par 
+\par \cf1\b 043 - Atributo: \cf2\b0 Modelo_veiculo\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(40)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 044 - Atributo: \cf2\b0 Modelo_veiculo\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(40)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 045 - Entidade: \cf2\b0 Modelos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Modelos
+\par Possui rela\'e7\'e3o entre as entidades Marcas, Veiculos
+\par \f0 
+\par \cf1\b 046 - Atributo: \cf2\b0 Modelos_veiculos\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(1000) 
+\par \cf1\b 047 - Atributo: \cf2\b0 Nacional\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 048 - Atributo: \cf2\b0 Nacional\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 049 - Atributo: \cf2\b0 Nacionalidade_marca\cf1\b 
+\par \cf0\b0 Tipo de dados:: ENUM('NACIONAL', 'INTERNACIONAL')
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 050 - Atributo: \cf2\b0 Nacionalidade_modelo\cf1\b 
+\par \cf0\b0 Tipo de dados:: ENUM('NACIONAL', 'INTERNACIONAL')
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 051 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 052 - Atributo: \cf2\b0 Nome_cliente\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 053 - Atributo: \cf2\b0 Nome_cliente\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 054 - Atributo: \cf2\b0 Nome_dono\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 055 - Atributo: \cf2\b0 Nome_fornecedor\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 056 - Atributo: \cf2\b0 Nome_funcionario\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 057 - Atributo: \cf2\b0 Nome_paciente\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(60)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par \f0 
+\par \cf1\b 058 - Atributo: \cf2\b0 O_que_concertar\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(300) 
+\par \cf1\b 059 - Atributo: \cf2\b0 O_que_concertar\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(300)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 060 - Atributo: \cf2\b0 O_que_concertou\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(300)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 061 - Atributo: \cf2\b0 Observacoes\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(100) 
+\par \cf1\b 062 - Observa\f1\'e7\'e3o: \cf2\b0 Oficina - Larissa\cf1\b  \cf0\b0\f0 
+\par \cf1\b 063 - Entidade: \cf2\b0 Ordens de Servico\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Ordens de Servico
+\par Possui rela\'e7\'e3o entre as entidades Clientes
+\par \f0 
+\par \cf1\b 064 - Entidade: \cf2\b0 Pagamentos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Pagamentos
+\par Possui rela\'e7\'e3o entre as entidades Clientes, Servicos
+\par \f0 
+\par \cf1\b 065 - Atributo: \cf2\b0 Parcelado\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 066 - Entidade: \cf2\b0 Pecas\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Pecas
+\par Possui rela\'e7\'e3o entre as entidades Fornecedores
+\par \f0 
+\par \cf1\b 067 - Atributo: \cf2\b0 Pecas_utilizadas\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(300) 
+\par \cf1\b 068 - Rela\f1\'e7\'e3o: \cf2\b0 Pertence\cf1\b 
+\par \cf0\b0\f0 Pertence est\f1\'e1 relacionando Veiculos com Marcas
+\par 1 Veiculo petence a 1 Marca
+\par 1 Marca pertence a N Veiculos
+\par \f0 
+\par \cf1\b 069 - Atributo: \cf2\b0 Pix\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 070 - Atributo: \cf2\b0 Placa\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(8)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 071 - Atributo: \cf2\b0 Placa\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(8)
+\par Compo obrigat\f1\'f3rio - NOT NULL
+\par Campo \'fanico - UNIQUE
+\par \f0 
+\par \cf1\b 072 - Atributo: \cf2\b0 Placa_veiculo\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(8)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 073 - Rela\f1\'e7\'e3o: \cf2\b0 Possui\cf1\b 
+\par \cf0\b0\f0 Possui est\f1\'e1 relacionando Clientes com Veiculos
+\par 1 Cliente pode possuir N Veiculos
+\par 1 Veiculo \'e9 possuido por 1 Cliente
+\par \f0 
+\par \cf1\b 074 - Rela\f1\'e7\'e3o: \cf2\b0 Precisam\cf1\b 
+\par \cf0\b0\f0 Precisam est\f1\'e1 relacionando Veiculos com Servicos
+\par 1 Veiculo precisa de 1 Servico
+\par 1 Servico precisa de 1 Veiculo
+\par \f0 
+\par \cf1\b 075 - Atributo: \cf2\b0 Preco\cf1\b 
+\par \cf0\b0 Tipo de dados:: FLOAT 
+\par \cf1\b 076 - Atributo: \cf2\b0 Produtos\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(300)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 077 - Atributo: \cf2\b0 Quando_pagar\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(40)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 078 - Atributo: \cf2\b0 Quantidade\cf1\b 
+\par \cf0\b0 Tipo de dados:: INT 
+\par \cf1\b 079 - Atributo: \cf2\b0 Quantidade_produtos\cf1\b 
+\par \cf0\b0 Tipo de dados:: INT 
+\par \cf1\b 080 - Rela\f1\'e7\'e3o: \cf2\b0 Realiza\cf1\b 
+\par \cf0\b0\f0 Realiza est\f1\'e1 relacionando Funcionarios com Servicos
+\par 1 Funcionario pode realizar N Servicos
+\par 1 Servico pode ser realizado por N Funcionarios
+\par \f0 
+\par \cf1\b 081 - Rela\f1\'e7\'e3o: \cf2\b0 Recebem\cf1\b 
+\par \cf0\b0\f0 Recebem est\f1\'e1 relacionando Clientes com Ordens de Servico
+\par 1 Cliente recebe 1 Ordem de Servico
+\par 1 Ordem de Servico \'e9 recebida por 1 Cliente
+\par \f0 
+\par \cf1\b 082 - Atributo: \cf2\b0 Salario\cf1\b 
+\par \cf0\b0 Tipo de dados:: FLOAT
+\par 
+\par \cf1\b 083 - Entidade: \cf2\b0 Servicos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Servicos
+\par Possui rela\'e7\'e3o entre as entidades Funcionarios, Pagamentos
+\par \f0 
+\par \cf1\b 084 - Atributo: \cf2\b0 Setor_trabalhado\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(20)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 085 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(15)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 086 - Atributo: \cf2\b0 Telefone\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(15)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 087 - Atributo: \cf2\b0 Telefone_cliente\cf1\b 
+\par \cf0\b0 Tipo de dados:: VARCHAR(15)
+\par Compo obrigat\f1\'f3rio - NOT NULL \f0 
+\par \cf1\b 088 - Rela\f1\'e7\'e3o: \cf2\b0 Tem\cf1\b 
+\par \cf0\b0\f0 Tem est\f1\'e1 relacionando Veiculos com Modelos
+\par 1 Veiculo tem 1 Modelo
+\par 1 Modelo tem N Veiculos
+\par \f0 
+\par \cf1\b 089 - Atributo: \cf2\b0 Valor\cf1\b 
+\par \cf0\b0 Tipo de dados:: FLOAT 
+\par \cf1\b 090 - Atributo: \cf2\b0 Valor\cf1\b 
+\par \cf0\b0 Tipo de dados:: FLOAT
+\par 
+\par \cf1\b 091 - Entidade: \cf2\b0 Veiculos\cf1\b 
+\par \cf0\b0 Respons\f1\'e1vel por organizar informa\'e7\'f5es sobre Veiculos
+\par Possui rela\'e7\'e3o entre as entidades Clientes, Marcas, Modelos \f0 
+\par 
+\par }
+ 
