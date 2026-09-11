@@ -41,3 +41,25 @@ Razao_social varchar(100) not null
 )
 
 ALTER TABLE Item_produto ADD FOREIGN KEY(Id_fornecedor) REFERENCES Fornecedor (Id_fornecedor)
+
+
+-- Desafios
+-- Questão 1 
+-- CATEGORIA --- POSSUI --- PRODUTOS
+-- 1:N                      1:1
+
+-- Questão 2
+-- FUNCIONÁRIO --- REGISTRA --- PEDIDOS
+-- 1:N                          1:1
+
+--Questão 3 
+-- FORNECEDOR --- COMERCIALIZA --- PRODUTOS
+-- 1:N                             1:N
+
+-- Questão 4
+-- MESA --- EXISTE --- RESERVA FUTURA
+-- 0:N                 1:1
+
+-- Questão 5
+-- PEDIDO --- POSSUI --- ITENS
+-- 1:N                   1:1
