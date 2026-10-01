@@ -4,6 +4,7 @@ body {
     padding: 0;
 }
 
+/* Cabeçalho */
 .cabecalho {
     background-color: #2B170D;
     padding: 30px 10px;
@@ -20,7 +21,7 @@ nav a {
 }
 
 
-
+/* Início */
 .banner {
     background-color: #F3E6D7;
     margin: 30px;
@@ -30,21 +31,25 @@ nav a {
     justify-content: space-between;
 }
 
-h6 {
+.subtitulo {
     color: #C66A1A;
+    margin: 20px;
 }
 
 .laranja {
     color: #C66A1A;
     font-weight: 1000;
+    margin: 20px;
 }
 
 .preto {
     font-weight: 1000;
+    margin: 20px;
 }
 
 header p {
-    font-weight: 600;
+    font-weight: 500;
+    margin: 20px;
 }
 
 button {
@@ -52,12 +57,13 @@ button {
     height: 50px;
     width: 150px;
     border: 0;
+    margin: 20px;
 }
 
 button a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-weight: 200;
+    font-weight: 500;
 }
 
 .banner img {
@@ -67,3 +73,83 @@ button a {
     margin: 20px auto;
 }
 
+
+/* Sobre */
+.sobreConteudo {
+    background-color: #4A341C;
+    margin: 30px;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobreCabecalho h2 {
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+.sobreCabecalho {
+    color: aliceblue;
+}
+
+.sobreConteudo img {
+    display: block;
+    max-width: 100%;
+    width: 500px;
+    margin: 20px auto;
+    justify-content: flex-start;
+}
+
+
+/* Produtos */
+.cafesConteudo {
+    background-color: #F3E6D7;
+    margin: 30px;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.cardSalgados {
+    background-color: #4A341C;
+}
+
+.cardDoces {
+    background-color: #4A341C;
+}
+
+.cardBebidas {
+    background-color: #4A341C;
+}
+
+.cafesConteudo img {
+    display: block;
+    max-width: 100%;
+    width: 500px;
+    margin: 20px auto;
+    justify-content: flex-start; 
+}
+
+
+/* Ambiente  */
+.ambienteConteudo {
+    background-color: #4A341C;
+    margin: 30px;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.ambienteConteudo h2 {
+    color: aliceblue;
+    justify-content: flex-end;
+}
+
+.ambienteConteudo img {
+    display: block;
+    max-width: 100%;
+    width: 500px;
+    margin: 20px auto;
+    justify-content: flex-start;    
+}
