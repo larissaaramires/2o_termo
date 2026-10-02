@@ -1,0 +1,20 @@
+[
+  {
+    "Código": 1,
+    "Nome": "Torno",
+    "Setor": "Usinagem",
+    "Operacional": true
+  },
+  {
+    "Código": 2,
+    "Nome": "Prensa",
+    "Setor": "Metalúrgico",
+    "Operacional": true
+  },
+  {
+    "Código": 3,
+    "Nome": "Esteiras Transportadoras",
+    "Setor": "Logística",
+    "Operacional": false
+  }
+]
