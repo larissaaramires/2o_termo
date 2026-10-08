@@ -5,6 +5,7 @@ body {
     background-color: rgb(227, 227, 227);
 }
 
+/* cabeçalho */
 .cabecalho {
     background-color: #0c6930;
     padding: 30px 10px;
@@ -24,27 +25,26 @@ nav a {
     margin: 20px;
 }
 
-.inicio {
+/* inicio */
+section.inicio {
     background-color: #71bb8d41;
     margin: 30px;
     padding: 40px;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 30px 10px;
+}
+
+/* título, texto */
+.conteudoInicio {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.inicio h2 {
-    width: 350px;
-    margin: 20px 0 35px 15px;
+.conteudoInicio h1, p {
+    margin: 10px;
+    flex: 1;
 }
 
-.inicio p {
-    width: 350px;
-    font-size: 18px;
-    margin: 0 0 35px 15px;
-}
-
+/* imagem */
 .inicioImg img {
     width: 100%;
     height: auto;
@@ -52,38 +52,45 @@ nav a {
     margin: 0;
 }
 
+/* quadros */
 .inicioQuadros {
     display: flex;
+    justify-content: center;
     gap: 20px;
-    margin: 30px;
+    margin-top: 30px;
+}
+
+.quadroOrganização,
+.quadroPrevisibilidade,
+.quadroResponsabilidade {
+    background-color: #71bb8d41;
+    width: 280px;
+    padding: 25px;
     text-align: center;
-    flex: 1;
 }
 
 .inicioQuadros h1 {
     margin: 20px;
 }
 
-.quadroOrganização {
-    background-color: #71bb8d41;
-}
-
-.quadroPrevisibilidade {
-    background-color: #71bb8d41;
-}
-
-.quadroResponsabilidade {
-    background-color: #71bb8d41;
-}
-
-
 /* CRONOGRAMA */
 .inicioCronograma {
     background-color: #71bb8d41;
+    margin: 30px;
+    padding: 40px;
 }
 
 .inicioCronograma, h3 {
     text-align: center;
+}
+
+.coletas {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    /* column-gap: 2; */
+    padding: 0;
+    margin: 0;
 }
 
 .lugares li, .coletaComum li, .coletaReciclavel li {

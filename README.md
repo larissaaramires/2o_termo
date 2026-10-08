@@ -1,12 +1,18 @@
-﻿# 2º Termo - Repositório de Atividades
+﻿# 2º Termo - Repositório de Estudos e Exercícios
 
-Este repositório reúne as atividades práticas desenvolvidas no segundo termo, organizadas em três áreas principais:
+## Visão geral
 
-- BCD: Banco de Dados e modelagem conceitual;
-- LIMA: Linguagem de Marcação e desenvolvimento web com HTML/CSS;
-- PBE: Programação Back-End com JavaScript e Node.js.
+Este repositório reúne as atividades, exercícios, desafios e materiais de apoio desenvolvidos no segundo termo do curso. O conteúdo está organizado em três áreas principais:
 
-O objetivo do projeto é centralizar exercícios, desafios, arquivos de apoio, scripts SQL e páginas web produzidos durante as aulas, facilitando a consulta, execução e revisão do conteúdo ao longo do curso.
+- BCD: Banco de Dados
+- LIMA: Linguagem de Marcação
+- PBE: Programação Back-End
+
+O objetivo do projeto é centralizar os arquivos práticos e teóricos produzidos ao longo do período, facilitando o estudo, a revisão e a execução dos exercícios em qualquer momento.
+
+## Descrição do projeto
+
+O projeto contém atividades de modelagem de banco de dados, desenvolvimento web com HTML e CSS, e programação em JavaScript com Node.js. Em cada módulo, são apresentados exercícios e desafios voltados à prática, com foco em lógica de programação, estrutura de páginas, modelagem conceitual e manipulação de dados.
 
 ## Tecnologias utilizadas
 
@@ -15,305 +21,138 @@ O objetivo do projeto é centralizar exercícios, desafios, arquivos de apoio, s
 - JavaScript
 - Node.js
 - SQL e MySQL/MariaDB
-- brModelo (`.brM`) para modelagem conceitual
+- brModelo (.brM)
+- JSON
+- Módulo nativo `fs` do Node.js
 - Git e GitHub
 - Visual Studio Code
-- Módulo nativo `fs` e arquivos JSON
-- Dependências extras como `readline-sync` em alguns scripts
+- Dependências como `readline-sync` em alguns scripts
 
-## Estrutura do projeto
+## Estrutura de pastas
 
 ```text
 2o_termo/
 ├── BCD/
 │   ├── Aula04/
-│   │   ├── DOCUMENTACAO_CLINICA_MEDICA_PROJETO.brM
-│   │   ├── MODELOS_RELACIONAMENTOS_CONCEITUAL.brM
-│   │   ├── SCRIPT_CLINICA_MEDICA.sql
-│   │   ├── SMARTCOFFEE_CONCEITUAL.brM
-│   │   └── Tabelas_clinica_medica.sql
 │   ├── Aula05/
-│   │   ├── DOCUMENTACAO_CLINICA_MEDICA_PROJETO.brM
-│   │   ├── OFICINA_SOMATIVA_LARISSA.brM
-│   │   ├── SCRIPT_ATIVIDADE_CLINICA_MEDICA.sql
-│   │   ├── SCRIPT_ATIVIDADE_CLINICA_MEDICA2.sql
-│   │   ├── SCRIPT_SMARTCOFFEE_LARISSA.sql
-│   │   └── SMARTCOFFEE_CONCEITUAL.brM
 │   ├── Aula06/
-│   │   └── sesi_extensaovsTA.sql
-│   ├── MODELOS_RELACIONAMENTOS_CONCEITUAL.brM
+│   ├── Aula07/
+│   ├── Aula08/
 │   ├── Smartcoffee/
-│   │   ├── SCRIPT_SMARTCOFFEE_LARISSA.sql
-│   │   ├── SMARTCOFFEE_CONCEITUAL.brM
-│   │   └── Smartcoffee_larissa.sql
-│   └── Somativa/
-│       ├── OFICINA_SOMATIVA_LARISSA.brM
-│       ├── SCRIPT_OFICINA_LARISSA.sql
-│       └── Imagens/
-│
+│   ├── Somativa/
+│   └── MODELOS_RELACIONAMENTOS_CONCEITUAL.brM
 ├── LIMA/
 │   ├── Aula02/
-│   │   ├── index.html
-│   │   └── index2.html
+│   ├── Aula03/
 │   ├── Aula04/
-│   │   ├── index.html
-│   │   ├── index2.html
-│   │   └── Imagens/
 │   ├── Aula05/
-│   │   ├── artigosRapidos.html
-│   │   ├── curriculo.html
-│   │   ├── index.html
-│   │   ├── indexNovo.html
-│   │   ├── noticias.html
-│   │   ├── semantico.html
-│   │   └── ultimasPostagens.html
 │   ├── Aula06/
-│   │   ├── atividadeLista.html
-│   │   ├── atividadeRevisao.html
-│   │   ├── indexExterno.html
-│   │   ├── indexInline.html
-│   │   ├── indexInterno.html
-│   │   ├── indexListas.html
-│   │   ├── revisao.css
-│   │   └── style.css
+│   ├── Aula09/
+│   ├── Aula10/
 │   ├── Projeto/
-│   │   ├── bebidas_geladas.html
-│   │   ├── bebidas_quentes.html
-│   │   ├── doces.html
-│   │   ├── index.html
-│   │   ├── lanches.html
-│   │   ├── salgados.html
-│   │   └── Imagens/
 │   ├── Somativa/
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── Imagens/
-│   ├── index.html
-│   └── index2.html
-│
+│   └── index.html
 ├── PBE/
-│   ├── Aulas-01a10/
-│   │   ├── Aula01/
-│   │   │   ├── app.js
-│   │   │   ├── imc.js
-│   │   │   ├── olaMundo.js
-│   │   │   ├── padaria.js
-│   │   │   ├── produtos.js
-│   │   │   └── variaveis.js
-│   │   ├── Aula02/
-│   │   │   ├── padariaNova.js
-│   │   │   └── strings.js
-│   │   ├── Aula03/
-│   │   │   ├── balada.js
-│   │   │   ├── notas.js
-│   │   │   └── velocidade.js
-│   │   ├── Aula04/
-│   │   │   ├── contador.js
-│   │   │   ├── contadorFor.js
-│   │   │   ├── ex1.js
-│   │   │   ├── menuPadaria.js
-│   │   │   ├── tabuada.js
-│   │   │   └── Desafios/
-│   │   │       ├── desafioEtanol.js
-│   │   │       ├── desafioFoguete.js
-│   │   │       └── desafioNatacao.js
-│   │   ├── Aula05/
-│   │   │   ├── array.js
-│   │   │   └── array2.js
-│   │   ├── Aula06/
-│   │   │   ├── exercicio.js
-│   │   │   ├── exercicio2.js
-│   │   │   ├── exercicio3.js
-│   │   │   ├── exercicio4.js
-│   │   │   └── exercicio5.js
-│   │   ├── Aula07/
-│   │   │   ├── Logística/
-│   │   │   │   ├── calculadoraFrete.js
-│   │   │   │   └── sistemaEntrega.js
-│   │   │   └── Oficina/
-│   │   │       ├── app.js
-│   │   │       └── funcoesOficina.js
-│   │   ├── Aula08/
-│   │   │   ├── funcoesBalanca.js
-│   │   │   ├── trycat.js
-│   │   │   ├── trycat2.js
-│   │   │   ├── trycat3.js
-│   │   │   └── trycat4.js
-│   │   └── Aula09/
-│   │       ├── consulta.js
-│   │       ├── estoque.json
-│   │       ├── funcionarios.js
-│   │       └── lojaFerramentas.js
 │   ├── Atividades/
-│   │   ├── Atividade 1/
-│   │   │   ├── app.js
-│   │   │   └── conversor.js
-│   │   ├── Atividade 2/
-│   │   │   ├── geometria.js
-│   │   │   └── main.js
-│   │   ├── Atividade 3/
-│   │   │   ├── principal.js
-│   │   │   └── sensor.js
-│   │   ├── Atividade 4/
-│   │   │   ├── caixa.js
-│   │   │   └── calculosVenda.js
-│   │   ├── Atividade 5/
-│   │   │   └── array.js
-│   │   └── Atividade 6/
-│   │       └── array.js
+│   ├── Aulas-01a10/
+│   ├── Aulas-11a20/
 │   ├── Desafios/
-│   │   ├── desafio.js
-│   │   ├── desafio1.js
-│   │   ├── desafio2.js
-│   │   ├── desafio3.js
-│   │   ├── desafio4.js
-│   │   └── desafio5.js
 │   ├── Exercicios/
-│   │   ├── app5.js
-│   │   ├── array.js
-│   │   ├── array2.js
-│   │   ├── ex1.js
-│   │   ├── ex2.js
-│   │   ├── ex3.js
-│   │   ├── ex4.js
-│   │   ├── ex5.js
-│   │   ├── exercicio.js
-│   │   ├── exercicio2.js
-│   │   ├── exercicio3.js
-│   │   ├── exercicio4.js
-│   │   └── exercicio5.js
+│   ├── Somativa/
 │   └── node_modules/
-│
 ├── README.md
 ├── texto_para_gerar_readme
-└── .git/
+├── .git/
+└── .gitignore (se existir no ambiente)
 ```
 
-## Resumo das atividades por área
+## Resumo dos exercícios e aulas
 
 ### BCD — Banco de Dados
 
-- `Aula04`: criação de modelos conceituais e scripts iniciais para a clínica médica e para o projeto SmartCoffee, incluindo tabelas, relacionamentos e documentação.
-- `Aula05`: aprofundamento em SQL com comandos como `CREATE`, `ALTER`, `INSERT`, `SELECT`, `TRUNCATE`, `DROP`, além de scripts para clínica, SmartCoffee e oficina.
-- `Aula06`: estudo do banco `sesi_extensaovsTA`, com exploração de tabelas, schemas e estrutura do banco.
-- `Smartcoffee`: materiais específicos do projeto de cafeteria, com scripts SQL e modelos conceituais do sistema.
-- `Somativa`: atividade final de modelagem para uma oficina, com foco em clientes, veículos, serviços, peças, ordens de serviço, pagamentos e fornecedores.
+- `Aula04`: introdução à modelagem conceitual e criação de scripts SQL para clínica médica e SmartCoffee.
+- `Aula05`: aprofundamento em SQL com comandos como `CREATE`, `ALTER`, `INSERT`, `SELECT` e exclusão/remoção de dados.
+- `Aula06`: exploração de estrutura de banco e scripts com foco em banco `sesi_extensaovsTA`.
+- `Aula07`: modelagem de cardinalidade e relacionamento entre entidades.
+- `Aula08`: prática com desafios SQL e manipulação de dados.
+- `Smartcoffee`: arquivos de modelagem e scripts do projeto de cafeteria.
+- `Somativa`: atividade final de modelagem de oficina com clientes, peças, serviços e ordens de serviço.
 
-### LIMA — Desenvolvimento Web
+### LIMA — Linguagem de Marcação
 
-- `Aula02`: introdução ao HTML com formatação de texto, links, imagens, citações e estrutura básica de páginas.
-- `Aula04`: uso de imagens, favicon, atributos `alt` e `title`, além de ajustes visuais e apresentação dos elementos.
-- `Aula05`: páginas com HTML semântico, desenvolvimento de currículo, blog, notícias, artigos e páginas de postagem.
-- `Aula06`: exercícios com CSS inline, interno e externo, listas, navegação e revisão de HTML/CSS.
-- `Projeto`: site de cafeteria com páginas para bebidas, doces, lanches e salgados.
-- `Somativa`: projeto final de site institucional, com seção de serviços, equipe, projetos e contato.
+- `Aula02`: introdução ao HTML com formatação de texto, listas, imagens e links.
+- `Aula03`: continuidade em estruturação de páginas com HTML básico.
+- `Aula04`: trabalho com imagens, atributos e estilização simples.
+- `Aula05`: páginas semânticas com currículo, notícias e artigos.
+- `Aula06`: exercícios com CSS inline, interno, externo e listas.
+- `Aula09`: desenvolvimento de páginas de café e navegação visual.
+- `Aula10`: atividades de layout e CSS aplicado a exercícios específicos.
+- `Projeto`: site temático de cafeteria com diferentes páginas.
+- `Somativa`: atividade final com página institucional e elementos visuais.
 
 ### PBE — Programação Back-End
 
-- `Aula01`: variáveis, tipos, operações, entrada no terminal, cálculo de IMC, sistema de padaria e primeiros exercícios.
-- `Aula02`: manipulação de strings, template strings, padaria nova e operações com texto e números.
-- `Aula03`: condicionais, notas, velocidade, multas e lógica de fluxo com estruturas `if`/`else`.
-- `Aula04`: laços de repetição, contadores, tabuada, menu de padaria e desafios com laços.
-- `Aula05`: arrays, operações com elementos e exercícios de organização de dados.
-- `Aula06`: funções, conversões, descontos, arrays de produtos e exercícios de revisão.
-- `Aula07`: modularização com `require` e `module.exports`, além de módulos de logística e oficina.
-- `Aula08`: funções, validações e tratamento de erros com `try...catch`.
-- `Aula09`: leitura e escrita de arquivos, manipulação de JSON e controle de estoque.
-- `Atividades`: exercícios complementares de 1 a 6, com foco em lógica, arrays, funções e operações práticas.
-- `Exercicios`: conjunto adicional de exercícios de JavaScript para revisão e prática.
-- `Desafios`: desafios diversos de lógica, cálculo, estrutura e programação.
+- `Atividades`: exercícios práticos sobre operações com JS e lógica de programação.
+- `Aulas-01a10`: sequência de aulas sobre variáveis, condições, laços, arrays, funções, objetos, JSON, tratamento de erros e leitura de dados.
+- `Aulas-11a20`: exercícios mais avançados envolvendo sensores, ferramentas, inspeção e manipulação de arquivos/JSON.
+- `Desafios`: tarefas propostas com foco em resolução lógica e interpretação de problemas.
+- `Exercicios`: conjunto de exercícios complementares de programação.
+- `Somativa`: avaliações de lógica, cálculos e estruturas de dados aplicadas a cenários reais.
 
 ## Como executar os arquivos com Node.js
 
-### 1) Verifique o Node.js
+1. Abra o terminal no diretório do projeto:
 
-Certifique-se de ter o Node.js instalado no sistema. Em seguida, abra o terminal e navegue até a pasta do projeto.
-
-### 2) Executar arquivos JavaScript da pasta PBE
-
-Exemplos de execução:
-
-```powershell
-cd PBE
-node Aulas-01a10\Aula01\olaMundo.js
-node Aulas-01a10\Aula01\imc.js
-node Aulas-01a10\Aula03\notas.js
-node Aulas-01a10\Aula04\tabuada.js
-node Aulas-01a10\Aula07\Logística\sistemaEntrega.js
-node Aulas-01a10\Aula09\consulta.js
+```bash
+cd C:\caminho\para\2o_termo\2o_termo
 ```
 
-Alguns programas dependem de entrada do usuário no terminal e podem solicitar valores durante a execução.
+2. Execute qualquer arquivo `.js` com Node.js:
 
-### 3) Scripts que usam dependências extras
+```bash
+node PBE/Aulas-01a10/Aula01/olaMundo.js
+node PBE/Aulas-01a10/Aula04/contador.js
+node PBE/Desafios/desafio1.js
+```
 
-Se algum arquivo exigir módulos externos, como `readline-sync`, instale a dependência no diretório correspondente:
+3. Se o script depender de bibliotecas externas, instale as dependências na pasta:
 
-```powershell
+```bash
 npm install readline-sync
 ```
 
-> Observação: no workspace atual, o diretório `PBE` contém `node_modules`, mas não há um `package.json` visível na raiz dessa pasta. Caso ocorra erro de módulo, verifique a dependência necessária e instale-a localmente.
+4. Para executar arquivos na raiz do projeto ou em outra pasta:
 
-## Como abrir as páginas HTML
-
-As páginas da pasta `LIMA` podem ser abertas diretamente no navegador ou por meio da extensão Live Server do VS Code.
-
-Exemplos:
-
-- `LIMA/Projeto/index.html`
-- `LIMA/Somativa/index.html`
-- `LIMA/Aula05/index.html`
-
-## Como executar os scripts SQL
-
-Os arquivos de `BCD` podem ser executados em um banco MySQL/MariaDB por meio de um cliente SQL ou do comando `mysql`.
-
-Exemplo de execução via terminal:
-
-```powershell
-mysql -u usuario -p < "BCD\Aula05\SCRIPT_SMARTCOFFEE_LARISSA.sql"
+```bash
+node nome-do-arquivo.js
 ```
 
-Outra opção no cliente MySQL:
-
-```sql
-source BCD/Aula05/SCRIPT_SMARTCOFFEE_LARISSA.sql;
-```
-
-> Atenção: alguns scripts podem conter operações como `DROP DATABASE`, `DROP TABLE` e `TRUNCATE`. Utilize-os somente em ambientes de teste ou em bancos que possam ser resetados.
+> Caso o arquivo receba entrada do usuário, o terminal solicitará dados durante a execução.
 
 ## Instruções de Git
 
-### Clonar o repositório
-
-```powershell
-git clone URL_DO_REPOSITORIO
+```bash
+git clone <url-do-repositorio>
 cd 2o_termo
-```
-
-### Verificar o estado do projeto
-
-```powershell
 git status
-```
-
-### Adicionar, confirmar e enviar alterações
-
-```powershell
+git checkout -b nova-branch
 git add .
-git commit -m "Atualiza atividades e README"
-git push origin main
+git commit -m "Adiciona atividades do 2º termo"
+git push origin nova-branch
 ```
 
-Se a branch principal tiver outro nome, substitua `main` pelo nome correto.
+Comandos úteis:
 
-### Atualizar o repositório local
-
-```powershell
-git pull origin main
-```
+- `git pull` — atualiza o repositório local com as mudanças do remoto.
+- `git log` — exibe o histórico de commits.
+- `git branch` — lista as branches do projeto.
+- `git checkout <nome-da-branch>` — alterna entre branches.
+- `git restore --staged .` — remove arquivos do estágio sem apagar alterações locais.
 
 ## Autor
 
 Larissa Ramires
+
+## Observação
+
+Este repositório funciona como um conjunto de materiais didáticos, exercícios práticos e arquivos de apoio do segundo termo, sendo útil tanto para estudos quanto para revisão do conteúdo das disciplinas.

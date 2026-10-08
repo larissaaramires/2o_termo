@@ -1,0 +1,12 @@
+[
+  {
+    "nome": "alicate",
+    "quantidade": 2,
+    "custoUnitario": 15
+  },
+  {
+    "nome": "puncao",
+    "quantidade": 5,
+    "custoUnitario": 5
+  }
+]
