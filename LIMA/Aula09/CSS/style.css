@@ -197,10 +197,7 @@ button a {
     margin: 30px;
     padding: 10px 8px;
     display: flex;
-    align-items: center;
-}
-
-.ambienteConteudo {
+    align-items: center;    
     color: aliceblue;
     justify-content: flex-end;
 }
