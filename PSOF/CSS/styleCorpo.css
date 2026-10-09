@@ -7,7 +7,7 @@ body {
 
 /* cabeçalho */
 .cabecalho {
-    background-color: #0c6930;
+    background-color: #198a44ec;
     padding: 30px 10px;
     display: flex;
     align-items: center;
@@ -25,8 +25,88 @@ nav a {
     margin: 20px;
 }
 
+/* Carrossel */
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 /* inicio */
-section.inicio {
+section#inicio {
     background-color: #71bb8d41;
     margin: 30px;
     padding: 40px;
@@ -39,7 +119,8 @@ section.inicio {
     justify-content: space-between;
 }
 
-.conteudoInicio h1, p {
+.conteudoInicio h1, 
+.conteudoInicio p {
     margin: 10px;
     flex: 1;
 }
@@ -48,7 +129,7 @@ section.inicio {
 .inicioImg img {
     width: 100%;
     height: auto;
-    grid-column: 2; 
+    /* grid-column: 2;  */
     margin: 0;
 }
 
@@ -60,9 +141,7 @@ section.inicio {
     margin-top: 30px;
 }
 
-.quadroOrganização,
-.quadroPrevisibilidade,
-.quadroResponsabilidade {
+.quadros {
     background-color: #71bb8d41;
     width: 280px;
     padding: 25px;
@@ -88,7 +167,6 @@ section.inicio {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    /* column-gap: 2; */
     padding: 0;
     margin: 0;
 }
@@ -97,4 +175,81 @@ section.inicio {
     display: flex;
     flex-wrap: wrap;
     padding: 20px 8%;
+}
+
+/* Categoria  */
+.categoriaConteudo, .categoriaConteudo2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.residuosDomiciliares, .residuosEspeciais {
+    background-color: #71bb8d41;
+    width: 280px;
+    padding: 25px;
+    text-align: center;
+    margin: 30px;
+}
+
+.categoriaCabecalho, .categoriaCabecalho2  {
+    margin: 30px;
+}
+
+/* Descarte  */
+.descarteConteudo, .descarteConteudo2, .descarteConteudo3 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.residuosReciclaveis, .residuosNaoReciclaveis, .residuosRejeitos {
+    background-color: #71bb8d41;
+    width: 280px;
+    padding: 25px;
+    text-align: center;
+    margin: 30px;
+}
+
+.descarteCabecalho, .descarteCabecalho2, .categoriaCabecalho3  {
+    margin: 30px;
+}
+
+
+/* Deixando para todas as telas */
+.mySlides fade, inicioImg {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(300px, 1fr));
+    gap: 23px;
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* celular */
+@media (max-width: 500px) {
+    .mySlides fade, inicioImg{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    .mySlides fade, inicioImg{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* computador */
+@media (max-width: 1024px) {
+    .mySlides fade, inicioImg{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

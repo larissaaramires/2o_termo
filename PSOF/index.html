@@ -7,6 +7,7 @@
     <title>WasteWise</title>
 </head>
 <body>
+    
     <header>
         <article class="cabecalho">
             <h1>WasteWise</h1>
@@ -21,6 +22,57 @@
         </article>
     </header>
 
+    <!-- Carrossel -->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="Imagens/img1_carrossel.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="Imagens/img2_carrossel.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="Imagens/img3_carrossel.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="Imagens/img4_carrossel.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="Imagens/img5_carrossel.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>  
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)"><</a>
+        <a class="next" onclick="plusSlides(1)">></a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <!-- Final Carrossel -->
+    
     <main>
         <section id="inicio" class="inicio">
             <article class="conteudoInicio">
@@ -40,21 +92,21 @@
             </article>  
 
             <article class="inicioQuadros">
-                <div class="quadroOrganização">
+                <div class="quadros">
                     <h3>Organização</h3>
                     <p>
                         Cidades limpas e organizadas, com processos claros e eficientes para o gerenciamento de resíduos.
                     </p>
                 </div>
 
-                <div class="quadroPrevisibilidade">
+                <div class="quadros">
                     <h3>Previsibilidade</h3>
                     <p>
                         Horário e dias certos para coleta e descarte de resíduos.
                     </p>
                 </div>
 
-                <div class="quadroResponsabilidade">
+                <div class="quadros">
                     <h3>Responsabilidade</h3>
                     <p>
                         Responsabilidade e sustentabilidade.
@@ -93,35 +145,35 @@
 
 
 
-        <section id="categorias" class="categoria">
+        <section id="categorias" class="inicioCategoria">
             <header class="categoriaCabecalho">
                 <p class="subtitulo">CATEGORIAS</p>
                 <h2>Resíduos Domiciliares</h2> 
             </header>
 
             <article class="categoriaConteudo">
-                <div class="residuosOrganicos">
+                <div class="residuosDomiciliares">
                     <h3>Resíduos Orgânicos</h3>
                     <p>
                         Restos de alimentos, cascas e borra de café. Vão para a coleta comum ou compostagem.
                     </p>
                 </div>
 
-                <div class="residuosReciclaveis">
+                <div class="residuosDomiciliares">
                     <h3>Resíduos Recicláveis</h3>
                     <p>
                         Plástico, papel, vidro e metal limpos. Vão para a coleta seletiva.
                     </p>
                 </div>
 
-                <div class="residuosPerigosos">
+                <div class="residuosDomiciliares">
                     <h3>Resíduos Perigosos</h3>
                     <p>
                         Pilhas, baterias, lâmpadas e remédios. Devem ser levados aos ecopontos.
                     </p>
                 </div>
 
-                <div class="residuosRejeitos">
+                <div class="residuosDomiciliares">
                     <h3>Resíduos Rejeitos</h3>
                     <p>
                         Lixo do banheiro e materiais engordurados. Vão para o aterro sanitário na coleta comum.
@@ -129,8 +181,13 @@
                 </div>                
             </article>
 
+            <article class="inicioCategoria2">
+                <header class="categoriaCabecalho2">
+                    <h2>Resíduos Especiais</h2>
+                </header>
+            </article>
+
             <article class="categoriaConteudo2">
-                <h2>Resíduos Especiais</h2>
                 <div class="residuosEspeciais">
                     <h3>Resíduos Volumosos</h3>
                     <p>
@@ -138,14 +195,14 @@
                     </p>
                 </div>
 
-                <div class="residuosReciclaveis">
+                <div class="residuosEspeciais">
                     <h3>Entulho de Construção</h3>
                     <p>
                         Restos de obras, tijolos, azulejos e cimento em pequenas quantidades. Devem ser descartados nos pontos de entrega voluntária da cidade.
                     </p>
                 </div>
 
-                <div class="residuosPerigosos">
+                <div class="residuosEspeciais">
                     <h3>Resíduos Verdes</h3>
                     <p>
                         Podas de árvores, restos de jardinagem e folhagem. Requerem descarte próprio para compostagem ou recolha agendada.
@@ -163,28 +220,28 @@
             </header>
 
             <article class="descarteConteudo">
-                <div class="garrafaPetEPlasticos">
+                <div class="residuosReciclaveis">
                     <h3>Garrafa Pet e Plásticos</h3>
                     <p>
                         Lave, amasse e coloque na coleta seletiva (com a tampa).   
                     </p>
                 </div>
 
-                <div class="caixasEPapeis">
+                <div class="residuosReciclaveis">
                     <h3>Caixas e Papéis</h3>
                     <p>
                         Dobre para economizar espaço e coloque secos na coleta seletiva.
                     </p>
                 </div>
 
-                <div class="latasAluminio">
+                <div class="residuosReciclaveis">
                     <h3>Latas de Alumínio</h3>
                     <p>
                         Enxágue, empurre a tampa para dentro e vá para a coleta seletiva.
                     </p>
                 </div>
 
-                <div class="vidro">
+                <div class="residuosReciclaveis">
                     <h3>Vidro</h3>
                     <p>
                         Se estiver partido, embale num papelão identificado antes de ir para a coleta seletiva.
@@ -193,8 +250,12 @@
             </article>
 
             <article class="descarteConteudo2">
-                <h2>Não Recicláveis</h2>
-                <div>
+                <header class="descarteCabecalho2">
+                    <h2>Não Recicláveis</h2>
+                </header>
+            </article>
+
+            <article class="residuosNaoReciclaveis">
                     <h3>Orgânicos</h3>
                     <p>
                         Embale em sacos pretos ou resistentes, feche bem e coloque na coleta comum nos dias informados.
@@ -203,7 +264,12 @@
             </article>
 
             <article class="descarteConteudo3">
-                <h2>Rejeitos</h2>
+                <header class="descarteCabecalho3">
+                    <h2>Rejeitos</h2>
+                </header>
+            </article> 
+
+            <article class="residuosRejeitos">
                 <div>
                     <h3>Restos de Alimentos</h3>
                     <p>
@@ -258,5 +324,47 @@
             </article>
         </section>
     </main>
+
+
+    <script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Controles manuais
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+// Slideshow automático
+let slideInterval = setInterval(() => {
+    plusSlides(1);
+}, 4000); // troca a cada 4 segundos
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+</script>
+
 </body>
 </html>
+
+
