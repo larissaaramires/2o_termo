@@ -157,7 +157,24 @@ SELECT SUM(valor_total) AS fatutamento FROM pedido WHERE status_pedido = 'PREPAR
 ---------------------------------------------------------------------------
 -- Ex 15: GROUP BY - agrupar dados 
 SELECT  cidade, COUNT(*) AS qnt_clientes FROM cliente GROUP BY cidade;
--- Quantos clientes tem em  cada cidade
+-- Quantos clientes tem em cada cidade
 
 SELECT id_categoria, COUNT(*) AS qnt_produtos from produto GROUP BY id_categoria;
 -- Quantidade de produtos por categoria    
+
+---------------------------------------------------------------------------
+-- Ex 16: HAVING - criar condições em agrupamentos
+-- WHERE filtra linhas antes do agrupamento
+-- HAVIN filtra linhas depois do GROUP BY
+SELECT cidade, COUNT(*) AS qnt_clientes FROM cliente GROUP BY cidade HAVING COUNT(*) >= 2;
+-- Consulta para cidades com pelo menos dois clientes
+
+---------------------------------------------------------------------------
+-- Ex 17: resumo de uma consulta completa
+SELECT colunas
+FROM tabela
+WHERE condição
+GROUP BY agrupar_colunas
+HAVING condição_agrupar
+ORDER BY colunas
+LIMIT quantidade;
