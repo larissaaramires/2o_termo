@@ -98,15 +98,3 @@ section.inicio {
     flex-wrap: wrap;
     padding: 20px 8%;
 }
-
-.lugares > li {
-    grid-column: 1;
-}
-
-.coletaComum > li {
-    grid-column: 2;
-}
-
-.coletaReciclavel > li {
-    grid-column: 3;
-}
