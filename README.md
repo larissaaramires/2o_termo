@@ -2,17 +2,18 @@
 
 ## Visão geral
 
-Este repositório reúne as atividades, exercícios, desafios e materiais de apoio desenvolvidos no segundo termo do curso. O conteúdo está organizado em três áreas principais:
+Este repositório reúne atividades, exercícios, desafios e materiais de apoio desenvolvidos no segundo termo do curso. O conteúdo está organizado em quatro áreas principais:
 
 - BCD: Banco de Dados
 - LIMA: Linguagem de Marcação
 - PBE: Programação Back-End
+- PSOF: páginas e layouts desenvolvidos em HTML/CSS
 
-O objetivo do projeto é centralizar os arquivos práticos e teóricos produzidos ao longo do período, facilitando o estudo, a revisão e a execução dos exercícios em qualquer momento.
+O objetivo do projeto é centralizar os arquivos práticos e teóricos produzidos ao longo do período, permitindo revisão, estudo e execução dos exercícios com facilidade.
 
 ## Descrição do projeto
 
-O projeto contém atividades de modelagem de banco de dados, desenvolvimento web com HTML e CSS, e programação em JavaScript com Node.js. Em cada módulo, são apresentados exercícios e desafios voltados à prática, com foco em lógica de programação, estrutura de páginas, modelagem conceitual e manipulação de dados.
+O workspace contém exercícios de modelagem conceitual e SQL, páginas estáticas em HTML/CSS, e scripts em JavaScript executados com Node.js. Cada pasta representa uma etapa de aprendizagem, com foco em lógica de programação, estrutura de páginas web, manipulação de dados e criação de projetos práticos.
 
 ## Tecnologias utilizadas
 
@@ -38,9 +39,11 @@ O projeto contém atividades de modelagem de banco de dados, desenvolvimento web
 │   ├── Aula06/
 │   ├── Aula07/
 │   ├── Aula08/
+│   ├── Aula09/
 │   ├── Smartcoffee/
 │   ├── Somativa/
-│   └── MODELOS_RELACIONAMENTOS_CONCEITUAL.brM
+│   ├── MODELOS_RELACIONAMENTOS_CONCEITUAL.brM
+│   └── DOCUMENTACAO_CLINICA_MEDICA_PROJETO.brM
 ├── LIMA/
 │   ├── Aula02/
 │   ├── Aula03/
@@ -49,85 +52,110 @@ O projeto contém atividades de modelagem de banco de dados, desenvolvimento web
 │   ├── Aula06/
 │   ├── Aula09/
 │   ├── Aula10/
+│   ├── Aula11/
 │   ├── Projeto/
 │   ├── Somativa/
-│   └── index.html
+│   └── node_modules/
 ├── PBE/
 │   ├── Atividades/
 │   ├── Aulas-01a10/
+│   │   ├── Aula01/
+│   │   ├── Aula02/
+│   │   ├── Aula03/
+│   │   ├── Aula04/
+│   │   ├── Aula05/
+│   │   ├── Aula06/
+│   │   ├── Aula07/
+│   │   ├── Aula08/
+│   │   └── Aula09/
 │   ├── Aulas-11a20/
+│   │   ├── Aula13/
+│   │   └── Aula14/
 │   ├── Desafios/
 │   ├── Exercicios/
 │   ├── Somativa/
 │   └── node_modules/
+├── PSOF/
+│   ├── CSS/
+│   ├── Imagens/
+│   ├── capa.html
+│   └── index.html
 ├── README.md
 ├── texto_para_gerar_readme
 ├── .git/
-└── .gitignore (se existir no ambiente)
+└── .gitignore
 ```
 
 ## Resumo dos exercícios e aulas
 
 ### BCD — Banco de Dados
 
-- `Aula04`: introdução à modelagem conceitual e criação de scripts SQL para clínica médica e SmartCoffee.
-- `Aula05`: aprofundamento em SQL com comandos como `CREATE`, `ALTER`, `INSERT`, `SELECT` e exclusão/remoção de dados.
-- `Aula06`: exploração de estrutura de banco e scripts com foco em banco `sesi_extensaovsTA`.
-- `Aula07`: modelagem de cardinalidade e relacionamento entre entidades.
-- `Aula08`: prática com desafios SQL e manipulação de dados.
-- `Smartcoffee`: arquivos de modelagem e scripts do projeto de cafeteria.
-- `Somativa`: atividade final de modelagem de oficina com clientes, peças, serviços e ordens de serviço.
+- `Aula04`: modelagem conceitual de banco de dados, criação de diagramas e scripts para clínica médica e SmartCoffee.
+- `Aula05`: aprofundamento em SQL com estruturas de dados, alterações e consultas de dados.
+- `Aula06`: scripts e organização de banco de dados com foco em estrutura e funcionalidade.
+- `Aula07`: cardinalidade e relações entre entidades em modelagem lógica.
+- `Aula08`: desafios de SQL e manipulação de registros.
+- `Aula09`: desenvolvimento de consultas e exercícios de DQL.
+- `Smartcoffee`: projeto de modelagem e banco para uma cafeteria.
+- `Somativa`: atividade final com cenário e modelagem de oficina e processos.
 
 ### LIMA — Linguagem de Marcação
 
-- `Aula02`: introdução ao HTML com formatação de texto, listas, imagens e links.
-- `Aula03`: continuidade em estruturação de páginas com HTML básico.
-- `Aula04`: trabalho com imagens, atributos e estilização simples.
-- `Aula05`: páginas semânticas com currículo, notícias e artigos.
-- `Aula06`: exercícios com CSS inline, interno, externo e listas.
-- `Aula09`: desenvolvimento de páginas de café e navegação visual.
-- `Aula10`: atividades de layout e CSS aplicado a exercícios específicos.
-- `Projeto`: site temático de cafeteria com diferentes páginas.
-- `Somativa`: atividade final com página institucional e elementos visuais.
+- `Aula02`: introdução ao HTML com textos, listas, imagens e links.
+- `Aula03`: construção de páginas com estrutura básica e organização de conteúdo.
+- `Aula04`: uso de imagens, recursos visuais e elementos de layout.
+- `Aula05`: páginas semânticas, currículo, notícias e artigos em HTML.
+- `Aula06`: exercícios com CSS inline, interno e externo, além de listas e formatação.
+- `Aula09`: páginas temáticas com foco em visual e navegação.
+- `Aula10`: exercícios de layout e estilização com CSS.
+- `Aula11`: continuidade de práticas com HTML/CSS e exercícios específicos.
+- `Projeto`: site dinâmico em estrutura estática para uma cafeteria.
+- `Somativa`: atividade final com proposta visual e conteúdo institucional.
 
 ### PBE — Programação Back-End
 
-- `Atividades`: exercícios práticos sobre operações com JS e lógica de programação.
-- `Aulas-01a10`: sequência de aulas sobre variáveis, condições, laços, arrays, funções, objetos, JSON, tratamento de erros e leitura de dados.
-- `Aulas-11a20`: exercícios mais avançados envolvendo sensores, ferramentas, inspeção e manipulação de arquivos/JSON.
-- `Desafios`: tarefas propostas com foco em resolução lógica e interpretação de problemas.
-- `Exercicios`: conjunto de exercícios complementares de programação.
-- `Somativa`: avaliações de lógica, cálculos e estruturas de dados aplicadas a cenários reais.
+- `Atividades`: exercícios práticos com lógica e manipulação de dados.
+- `Aulas-01a10`: estudo de variáveis, operações, laços, arrays, funções, objetos, JSON e leitura de dados.
+- `Aulas-11a20`: exercícios mais avançados, incluindo estruturas de código e desenvolvimento lógico em JavaScript.
+- `Desafios`: tarefas de interpretação e resolução de problemas.
+- `Exercicios`: conjunto complementar de práticas de programação.
+- `Somativa`: avaliações aplicadas em cenários reais de lógica e cálculo.
+
+### PSOF
+
+- `capa.html` e `index.html`: estrutura de página estática com layout e conteúdo visual.
+- `CSS/`: arquivos de estilos para organização e apresentação visual.
+- `Imagens/`: recursos gráficos utilizados na página.
 
 ## Como executar os arquivos com Node.js
 
 1. Abra o terminal no diretório do projeto:
 
 ```bash
-cd C:\caminho\para\2o_termo\2o_termo
+cd C:\caminho\para\2o_termo
 ```
 
-2. Execute qualquer arquivo `.js` com Node.js:
+2. Execute qualquer arquivo `.js` com o Node:
 
 ```bash
 node PBE/Aulas-01a10/Aula01/olaMundo.js
-node PBE/Aulas-01a10/Aula04/contador.js
-node PBE/Desafios/desafio1.js
+node PBE/Aulas-01a10/Aula01/app.js
+node PBE/Aulas-01a10/Aula01/imc.js
 ```
 
-3. Se o script depender de bibliotecas externas, instale as dependências na pasta:
+3. Caso o script utilize bibliotecas externas, instale as dependências do projeto ou da pasta desejada:
 
 ```bash
 npm install readline-sync
 ```
 
-4. Para executar arquivos na raiz do projeto ou em outra pasta:
+4. Para rodar arquivos locais na raiz ou em outra pasta:
 
 ```bash
 node nome-do-arquivo.js
 ```
 
-> Caso o arquivo receba entrada do usuário, o terminal solicitará dados durante a execução.
+> Se o script solicitar entrada do usuário, o terminal solicitará os valores durante a execução.
 
 ## Instruções de Git
 
@@ -143,10 +171,10 @@ git push origin nova-branch
 
 Comandos úteis:
 
-- `git pull` — atualiza o repositório local com as mudanças do remoto.
-- `git log` — exibe o histórico de commits.
-- `git branch` — lista as branches do projeto.
-- `git checkout <nome-da-branch>` — alterna entre branches.
+- `git pull` — atualiza o repositório local com as alterações do remoto.
+- `git log` — mostra o histórico de commits.
+- `git branch` — lista as branches existentes.
+- `git checkout <nome-da-branch>` — troca de branch.
 - `git restore --staged .` — remove arquivos do estágio sem apagar alterações locais.
 
 ## Autor
@@ -155,4 +183,4 @@ Larissa Ramires
 
 ## Observação
 
-Este repositório funciona como um conjunto de materiais didáticos, exercícios práticos e arquivos de apoio do segundo termo, sendo útil tanto para estudos quanto para revisão do conteúdo das disciplinas.
+Este repositório funciona como material de estudo do segundo termo, reunindo exercícios práticos, projetos e arquivos de apoio para revisão das disciplinas de Banco de Dados, Linguagem de Marcação e Programação Back-End.
