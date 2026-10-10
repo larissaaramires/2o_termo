@@ -323,11 +323,63 @@ img {
 }
 
 /* VERSO: IMAGEM */
+
+/* Cartão principal */
+.flip-card {
+    width: 280px;
+    height: 316px;
+    perspective: 1000px;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: transparent;
+}
+
+/* Parte que gira */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+/* Giro ao clicar */
+.flip-card.virado .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Frente e verso */
+.residuosFront,
+.residuosBack {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Frente */
+.residuosFront {
+    color: #17251c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Verso com imagem */
 .residuosBack {
     transform: rotateY(180deg);
     background-color: #c6dacf;
 }
 
+/* Imagem ocupa todo o verso */
 .residuosBack img {
     display: block;
     width: 100%;
@@ -335,24 +387,79 @@ img {
     object-fit: cover;
 }
 
-/* Legenda sobre a imagem */
-.legenda {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+/* Remove as margens padrão da figura */
+.residuosBack figure {
     width: 100%;
-    box-sizing: border-box;
-
-    padding: 18px 10px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-
-    background: linear-gradient(
-        transparent,
-        rgba(0, 0, 0, 0.8)
-    );
+    height: 100%;
+    margin: 0;
 }
+
+/* Orgânicos */
+.cartao-organicos .residuosFront {
+    background-color: #E8D5C4;
+    border: 2px solid #795548;
+}
+
+/* Recicláveis */
+.cartao-reciclaveis .residuosFront {
+    background-color: #E3F2FD;
+    border: 2px solid #1976D2;
+}
+
+/* Perigosos */
+.cartao-perigosos .residuosFront {
+    background-color: #FFEBEE;
+    border: 2px solid #C62828;
+}
+
+/* Rejeitos */
+.cartao-rejeitos .residuosFront {
+    background-color: #EEEEEE;
+    border: 2px solid #616161;
+}
+
+/* Resíduos volumosos */
+.cartao-volumosos .residuosFront {
+    background-color: #EFEBE9;
+    border: 2px solid #795548;
+}
+
+/* Entulho de construção */
+.cartao-entulho .residuosFront {
+    background-color: #F5F5F5;
+    border: 2px solid #757575;
+}
+
+/* Resíduos verdes */
+.cartao-verdes .residuosFront {
+    background-color: #E8F5E9;
+    border: 2px solid #2E7D32;
+}
+
+/* Garrafa PET e plásticos */
+.cartao-plasticos .residuosFront {
+    background-color: #E3F2FD;
+    border: 2px solid #1976D2;
+}
+
+/* Caixas e papéis */
+.cartao-papeis .residuosFront {
+    background-color: #E8EAF6;
+    border: 2px solid #3949AB;
+}
+
+/* Latas de alumínio */
+.cartao-aluminio .residuosFront {
+    background-color: #E0F2F1;
+    border: 2px solid #00897B;
+}
+
+/* Vidro */
+.cartao-vidro .residuosFront {
+    background-color: #F3E5F5;
+    border: 2px solid #8E24AA;
+}
+
 
 /* Adaptação para celulares */
 @media (max-width: 600px) {
