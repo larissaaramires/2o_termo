@@ -129,7 +129,6 @@ section#inicio {
 .inicioImg img {
     width: 100%;
     height: auto;
-    /* grid-column: 2;  */
     margin: 0;
 }
 
@@ -153,6 +152,18 @@ section#inicio {
 }
 
 /* Categoria  */
+.inicioCategoria {
+    background-color: #71bb8d41;
+    margin: 30px;
+    padding: 40px;
+}
+
+.inicioDescarte {
+    background-color: #71bb8d41;
+    margin: 30px;
+    padding: 40px;   
+}
+
 .categoriaConteudo, .categoriaConteudo2 {
     display: flex;
     justify-content: center;
@@ -161,7 +172,6 @@ section#inicio {
 }
 
 .residuosDomiciliaresFront, .residuosEspeciais {
-    background-color: #71bb8d41;
     width: 280px;
     padding: 25px;
     text-align: center;
@@ -181,7 +191,7 @@ section#inicio {
 }
 
 .residuosReciclaveis, .residuosNaoReciclaveis, .residuosRejeitos {
-    background-color: #71bb8d41;
+    /* background-color: #71bb8d41; */
     width: 280px;
     padding: 25px;
     text-align: center;
@@ -459,7 +469,53 @@ img {
     background-color: #F3E5F5;
     border: 2px solid #8E24AA;
 }
+/* Orgânicos */
+.organicos .residuosFront {
+    background-color: #F0F4E8;
+    border: 2px solid #6D8B4E;
+}
 
+/* Restos de alimentos */
+.restos-alimentos .residuosFront {
+    background-color: #F9EDF3;
+    border: 2px solid #A0527D;
+}
+
+/* Pilhas e baterias */
+.pilhas-baterias .residuosFront {
+    background-color: #FCEAE6;
+    border: 2px solid #D35445;
+}
+
+/* Lâmpadas Fluorescentes */
+.lampadas .residuosFront {
+    background-color: #FFF8D9;
+    border: 2px solid #C49A18;
+}
+
+/* Medicamentos vencidos */
+.medicamentos .residuosFront {
+    background-color: #E5F5F2;
+    border: 2px solid #328C83;
+}
+
+/* Óleo de cozinha */
+.oleo-cozinha .residuosFront {
+    background-color: #FFF0E2;
+    border: 2px solid #C46A25;
+}
+
+/* Lixo eletrônico */
+.lixo-eletronico .residuosFront {
+    background-color: #E9EDFA;
+    border: 2px solid #5367A5;
+}
+
+/* Tintas, solventes e produtos químicos */
+.produtos-quimicos .residuosFront {
+    background-color: #F3E8F8;
+    border: 2px solid #884C9E;
+}
 
 /* Adaptação para celulares */
 @media (max-width: 600px) {
@@ -479,4 +535,8 @@ img {
     .flip-card-inner {
         transition: none;
     }
+}
+
+.subtitulo {
+    color: #005f05;
 }
