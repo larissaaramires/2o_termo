@@ -1,140 +1,196 @@
+/* ============================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   ============================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background-color: #F4F6F0;
+    line-height: 1.5;
 }
 
-/* cabeçalho */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   CABEÇALHO E RODAPÉ
+   ============================================ */
 .cabecalho, footer {
     background-color: #198a44ec;
-    padding: 30px 10px;
+    padding: 20px 16px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
 }
 
-header h1 {
+header h1,
+footer h1 {
     color: aliceblue;
     margin: 10px;
+    font-size: 1.6rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
 }
 
 nav a {
     color: aliceblue;
     text-decoration: none;
-    margin: 20px;
+    margin: 4px 8px;
+    font-size: 15px;
+    transition: opacity 0.2s;
 }
 
-/* Carrossel */
-* {box-sizing:border-box}
+nav a:hover {
+    opacity: 0.75;
+}
 
+/* ============================================
+   CARROSSEL
+   ============================================ */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
 }
 
 .mySlides {
-  display: none;
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
 }
 
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 4px 0;
 }
 
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+    background-color: #717171;
 }
 
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+    from { opacity: .4; }
+    to   { opacity: 1; }
 }
 
-/* inicio */
+/* ============================================
+   SEÇÃO INÍCIO
+   ============================================ */
 section#inicio {
     background-color: #71bb8d41;
     margin: 30px;
     padding: 40px;
 }
 
-/* título, texto */
 .conteudoInicio {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
-.conteudoInicio h1, 
-.conteudoInicio p {
-    margin: 10px;
-    flex: 1;
+.conteudoInicio > * {
+    flex: 1 1 300px;
 }
 
-/* imagem */
+.textoInicio h2 {
+    margin: 10px 0;
+    font-size: 1.8rem;
+}
+
+.textoInicio p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
 .inicioImg img {
     width: 100%;
     height: auto;
     margin: 0;
 }
 
-/* quadros */
+/* Quadros do início */
 .inicioQuadros {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin-top: 30px;
@@ -142,468 +198,483 @@ section#inicio {
 
 .quadros {
     background-color: #71bb8d41;
-    width: 280px;
-    padding: 25px;
-    text-align: center;
-}
-
-.inicioQuadros h1 {
-    margin: 20px;
-}
-
-/* Categoria  */
-.inicioCategoria {
-    background-color: #71bb8d41;
-    margin: 30px;
-    padding: 40px;
-}
-
-.inicioDescarte {
-    background-color: #71bb8d41;
-    margin: 30px;
-    padding: 40px;   
-}
-
-.categoriaConteudo, .categoriaConteudo2 {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.residuosDomiciliaresFront, .residuosEspeciais {
-    width: 280px;
-    padding: 25px;
-    text-align: center;
-    margin: 30px;
-}
-
-.categoriaCabecalho, .categoriaCabecalho2  {
-    margin: 40px;
-}
-
-/* Descarte  */
-.descarteConteudo, .descarteConteudo2, .descarteConteudo3 {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.residuosReciclaveis, .residuosNaoReciclaveis, .residuosRejeitos {
-    width: 280px;
-    padding: 25px;
-    text-align: center;
-    margin: 30px;
-}
-
-.descarteCabecalho, .descarteCabecalho2, .categoriaCabecalho3  {
-    margin: 30px;
-}
-
-/* Ecoponto */
-.ecopontoConteudo {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    margin: 40px;
-}
-
-.ecopontoCabecalho {
-    margin: 40px;
-}
-
-.inicioEcoponto {
-    background-color: #71bb8d41;
-    margin: 30px;
-    padding: 40px;
-}
-
-/* Conscientização  */
-.inicioConscientizacao {
-    background-color: #71bb8d41;
-    margin: 30px;
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.conscientizacaoCabecalho {
-    justify-content: flex-end;
-    margin: 20px;
-}
-
-.campanhas img {
-    display: block;
+    flex: 1 1 250px;
     max-width: 100%;
-    width: 500px;
-    margin: 20px auto;
-    justify-content: flex-start;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
 }
 
-/* Conscientização 2  */
+.quadros h3 {
+    margin: 10px 0;
+}
+
+.quadros p {
+    margin: 10px 0;
+}
+
+/* ============================================
+   SEÇÕES CATEGORIA / DESCARTE / ECOPONTO
+   ============================================ */
+.inicioCategoria,
+.inicioDescarte,
+.inicioEcoponto,
+.inicioConscientizacao,
 .inicioConscientizacao2 {
     background-color: #71bb8d41;
     margin: 30px;
     padding: 40px;
-    display: flex;
-    align-items: center;    
+    border-radius: 8px;
 }
 
+/* Cabeçalhos das seções */
+.categoriaCabecalho,
+.categoriaCabecalho2,
+.descarteCabecalho,
+.descarteCabecalho2,
+.ecopontoCabecalho,
+.conscientizacaoCabecalho,
 .conscientizacaoCabecalho2 {
-    margin: 40px;
-    justify-content: flex-end;
+    margin: 20px 0;
 }
 
-.dicas img {
-    display: block;
-    max-width: 100%;
-    width: 500px;
-    margin: 30px;
-    justify-content: flex-start;    
+.subtitulo {
+    color: #005f05;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 0 6px;
 }
 
-/* Deixando para todas as telas */
-.mySlides fade, inicioImg {
-    display: grid;
-    grid-template-columns: repeat(autofit, minmax(300px, 1fr));
-    gap: 23px;
-    list-style: none;
-    padding: 0;
+.categoriaCabecalho h2,
+.descarteCabecalho h2,
+.ecopontoCabecalho h2,
+.conscientizacaoCabecalho h2,
+.conscientizacaoCabecalho2 h2 {
+    margin: 0;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* celular */
-@media (max-width: 500px) {
-    .mySlides fade, inicioImg{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* tablet */
-@media (max-width: 768px) {
-    .mySlides fade, inicioImg{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* computador */
-@media (max-width: 1024px) {
-    .mySlides fade, inicioImg{
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-/* Cartões */
-.categoriaConteudo {
+/* Containers de cartões */
+.categoriaConteudo,
+.descarteConteudo,
+.descarteConteudo2,
+.descarteConteudo3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    margin: 30px;
+    gap: 25px;
+    margin: 20px 0;
     text-align: center;
 }
 
-/* Cartão principal */
+/* ============================================
+   CARTÕES FLIP
+   ============================================ */
 .flip-card {
-    width: 280px;
-    height: 316px;
+    width: min(280px, 100%);
+    height: auto;
+    aspect-ratio: 280 / 316;
     perspective: 1000px;
     cursor: pointer;
     flex-shrink: 0;
     border-radius: 12px;
     background: transparent;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito de levantar */
-.flip-card:hover, .quadros:hover {
+.flip-card:hover,
+.quadros:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.18);
 }
 
-/* Elemento que gira */
 .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-
     transform-style: preserve-3d;
     transition: transform 0.8s ease;
 }
 
-/* Rotação ao clicar */
 .flip-card.virado .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* Frente e verso */
 .residuosFront,
 .residuosBack {
     position: absolute;
     inset: 0;
-
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
     overflow: hidden;
-
     border-radius: 12px;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
 
-/* FRENTE: TEXTO */
+/* Frente: texto */
 .residuosFront {
     background-color: #c6dacf;
     color: #17251c;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    padding: 25px;
+    padding: 20px;
     text-align: center;
 }
 
 .residuosFront h3 {
-    font-size: 21px;
-    margin: 0 0 15px;
+    font-size: 1.15rem;
+    margin: 0 0 12px;
 }
 
 .residuosFront p {
-    font-size: 16px;
+    font-size: 0.95rem;
     line-height: 1.5;
     margin: 0;
 }
 
 .dica {
-    margin-top: 20px;
-    font-size: 12px;
+    margin-top: 15px;
+    font-size: 11px;
     opacity: 0.7;
 }
 
-/* VERSO: IMAGEM */
-
-/* Cartão principal */
-.flip-card {
-    width: 280px;
-    height: 316px;
-    perspective: 1000px;
-    cursor: pointer;
-    flex-shrink: 0;
-    border-radius: 12px;
-    background: transparent;
-}
-
-/* Parte que gira */
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.8s ease;
-}
-
-/* Giro ao clicar */
-.flip-card.virado .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-/* Frente e verso */
-.residuosFront,
-.residuosBack {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 12px;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-/* Frente */
-.residuosFront {
-    color: #17251c;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-    text-align: center;
-}
-
-/* Verso com imagem */
+/* Verso: imagem */
 .residuosBack {
     transform: rotateY(180deg);
     background-color: #c6dacf;
 }
 
-/* Imagem ocupa todo o verso */
 .residuosBack img {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Remove as margens padrão da figura */
-.residuosBack figure {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
+/* ============================================
+   CORES DOS CARTÕES POR CATEGORIA
+   ============================================ */
 
-/* Orgânicos */
+/* Domiciliares */
 .cartao-organicos .residuosFront {
     background-color: #E8D5C4;
     border: 2px solid #795548;
 }
-
-/* Recicláveis */
 .cartao-reciclaveis .residuosFront {
     background-color: #E3F2FD;
     border: 2px solid #1976D2;
 }
-
-/* Perigosos */
 .cartao-perigosos .residuosFront {
     background-color: #FFEBEE;
     border: 2px solid #C62828;
 }
-
-/* Rejeitos */
 .cartao-rejeitos .residuosFront {
     background-color: #EEEEEE;
     border: 2px solid #616161;
 }
 
-/* Resíduos volumosos */
+/* Especiais */
 .cartao-volumosos .residuosFront {
     background-color: #EFEBE9;
     border: 2px solid #795548;
 }
-
-/* Entulho de construção */
 .cartao-entulho .residuosFront {
     background-color: #F5F5F5;
     border: 2px solid #757575;
 }
-
-/* Resíduos verdes */
 .cartao-verdes .residuosFront {
     background-color: #E8F5E9;
     border: 2px solid #2E7D32;
 }
 
-/* Garrafa PET e plásticos */
+/* Recicláveis */
 .cartao-plasticos .residuosFront {
     background-color: #E3F2FD;
     border: 2px solid #1976D2;
 }
-
-/* Caixas e papéis */
 .cartao-papeis .residuosFront {
     background-color: #E8EAF6;
     border: 2px solid #3949AB;
 }
-
-/* Latas de alumínio */
 .cartao-aluminio .residuosFront {
     background-color: #E0F2F1;
     border: 2px solid #00897B;
 }
-
-/* Vidro */
 .cartao-vidro .residuosFront {
     background-color: #F3E5F5;
     border: 2px solid #8E24AA;
 }
-/* Orgânicos */
+
+/* Descarte: orgânicos e rejeitos */
 .organicos .residuosFront {
     background-color: #F0F4E8;
     border: 2px solid #6D8B4E;
 }
-
-/* Lixo do Banheiro */
 .lixo-banheiro .residuosFront {
     background-color: #F7EDEF;
     border: 2px solid #9B5D68;
 }
 
-/* Pilhas e baterias */
+/* Descarte: perigosos */
 .pilhas-baterias .residuosFront {
     background-color: #FCEAE6;
     border: 2px solid #D35445;
 }
-
-/* Lâmpadas Fluorescentes */
 .lampadas .residuosFront {
     background-color: #FFF8D9;
     border: 2px solid #C49A18;
 }
-
-/* Medicamentos vencidos */
 .medicamentos .residuosFront {
     background-color: #E5F5F2;
     border: 2px solid #328C83;
 }
-
-/* Óleo de cozinha */
 .oleo-cozinha .residuosFront {
     background-color: #FFF0E2;
     border: 2px solid #C46A25;
 }
-
-/* Lixo eletrônico */
 .lixo-eletronico .residuosFront {
     background-color: #E9EDFA;
     border: 2px solid #5367A5;
 }
-
-/* Tintas, solventes e produtos químicos */
 .produtos-quimicos .residuosFront {
     background-color: #F3E8F8;
     border: 2px solid #884C9E;
 }
 
-/* Adaptação para celulares */
-@media (max-width: 600px) {
-    .categoriaConteudo {
-        margin: 20px 10px;
-        gap: 20px;
+/* ============================================
+   ECOPONTO
+   ============================================ */
+.ecopontoConteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Consulta de CEP */
+.container-consulta-lixo {
+    background: #ffffff;
+    max-width: 450px;
+    margin: 30px auto 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border: 2px solid #28a745;
+}
+
+.container-consulta-lixo p {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.busca-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.container-consulta-lixo input {
+    padding: 10px;
+    width: 65%;
+    min-width: 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container-consulta-lixo button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.container-consulta-lixo button:hover {
+    background-color: #218838;
+}
+
+.container-consulta-lixo .resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9f5ed;
+    border-radius: 6px;
+    text-align: left;
+    display: none;
+}
+
+.container-consulta-lixo .resultado hr {
+    border: 0;
+    border-top: 1px solid #d4edda;
+    margin: 10px 0;
+}
+
+/* ============================================
+   CONSCIENTIZAÇÃO
+   ============================================ */
+.inicioConscientizacao,
+.inicioConscientizacao2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.inicioConscientizacao > *,
+.inicioConscientizacao2 > * {
+    flex: 1 1 300px;
+}
+
+.campanhas,
+.dicas {
+    margin: 0;
+}
+
+.campanhas img,
+.dicas img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.conscientizacaoCabecalho,
+.conscientizacaoCabecalho2 {
+    margin: 0;
+}
+
+.conscientizacaoCabecalho2 ul {
+    padding-left: 20px;
+}
+
+.conscientizacaoCabecalho2 li {
+    margin: 8px 0;
+}
+
+/* ============================================
+   RESPONSIVIDADE — TABLET (até 900px)
+   ============================================ */
+@media (max-width: 900px) {
+    section#inicio,
+    .inicioCategoria,
+    .inicioDescarte,
+    .inicioEcoponto,
+    .inicioConscientizacao,
+    .inicioConscientizacao2 {
+        margin: 20px 14px;
+        padding: 28px 20px;
     }
 
-    .flip-card {
-        width: min(280px, 100%);
+    .textoInicio h2 {
+        font-size: 1.5rem;
+    }
+
+    .cabecalho, footer {
+        justify-content: center;
+        text-align: center;
+    }
+
+    header h1, footer h1 {
+        flex: 1 1 100%;
+        text-align: center;
+        margin: 0;
     }
 }
 
-/* Respeita a preferência por menos animações */
+/* ============================================
+   RESPONSIVIDADE — CELULAR (até 600px)
+   ============================================ */
+@media (max-width: 600px) {
+    section#inicio,
+    .inicioCategoria,
+    .inicioDescarte,
+    .inicioEcoponto,
+    .inicioConscientizacao,
+    .inicioConscientizacao2 {
+        margin: 14px 8px;
+        padding: 20px 14px;
+    }
+
+    .textoInicio h2 {
+        font-size: 1.35rem;
+    }
+
+    .textoInicio p {
+        font-size: 0.95rem;
+    }
+
+    .quadros {
+        flex: 1 1 100%;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        margin: 3px 5px;
+        font-size: 14px;
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .numbertext {
+        font-size: 11px;
+    }
+
+    .container-consulta-lixo input {
+        width: 100%;
+    }
+
+    .container-consulta-lixo button {
+        width: 100%;
+    }
+
+    .categoriaConteudo,
+    .descarteConteudo {
+        gap: 18px;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE — TELAS MUITO PEQUENAS (até 380px)
+   ============================================ */
+@media (max-width: 380px) {
+    .flip-card {
+        width: 100%;
+    }
+
+    header h1, footer h1 {
+        font-size: 1.4rem;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+}
+
+/* ============================================
+   ACESSIBILIDADE — REDUZIR ANIMAÇÕES
+   ============================================ */
 @media (prefers-reduced-motion: reduce) {
     .flip-card,
-    .flip-card-inner {
+    .flip-card-inner,
+    .fade,
+    .prev,
+    .next,
+    .dot {
         transition: none;
+        animation: none;
     }
-}
-
-.subtitulo {
-    color: #005f05;
-}
-
-footer h1 {
-    color: aliceblue;
-    margin: 10px;
 }

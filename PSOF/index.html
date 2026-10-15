@@ -7,12 +7,10 @@
     <title>WasteWise</title>
 </head>
 <body>
-    
 
-
-
-
-    <!-- CABEÇALHO  -->
+    <!-- ============================================
+         CABEÇALHO
+         ============================================ -->
     <header>
         <article class="cabecalho">
             <h1>WasteWise</h1>
@@ -22,57 +20,55 @@
                 <a href="#descarte">Descarte</a>
                 <a href="#ecoponto">Ecoponto</a>
                 <a href="#conscientizacao">Conscientização</a>
+                <a href="#dicas">Dicas</a>
                 <a href="#contato">Contato</a>
             </nav>
         </article>
     </header>
 
-
-
-
-
-    <!-- CARROSSEL -->
-    <!-- Slideshow container -->
+    <!-- ============================================
+         CARROSSEL
+         ============================================ -->
     <div class="slideshow-container">
 
-    <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
             <div class="numbertext">1 / 5</div>
-            <img src="Imagens/img1_carrossel.jpg" style="width:100%">
+            <img src="Imagens/img1_carrossel.jpg" alt="Slide 1">
             <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 5</div>
-            <img src="Imagens/img2_carrossel.jpg" style="width:100%">
+            <img src="Imagens/img2_carrossel.jpg" alt="Slide 2">
             <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 5</div>
-            <img src="Imagens/img3_carrossel.jpg" style="width:100%">
+            <img src="Imagens/img3_carrossel.jpg" alt="Slide 3">
             <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">4 / 5</div>
-            <img src="Imagens/img4_carrossel.jpg" style="width:100%">
+            <img src="Imagens/img4_carrossel.jpg" alt="Slide 4">
             <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">5 / 5</div>
-            <img src="Imagens/img5_carrossel.jpg" style="width:100%">
+            <img src="Imagens/img5_carrossel.jpg" alt="Slide 5">
             <div class="text"></div>
-        </div>  
+        </div>
 
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)"><</a>
-        <a class="next" onclick="plusSlides(1)">></a>
+        <!-- Botões anterior/próximo -->
+        <a class="prev" onclick="plusSlides(-1)">&lt;</a>
+        <a class="next" onclick="plusSlides(1)">&gt;</a>
     </div>
+
     <br>
 
-    <!-- The dots/circles -->
+    <!-- Indicadores (bolinhas) -->
     <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
@@ -80,38 +76,35 @@
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
     </div>
-    <!-- Final Carrossel -->
-    
 
-
-
-
+    <!-- ============================================
+         MAIN
+         ============================================ -->
     <main>
 
-        <!-- INÍCIO  -->
+        <!-- ============ INÍCIO ============ -->
         <section id="inicio" class="inicio">
             <article class="conteudoInicio">
                 <div class="textoInicio">
-                    <h2>
-                        Gestão Sustentável e Pontual de Resíduos
-                    </h2>
+                    <h2>Gestão Sustentável e Pontual de Resíduos</h2>
                     <p>
                         A WasteWise promove uma gestão de resíduos sustentável e eficiente,
-                        incentivando o descarte correto, o reaproveitamento e a redução 
+                        incentivando o descarte correto, o reaproveitamento e a redução
                         dos impactos ambientais.
                     </p>
                 </div>
                 <figure class="inicioImg">
                     <img src="Imagens/imagemInicio.png" alt="Gestão Sustentável e Pontual de Resíduos">
                 </figure>
-            </article>  
+            </article>
 
-            <!-- QUADROS DO INÍCIO  -->
+            <!-- Quadros do início -->
             <article class="inicioQuadros">
                 <div class="quadros">
                     <h3>Organização</h3>
                     <p>
-                        Cidades limpas e organizadas, com processos claros e eficientes para o gerenciamento de resíduos.
+                        Cidades limpas e organizadas, com processos claros e
+                        eficientes para o gerenciamento de resíduos.
                     </p>
                 </div>
 
@@ -131,26 +124,19 @@
             </article>
         </section>
 
-
-
-
-
-        <!-- CATEGORIAS  -->
+        <!-- ============ CATEGORIAS: DOMICILIARES ============ -->
         <section id="categorias" class="inicioCategoria">
 
-            <!-- CABEÇALHO CATEGORIA  -->
             <header class="categoriaCabecalho">
-                <P class="subtitulo">CATEGORIA</P>
-                <h2>Resíduos Domiciliares</h2> 
+                <p class="subtitulo">CATEGORIA</p>
+                <h2>Resíduos Domiciliares</h2>
             </header>
 
             <article class="categoriaConteudo">
 
-
-                <!-- CARTÃO 1: ORGÂNICOS  -->
+                <!-- Cartão 1: Orgânicos -->
                 <div class="residuos flip-card cartao-organicos">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Resíduos Orgânicos</h3>
                             <p>
@@ -160,20 +146,15 @@
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/residuosOrganicos.png"
-                                alt="Resíduos orgânicos">
+                            <img src="./Imagens/residuosOrganicos.png" alt="Resíduos orgânicos">
                         </div>
-
                     </div>
                 </div>
 
-
-                <!-- CARTÃO 2: RECICLÁVEIS -->
+                <!-- Cartão 2: Recicláveis -->
                 <div class="residuos flip-card cartao-reciclaveis">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Resíduos Recicláveis</h3>
                             <p>
@@ -183,20 +164,15 @@
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/residuosReciclaveis.png"
-                                 alt="Materiais recicláveis">
+                            <img src="./Imagens/residuosReciclaveis.png" alt="Materiais recicláveis">
                         </div>
-
                     </div>
                 </div>
 
-
-                <!-- CARTÃO 3: PERIGOSOS -->
+                <!-- Cartão 3: Perigosos -->
                 <div class="residuos flip-card cartao-perigosos">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Resíduos Perigosos</h3>
                             <p>
@@ -206,63 +182,49 @@
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/residuosPerigosos.png"
-                                 alt="Pilhas e baterias para descarte">
+                            <img src="./Imagens/residuosPerigosos.png" alt="Pilhas e baterias para descarte">
                         </div>
-
                     </div>
                 </div>
 
-
-                <!-- CARTÃO 4: REJEITOS  -->
+                <!-- Cartão 4: Rejeitos -->
                 <div class="residuos flip-card cartao-rejeitos">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Resíduos Rejeitos</h3>
                             <p>
-                                Lixo do banheiro e materiais 
+                                Lixo do banheiro e materiais
                                 engordurados. Vão para o aterro
                                 sanitário na coleta comum.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
-                        </div>  
-
+                        </div>
                         <div class="residuosBack">
                             <img src="./Imagens/residuosRejeitos.jpg"
-                                 alt="Lixo do banheiro e materiais 
-                                engordurados">
+                                 alt="Lixo do banheiro e materiais engordurados">
                         </div>
-
-                    </div>     
-                </div>  
+                    </div>
+                </div>
 
             </article>
-
         </section>
 
         <br>
 
-
-
-        <!-- CATEGORIA PARTE 2  -->
+        <!-- ============ CATEGORIAS: ESPECIAIS ============ -->
         <section class="inicioCategoria">
 
-            <!-- CABEÇALHO CATEGORIA 2 -->
             <header class="categoriaCabecalho">
                 <p class="subtitulo">CATEGORIA</p>
-                <h2>Resíduos Especiais</h2> 
+                <h2>Resíduos Especiais</h2>
             </header>
 
             <article class="categoriaConteudo">
 
-
-                <!-- CARTÃO 1: VOLUMOSOS  -->
+                <!-- Cartão 1: Volumosos -->
                 <div class="residuos flip-card cartao-volumosos">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Resíduos Volumosos</h3>
                             <p>
@@ -272,71 +234,54 @@
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/residuosVolumosos.jpg"
-                                 alt="Resíduos Volumosos">
+                            <img src="./Imagens/residuosVolumosos.jpg" alt="Resíduos Volumosos">
                         </div>
-
                     </div>
                 </div>
 
-
-                <!-- CARTÃO 2: ENTULHO -->
+                <!-- Cartão 2: Entulho -->
                 <div class="residuos flip-card cartao-entulho">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Entulho de Construção</h3>
                             <p>
                                 Restos de obras, tijolos, azulejos e
-                                cimento em pequenas quantidades. Devem 
-                                ser descartados nos pontos de entrega 
+                                cimento em pequenas quantidades. Devem
+                                ser descartados nos pontos de entrega
                                 voluntária da cidade.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/entulhoConstrucao.jpg"
-                                 alt="Entulho de Construção">
+                            <img src="./Imagens/entulhoConstrucao.jpg" alt="Entulho de Construção">
                         </div>
-
                     </div>
                 </div>
 
-
-                <!-- CARTÃO 3: VERDES -->
+                <!-- Cartão 3: Verdes -->
                 <div class="residuos flip-card cartao-verdes">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Resíduos Verdes</h3>
                             <p>
                                 Podas de árvores, restos de jardinagem e
-                                folhagem. Requerem descarte próprio para 
+                                folhagem. Requerem descarte próprio para
                                 compostagem ou recolha agendada.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/residuosVerde.jpg"
-                                 alt="Resíduos Verdes">
+                            <img src="./Imagens/residuosVerde.jpg" alt="Resíduos Verdes">
                         </div>
-
-                    </div>   
-                </div>  
+                    </div>
+                </div>
 
             </article>
-            
         </section>
 
-
-
-        <!-- DESCARTE  -->
-
-         <section id="descarte" class="inicioDescarte">
+        <!-- ============ DESCARTE: ORGÂNICOS ============ -->
+        <section id="descarte" class="inicioDescarte">
 
             <header class="descarteCabecalho">
                 <p class="subtitulo">DESCARTE</p>
@@ -344,67 +289,56 @@
             </header>
 
             <article class="descarteConteudo">
-
                 <div class="residuos flip-card organicos">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Resto de Alimentos</h3>
                             <p>
-                                Coloque em sacos bem fechados para 
-                                a coleta comum ou destine para a 
+                                Coloque em sacos bem fechados para
+                                a coleta comum ou destine para a
                                 compostagem.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteOrganico.jpg"
-                                 alt="Resíduos Não Recicláveis">
+                            <img src="./Imagens/descarteOrganico.jpg" alt="Resíduos Não Recicláveis">
                         </div>
                     </div>
                 </div>
-
             </article>
 
         </section>
 
+        <!-- ============ DESCARTE: RECICLÁVEIS ============ -->
         <section class="inicioDescarte">
 
-            <!-- CABEÇALHO DESCARTE  -->
             <header class="descarteCabecalho">
                 <p class="subtitulo">DESCARTE</p>
-                <h2>Recicláveis</h2> 
+                <h2>Recicláveis</h2>
             </header>
 
             <article class="descarteConteudo">
 
-
-                <!-- CARTÃO 1: RECICLÁVEIS -->
+                <!-- Cartão 1: Plásticos -->
                 <div class="residuos flip-card cartao-plasticos">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Garrafa Pet e Plásticos</h3>
                             <p>
                                 Lave, amasse e coloque na coleta
-                                seletiva (com a tampa).   
+                                seletiva (com a tampa).
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/descartePlasticos.jpg"
-                                 alt="Resíduos Recicláveis">
+                            <img src="./Imagens/descartePlasticos.jpg" alt="Resíduos Recicláveis">
                         </div>
                     </div>
                 </div>
-                
 
-                <!-- CARTÃO 2: RECICLÁVEIS -->
+                <!-- Cartão 2: Papéis -->
                 <div class="residuos flip-card cartao-papeis">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Caixas e Papéis</h3>
                             <p>
@@ -413,52 +347,42 @@
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteCaixasEPapeis.jpg"
-                                 alt="Resíduos Recicláveis">
+                            <img src="./Imagens/descarteCaixasEPapeis.jpg" alt="Resíduos Recicláveis">
                         </div>
                     </div>
                 </div>
 
-
-                <!-- CARTÃO 3: RECICLÁVEIS -->
+                <!-- Cartão 3: Alumínio -->
                 <div class="residuos flip-card cartao-aluminio">
                     <div class="flip-card-inner">
-                
                         <div class="residuosFront">
                             <h3>Latas de Alumínio</h3>
                             <p>
-                                Enxágue, empurre a tampa para dentro 
+                                Enxágue, empurre a tampa para dentro
                                 e vá para a coleta seletiva.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteLatas.png"
-                                 alt="Resíduos Recicláveis">
+                            <img src="./Imagens/descarteLatas.png" alt="Resíduos Recicláveis">
                         </div>
                     </div>
                 </div>
 
-
-                <!-- CARTÃO 4: RECICLÁVEIS -->
+                <!-- Cartão 4: Vidro -->
                 <div class="residuos flip-card cartao-vidro">
                     <div class="flip-card-inner">
-                
                         <div class="residuosFront">
                             <h3>Vidro</h3>
                             <p>
-                                Se estiver partido, embale num papelão 
+                                Se estiver partido, embale num papelão
                                 identificado antes de ir para a coleta seletiva.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-                        
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteVidros.jpg"
-                                 alt="Resíduos Recicláveis">
+                            <img src="./Imagens/descarteVidros.jpg" alt="Resíduos Recicláveis">
                         </div>
                     </div>
                 </div>
@@ -466,14 +390,7 @@
             </article>
         </section>
 
-
-
-        
-
-
-        
-            
-
+        <!-- ============ DESCARTE: PERIGOSOS ============ -->
         <section class="inicioDescarte">
 
             <header class="descarteCabecalho">
@@ -481,222 +398,220 @@
                 <h2>Resíduos Perigosos</h2>
             </header>
 
-
             <article class="descarteConteudo">
 
+                <!-- Pilhas e Baterias -->
                 <div class="residuos flip-card pilhas-baterias">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Pilhas e Baterias</h3>
                             <p>
-                                Armazene em um recipiente seco e leve aos 
-                                pontos de coleta em supermercados, lojas de 
-                                eletrônicos ou ecopontos. Nunca jogue no lixo 
-                                comum.  
+                                Armazene em um recipiente seco e leve aos
+                                pontos de coleta em supermercados, lojas de
+                                eletrônicos ou ecopontos. Nunca jogue no lixo
+                                comum.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/descartePilhas.jpg"
-                                 alt="Resíduos Especiais">
+                            <img src="./Imagens/descartePilhas.jpg" alt="Resíduos Especiais">
                         </div>
                     </div>
                 </div>
 
+                <!-- Lâmpadas -->
                 <div class="residuos flip-card lampadas">
                     <div class="flip-card-inner">
-                
                         <div class="residuosFront">
                             <h3>Lâmpadas Fluorescentes</h3>
                             <p>
-                                Guarde na embalagem original ou envolva em 
-                                papelão para não quebrar. Entregue em ecopontos 
-                                ou locais de venda habilitados para logística 
+                                Guarde na embalagem original ou envolva em
+                                papelão para não quebrar. Entregue em ecopontos
+                                ou locais de venda habilitados para logística
                                 reversa.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteLampadas.jpg"
-                                 alt="Resíduos Especiais">
+                            <img src="./Imagens/descarteLampadas.jpg" alt="Resíduos Especiais">
                         </div>
                     </div>
                 </div>
 
+                <!-- Medicamentos -->
                 <div class="residuos flip-card medicamentos">
                     <div class="flip-card-inner">
-                
                         <div class="residuosFront">
                             <h3>Medicamentos Vencidos</h3>
                             <p>
-                                Mantenha nas embalagens e leve aos pontos de 
-                                recolha em farmácias ou unidades de saúde. Não 
+                                Mantenha nas embalagens e leve aos pontos de
+                                recolha em farmácias ou unidades de saúde. Não
                                 jogue no vaso sanitário nem no lixo comum.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteMedicamentos.jpg"
-                                 alt="Resíduos Especiais">
+                            <img src="./Imagens/descarteMedicamentos.jpg" alt="Resíduos Especiais">
                         </div>
                     </div>
                 </div>
 
+                <!-- Óleo de cozinha -->
                 <div class="residuos flip-card oleo-cozinha">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Óleo de cozinha usado</h3>
                             <p>
-                                Espere esfriar, armazene em uma garrafa 
-                                PET bem fechada e entregue em postos de 
+                                Espere esfriar, armazene em uma garrafa
+                                PET bem fechada e entregue em postos de
                                 coleta específicos, ecopontos ou cooperativas.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
-                        </div>  
-                        
+                        </div>
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteOleo.png"
-                                 alt="Resíduos Especiais">
+                            <img src="./Imagens/descarteOleo.png" alt="Resíduos Especiais">
                         </div>
                     </div>
                 </div>
 
+                <!-- Lixo eletrônico -->
                 <div class="residuos flip-card lixo-eletronico">
                     <div class="flip-card-inner">
-                
                         <div class="residuosFront">
                             <h3>Lixo Eletrônico</h3>
                             <p>
-                                Leve os aparelhos quebrados ou antigos a pontos 
-                                de coleta de lixo ou mutirões de reciclagem 
+                                Leve os aparelhos quebrados ou antigos a pontos
+                                de coleta de lixo ou mutirões de reciclagem
                                 eletrônica da cidade.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteEletronico.jpg"
-                                 alt="Resíduos Especiais">
+                            <img src="./Imagens/descarteEletronico.jpg" alt="Resíduos Especiais">
                         </div>
                     </div>
                 </div>
 
+                <!-- Produtos químicos -->
                 <div class="residuos flip-card produtos-quimicos">
                     <div class="flip-card-inner">
-
                         <div class="residuosFront">
                             <h3>Tintas, Solventes e Produtos Químicos</h3>
                             <p>
-                                Não despeje em ralos ou no solo. Entregue as sobras e 
-                                latas nos postos de recolha de resíduos perigosos ou 
+                                Não despeje em ralos ou no solo. Entregue as sobras e
+                                latas nos postos de recolha de resíduos perigosos ou
                                 ecopontos municipais.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
-                        </div> 
-
+                        </div>
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteTintas.jpg"
-                                 alt="Resíduos Especiais">
+                            <img src="./Imagens/descarteTintas.jpg" alt="Resíduos Especiais">
                         </div>
                     </div>
                 </div>
 
             </article>
-
         </section>
-        
-        
+
+        <!-- ============ DESCARTE: REJEITOS ============ -->
         <section class="inicioDescarte">
 
             <header class="descarteCabecalho">
                 <p class="subtitulo">DESCARTE</p>
                 <h2>Rejeitos</h2>
             </header>
- 
 
             <article class="descarteConteudo">
 
                 <div class="residuos flip-card lixo-banheiro">
                     <div class="flip-card-inner">
-
-
                         <div class="residuosFront">
                             <h3>Lixo do Banheiro</h3>
                             <p>
-                                Coloque os resíduos em sacos bem fechados e 
-                                disponibilize-os para a coleta pública no 
+                                Coloque os resíduos em sacos bem fechados e
+                                disponibilize-os para a coleta pública no
                                 dia e horário corretos.
                             </p>
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
-
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteLixoBanheiro.png"
-                                 alt="Resíduos Rejeitos">
+                            <img src="./Imagens/descarteLixoBanheiro.png" alt="Resíduos Rejeitos">
                         </div>
                     </div>
                 </div>
-                
+
             </article>
-        
         </section>
 
-
+        <!-- ============ ECOPONTO ============ -->
         <section id="ecoponto" class="inicioEcoponto">
 
             <header class="ecopontoCabecalho">
                 <p class="subtitulo">PONTOS DE COLETA</p>
-                <h2>Ecopontos</h2>
+                <h2>Ecopontos e Consulta de Coleta</h2>
             </header>
 
             <article class="ecopontoConteudo">
                 <p>
-                    Nós facilitamos o descarte correto de resíduos por 
-                    meio de ecopontos, incentivando a separação, a 
-                    reciclagem e a preservação do meio ambiente, deixe 
+                    Nós facilitamos o descarte correto de resíduos por
+                    meio de ecopontos, incentivando a separação, a
+                    reciclagem e a preservação do meio ambiente, deixe
                     seu lixo no ecoponto mais perto do seu bairro.
                 </p>
             </article>
 
+            <!-- Ferramenta de consulta de CEP -->
+            <div class="container-consulta-lixo">
+                <p>Digite seu CEP abaixo para consultar a coleta:</p>
+
+                <div class="busca-box">
+                    <input type="text" id="cep" placeholder="Ex: 01001000" maxlength="8" inputmode="numeric">
+                    <button onclick="buscarHorario()">Buscar</button>
+                </div>
+
+                <div id="resultado" class="resultado">
+                    <p><strong id="rua"></strong></p>
+                    <p id="bairro"></p>
+                    <hr>
+                    <p>🚚 <strong>Dias:</strong> <span id="dias"></span></p>
+                    <p>⏰ <strong>Horário estimado:</strong> <span id="horario"></span></p>
+                </div>
+            </div>
+
         </section>
 
-
+        <!-- ============ CONSCIENTIZAÇÃO ============ -->
         <section id="conscientizacao" class="inicioConscientizacao">
 
             <figure class="campanhas">
-                <img src="" alt="Campanha - 1">
+                <img src="./Imagens/campanha.jpg" alt="Campanha - 1">
             </figure>
 
             <header class="conscientizacaoCabecalho">
                 <p class="subtitulo">CONSCIENTIZAÇÃO</p>
-                <H2>Campanhas</H2>
+                <h2>Campanhas</h2>
                 <p>
-                    A WasteWise promove campanhas para conscientizar a população 
-                    sobre a importância do descarte correto e da separação dos 
-                    resíduos. A iniciativa incentiva a reciclagem, o uso dos ecopontos 
-                    e atitudes sustentáveis, contribuindo para uma cidade mais limpa, 
+                    A WasteWise promove campanhas para conscientizar a população
+                    sobre a importância do descarte correto e da separação dos
+                    resíduos. A iniciativa incentiva a reciclagem, o uso dos ecopontos
+                    e atitudes sustentáveis, contribuindo para uma cidade mais limpa,
                     organizada e sustentável.
                 </p>
             </header>
-                
+
         </section>
 
-
-        <section id="conscientizacao" class="inicioConscientizacao2">
+        <!-- ============ DICAS ============ -->
+        <section id="dicas" class="inicioConscientizacao2">
 
             <header class="conscientizacaoCabecalho2">
                 <p class="subtitulo">CONSCIENTIZAÇÃO</p>
-                <H2>Dicas</H2>
+                <h2>Dicas</h2>
                 <ul>
                     <li>♻️ Separe os resíduos recicláveis dos orgânicos.</li>
                     <li>🗑️ Descarte corretamente cada tipo de material.</li>
                     <li>📍 Utilize os ecopontos para resíduos específicos.</li>
-                    <li>🚛 Confira o horário da coleta da sua região</li>
+                    <li>🚛 Confira o horário da coleta da sua região.</li>
                 </ul>
             </header>
 
@@ -708,74 +623,118 @@
 
     </main>
 
-
+    <!-- ============================================
+         RODAPÉ
+         ============================================ -->
     <footer>
         <article class="rodape">
-            <h1>WasteWise</h1>
+            <h2>WasteWise</h2>
             <nav>
                 <a href="#inicio">Início</a>
                 <a href="#categorias">Categorias</a>
                 <a href="#descarte">Descarte</a>
                 <a href="#ecoponto">Ecopontos</a>
                 <a href="#conscientizacao">Conscientização</a>
+                <a href="#dicas">Dicas</a>
                 <a href="#contato">Contato</a>
             </nav>
-        </article>   
+        </article>
     </footer>
 
-
+    <!-- ============================================
+         SCRIPT: Carrossel
+         ============================================ -->
     <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-    // Controles manuais
-    function plusSlides(n) {
-    showSlides(slideIndex += n);
-    }
+        let slideInterval = setInterval(() => {
+            plusSlides(1);
+        }, 4000);
 
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    // Slideshow automático
-    let slideInterval = setInterval(() => {
-        plusSlides(1);
-    }, 4000); // troca a cada 4 segundos
-
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
         }
 
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
     </script>
 
-
+    <!-- ============================================
+         SCRIPT: Consulta de CEP (ViaCEP)
+         ============================================ -->
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const cartoes = document.querySelectorAll(".flip-card");
+        function buscarHorario() {
+            var cep = document.getElementById('cep').value.replace(/\D/g, '');
 
-        cartoes.forEach(function (cartao) {
-            cartao.addEventListener("click", function () {
-                cartao.classList.toggle("virado");
+            if (cep.length !== 8) {
+                alert('Por favor, digite um CEP válido com 8 números.');
+                return;
+            }
+
+            fetch('https://viacep.com.br/ws/' + cep + '/json/')
+                .then(function (resposta) {
+                    return resposta.json();
+                })
+                .then(function (dados) {
+                    if (dados.erro) {
+                        alert('CEP não encontrado!');
+                        return;
+                    }
+
+                    document.getElementById('rua').textContent = dados.logradouro || 'Rua sem nome';
+                    document.getElementById('bairro').textContent = dados.bairro + ' - ' + dados.localidade;
+
+                    if (cep % 2 === 0) {
+                        document.getElementById('dias').textContent = 'Segunda, Quarta e Sexta';
+                        document.getElementById('horario').textContent = '08:00 às 10:00 (Manhã)';
+                    } else {
+                        document.getElementById('dias').textContent = 'Terça, Quinta e Sábado';
+                        document.getElementById('horario').textContent = '19:00 às 21:00 (Noite)';
+                    }
+
+                    document.getElementById('resultado').style.display = 'block';
+                })
+                .catch(function () {
+                    alert('Erro ao consultar o CEP. Tente novamente.');
+                });
+        }
+    </script>
+
+    <!-- ============================================
+         SCRIPT: Flip Cards
+         ============================================ -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cartoes = document.querySelectorAll(".flip-card");
+
+            cartoes.forEach(function (cartao) {
+                cartao.addEventListener("click", function () {
+                    cartao.classList.toggle("virado");
+                });
             });
         });
-    });
     </script>
 
 </body>
 </html>
-
-
