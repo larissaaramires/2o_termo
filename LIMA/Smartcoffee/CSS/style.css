@@ -1,0 +1,228 @@
+body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: #2B170D;
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-left: 80px;
+    margin: 20px;
+}
+
+
+/* Início */
+.banner {
+    background-color: #F3E6D7;
+    margin: 30px;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subtitulo {
+    color: #C66A1A;
+    margin: 20px;
+}
+
+.laranja {
+    color: #C66A1A;
+    font-weight: 1000;
+    margin: 20px;
+}
+
+.preto {
+    font-weight: 1000;
+    margin: 20px;
+}
+
+header p {
+    font-weight: 500;
+    margin: 20px;
+}
+
+button {
+    background-color: #C66A1A;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #7a4d32;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+button a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.banner img {
+    display: block;
+    max-width: 100%;
+    width: 500px;
+    margin: 20px auto;
+}
+
+
+/* Sobre */
+.sobreConteudo {
+    background-color: #4A341C;
+    margin: 30px;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobreCabecalho h2 {
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+.sobreCabecalho {
+    color: aliceblue;
+}
+
+.sobreConteudo img {
+    display: block;
+    max-width: 100%;
+    width: 500px;
+    margin: 20px auto;
+    justify-content: flex-start;
+}
+
+/* Produtos */
+.cafesConteudo {
+    background-color: #F3E6D7;
+    margin: 30px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cafeCabecalho {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cafeCabecalho .subtitulo {
+    color: #C66A1A;
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.cafeCabecalho h2 {
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+.listaProdutos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.listaProdutos ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cardProduto {
+    width: 220px;
+    background-color: #54371f;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 0;
+    padding: 20px;
+}
+
+.cardProduto:hover  {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.cardProduto img {
+    width: 100%;
+    height: 125px;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    display: block;
+}
+
+.cardProduto h3 {
+    font-size: 20px;
+    margin: 18px 20px 10px;
+}
+
+.cardProduto p {
+    font-size: 16px;
+    margin: 0 20px 20px 20px;
+    margin-bottom: 15px;
+}
+
+
+/* Ambiente  */
+.ambienteConteudo {
+    background-color: #4A341C;
+    margin: 30px;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;    
+    color: aliceblue;
+    justify-content: flex-end;
+}
+
+.ambienteConteudo h2 {
+    margin: 20px;
+}
+
+.ambienteConteudo img {
+    display: block;
+    max-width: 100%;
+    width: 500px;
+    margin: 20px auto;
+    justify-content: flex-start;    
+}
+
+/* Contato */
+.contatoConteudo {
+    background-color: #F3E6D7;
+    margin: 30px;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;    
+}
+
+.contatoConteudo h2 {
+    margin: 20px;
+}
