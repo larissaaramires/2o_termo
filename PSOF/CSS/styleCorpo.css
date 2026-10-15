@@ -537,10 +537,10 @@ img {
     border: 2px solid #6D8B4E;
 }
 
-/* Restos de alimentos */
-.restos-alimentos .residuosFront {
-    background-color: #F9EDF3;
-    border: 2px solid #A0527D;
+/* Lixo do Banheiro */
+.lixo-banheiro .residuosFront {
+    background-color: #F7EDEF;
+    border: 2px solid #9B5D68;
 }
 
 /* Pilhas e baterias */
