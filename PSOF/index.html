@@ -583,9 +583,37 @@
         <!-- ============ CONSCIENTIZAÇÃO ============ -->
         <section id="conscientizacao" class="inicioConscientizacao">
 
-            <figure class="campanhas">
-                <img src="./Imagens/campanha.jpg" alt="Campanha - 1">
-            </figure>
+          <div class="slideshow-campanhas">
+
+            <div class="slide-campanha fade-campanha">
+                <img src="./Imagens/campanha1.png" alt="Campanha - 1">
+            </div>
+
+            <div class="slide-campanha fade-campanha">
+                <img src="./Imagens/campanha2.png" alt="Campanha - 2">
+            </div>
+
+            <div class="slide-campanha fade-campanha">
+                <img src="./Imagens/campanha3.png" alt="Campanha - 3">
+            </div>
+
+            <div class="slide-campanha fade-campanha">
+                <img src="./Imagens/campanha4.png" alt="Campanha - 4">
+            </div>
+
+            <!-- Setas de navegação -->
+            <a class="prev-campanha" onclick="mudarSlideCampanha(-1)">&#10094;</a>
+            <a class="next-campanha" onclick="mudarSlideCampanha(1)">&#10095;</a>
+
+            <!-- Bolinhas indicadoras -->
+            <div class="dots-campanha">
+                <span class="dot-c" onclick="irParaSlideCampanha(1)"></span>
+                <span class="dot-c" onclick="irParaSlideCampanha(2)"></span>
+                <span class="dot-c" onclick="irParaSlideCampanha(3)"></span>
+                <span class="dot-c" onclick="irParaSlideCampanha(4)"></span>
+            </div>
+
+        </div>
 
             <header class="conscientizacaoCabecalho">
                 <p class="subtitulo">CONSCIENTIZAÇÃO</p>
@@ -615,9 +643,37 @@
                 </ul>
             </header>
 
-            <figure class="dicas">
-                <img src="./Imagens/dicas.jpg" alt="Dicas">
-            </figure>
+            <div class="slideshow-campanhas">
+
+                <div class="slide-campanha fade-campanha">
+                    <img src="./Imagens/dicas1.png" alt="Dica - 1">
+                </div>
+
+                <div class="slide-dica fade-dica">
+                    <img src="./Imagens/dicas2.png" alt="Dica - 2">
+                </div>
+
+                <div class="slide-dica fade-dica">
+                    <img src="./Imagens/dicas3.png" alt="Dica - 3">
+                </div>
+
+                <div class="slide-dica fade-dica">
+                    <img src="./Imagens/dicas4.png" alt="Dica - 4">
+                </div>
+
+                <!-- Setas de navegação -->
+                <a class="prev-dica" onclick="mudarSlideDica(-1)">&#10094;</a>
+                <a class="next-dica" onclick="mudarSlideDica(1)">&#10095;</a>
+
+                <!-- Bolinhas indicadoras -->
+                <div class="dots-dica">
+                    <span class="dot-c" onclick="irParaSlideDica(1)"></span>
+                    <span class="dot-c" onclick="irParaSlideDica(2)"></span>
+                    <span class="dot-c" onclick="irParaSlideDica(3)"></span>
+                    <span class="dot-c" onclick="irParaSlideDica(4)"></span>
+                </div>
+
+            </div>
 
         </section>
 
@@ -628,7 +684,7 @@
          ============================================ -->
     <footer>
         <article class="rodape">
-            <h2>WasteWise</h2>
+            <h1>WasteWise</h1>
             <nav>
                 <a href="#inicio">Início</a>
                 <a href="#categorias">Categorias</a>
@@ -733,6 +789,61 @@
                     cartao.classList.toggle("virado");
                 });
             });
+        });
+    </script>
+
+    <script>
+    /* ============================================
+       CARROSSEL DE CAMPANHAS
+       ============================================ */
+        let slideCampanhaIndex = 1;
+        let intervaloCampanha;
+
+        function mostrarSlideCampanha(n) {
+            let slides = document.querySelectorAll(".slide-campanha");
+            let dots = document.querySelectorAll(".dot-c");
+
+            if (slides.length === 0) return;
+
+            if (n > slides.length) { slideCampanhaIndex = 1; }
+            if (n < 1) { slideCampanhaIndex = slides.length; }
+
+            slides.forEach(function (slide) {
+                slide.style.display = "none";
+            });
+
+            dots.forEach(function (dot) {
+            dot.classList.remove("ativo-c");
+            });
+
+            slides[slideCampanhaIndex - 1].style.display = "block";
+
+            if (dots[slideCampanhaIndex - 1]) {
+                dots[slideCampanhaIndex - 1].classList.add("ativo-c");
+            }
+        }
+
+        function mudarSlideCampanha(n) {
+            mostrarSlideCampanha(slideCampanhaIndex += n);
+            reiniciarIntervaloCampanha();
+        }
+
+        function irParaSlideCampanha(n) {
+            mostrarSlideCampanha(slideCampanhaIndex = n);
+            reiniciarIntervaloCampanha();
+        }
+
+        function reiniciarIntervaloCampanha() {
+            clearInterval(intervaloCampanha);
+            intervaloCampanha = setInterval(function () {
+                mostrarSlideCampanha(slideCampanhaIndex += 1);
+            }, 4000); /* troca a cada 4 segundos */
+        }
+
+        /* Inicia o carrossel assim que a página carregar */
+        document.addEventListener("DOMContentLoaded", function () {
+            mostrarSlideCampanha(slideCampanhaIndex);
+            reiniciarIntervaloCampanha();
         });
     </script>
 

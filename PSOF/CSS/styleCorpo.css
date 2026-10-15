@@ -22,7 +22,7 @@ img {
 /* ============================================
    CABEÇALHO E RODAPÉ
    ============================================ */
-.cabecalho, footer {
+.cabecalho, footer .rodape {
     background-color: #198a44ec;
     padding: 20px 16px;
     display: flex;
@@ -32,8 +32,7 @@ img {
     gap: 12px;
 }
 
-header h1,
-footer h1 {
+header h1, footer h1 {
     color: aliceblue;
     margin: 10px;
     font-size: 1.6rem;
@@ -558,7 +557,116 @@ section#inicio {
 .conscientizacaoCabecalho2 li {
     margin: 8px 0;
 }
+/* ============================================
+   CARROSSEL DE CAMPANHAS
+   ============================================ */
+.slideshow-campanhas {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    flex: 1 1 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 auto;
+}
 
+/* Cada slide fica escondido por padrão */
+.slide-campanha {
+    display: none;
+    width: 100%;
+}
+
+.slide-campanha img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Animação de fade ao trocar */
+.fade-campanha {
+    animation-name: fadeCampanha;
+    animation-duration: 1s;
+}
+
+@keyframes fadeCampanha {
+    from { opacity: 0.4; }
+    to   { opacity: 1; }
+}
+
+/* Setas de navegação */
+.prev-campanha,
+.next-campanha {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 12px 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.prev-campanha { left: 8px; }
+.next-campanha { right: 8px; }
+
+.prev-campanha:hover,
+.next-campanha:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Bolinhas indicadoras */
+.dots-campanha {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    left: 0;
+}
+
+.dot-c {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease;
+}
+
+.dot-c:hover,
+.dot-c.ativo-c {
+    background-color: #ffffff;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+    .slideshow-campanhas {
+        max-width: 100%;
+    }
+
+    .prev-campanha,
+    .next-campanha {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    .dot-c {
+        height: 10px;
+        width: 10px;
+        margin: 0 3px;
+    }
+}
 /* ============================================
    RESPONSIVIDADE — TABLET (até 900px)
    ============================================ */
@@ -677,4 +785,96 @@ section#inicio {
         transition: none;
         animation: none;
     }
+}
+
+/* ============================================
+   CARROSSEL DE DICAS
+   ============================================ */
+.slideshow-dica {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    flex: 1 1 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+/* Cada slide fica escondido por padrão */
+.slide-dica {
+    display: none;
+    width: 100%;
+}
+
+.slide-dica img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Animação de fade ao trocar */
+.fade-dica {
+    animation-name: fadeDicas;
+    animation-duration: 1s;
+}
+
+@keyframes fade-dica {
+    from { opacity: 0.4; }
+    to   { opacity: 1; }
+}
+
+/* Setas de navegação */
+.prev-dica,
+.next-dica {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 12px 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.prev-dica { left: 8px; }
+.next-dica { right: 8px; }
+
+.prev-dica:hover,
+.next-dica:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Bolinhas indicadoras */
+.dots-dica {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    left: 0;
+}
+
+.dot-c {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease;
+}
+
+.dot-c:hover,
+.dot-c.ativo-c {
+    background-color: #ffffff;
 }
