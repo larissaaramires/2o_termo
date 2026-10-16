@@ -210,7 +210,6 @@
             </article>
         </section>
 
-        <br>
 
         <!-- ============ CATEGORIAS: ESPECIAIS ============ -->
         <section class="inicioCategoria">
@@ -460,7 +459,7 @@
                 <div class="residuos flip-card oleo-cozinha">
                     <div class="flip-card-inner">
                         <div class="residuosFront">
-                            <h3>Óleo de cozinha usado</h3>
+                            <h3>Óleo de Cozinha Usado</h3>
                             <p>
                                 Espere esfriar, armazene em uma garrafa
                                 PET bem fechada e entregue em postos de
@@ -643,36 +642,44 @@
                 </ul>
             </header>
 
-            <div class="slideshow-campanhas">
+            <div class="bloco-conscientizacao">
+  
+    
+                <!-- Estrutura do Carrossel de Dicas -->
+                <div class="carousel-container-dicas">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide-dicas active">
+                        <img src="./Imagens/dicas1.png" alt="Dica 1 - Separe os resíduos" class="carousel-img-dicas">
+                    </div>
 
-                <div class="slide-campanha fade-campanha">
-                    <img src="./Imagens/dicas1.png" alt="Dica - 1">
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide-dicas">
+                        <img src="./Imagens/dicas2.png" alt="Dica 2 - Descarte correto" class="carousel-img-dicas">
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide-dicas">
+                        <img src="./Imagens/dicas3.png" alt="Dica 3 - Ecopontos" class="carousel-img-dicas">
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide-dicas">
+                        <img src="./Imagens/dicas4.png" alt="Dica 4 - Coleta seletiva" class="carousel-img-dicas">
+                    </div>
+
+                    <!-- Botões de Navegação (Setas) -->
+                    <button class="carousel-btn-dicas prev-btn" onclick="mudarSlideDicas(-1)">&#10094;</button>
+                    <button class="carousel-btn-dicas next-btn" onclick="mudarSlideDicas(1)">&#10095;</button>
+
+                    <!-- Indicadores (Pontinhos) -->
+                    <div class="carousel-dots-dicas">
+                        <span class="dot-dicas active" onclick="atualizarSlideDicas(0)"></span>
+                        <span class="dot-dicas" onclick="atualizarSlideDicas(1)"></span>
+                        <span class="dot-dicas" onclick="atualizarSlideDicas(2)"></span>
+                        <span class="dot-dicas" onclick="atualizarSlideDicas(3)"></span>
+                    </div>
                 </div>
-
-                <div class="slide-dica fade-dica">
-                    <img src="./Imagens/dicas2.png" alt="Dica - 2">
-                </div>
-
-                <div class="slide-dica fade-dica">
-                    <img src="./Imagens/dicas3.png" alt="Dica - 3">
-                </div>
-
-                <div class="slide-dica fade-dica">
-                    <img src="./Imagens/dicas4.png" alt="Dica - 4">
-                </div>
-
-                <!-- Setas de navegação -->
-                <a class="prev-dica" onclick="mudarSlideDica(-1)">&#10094;</a>
-                <a class="next-dica" onclick="mudarSlideDica(1)">&#10095;</a>
-
-                <!-- Bolinhas indicadoras -->
-                <div class="dots-dica">
-                    <span class="dot-c" onclick="irParaSlideDica(1)"></span>
-                    <span class="dot-c" onclick="irParaSlideDica(2)"></span>
-                    <span class="dot-c" onclick="irParaSlideDica(3)"></span>
-                    <span class="dot-c" onclick="irParaSlideDica(4)"></span>
-                </div>
-
+    
             </div>
 
         </section>
@@ -847,5 +854,43 @@
         });
     </script>
 
+    <script>let indiceSlideDicas = 0;
+
+function mostrarSlideDicas(n) {
+    const slides = document.querySelectorAll('.carousel-slide-dicas');
+    const dots = document.querySelectorAll('.dot-dicas');
+
+    if (slides.length === 0) return;
+
+    if (n >= slides.length) {
+        indiceSlideDicas = 0;
+    }
+    if (n < 0) {
+        indiceSlideDicas = slides.length - 1;
+    }
+
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    slides[indiceSlideDicas].classList.add('active');
+    dots[indiceSlideDicas].classList.add('active');
+}
+
+function mudarSlideDicas(direcao) {
+    indiceSlideDicas += direcao;
+    mostrarSlideDicas(indiceSlideDicas);
+}
+
+function atualizarSlideDicas(indice) {
+    indiceSlideDicas = indice;
+    mostrarSlideDicas(indiceSlideDicas);
+}
+
+// Transição automática a cada 5 segundos
+setInterval(() => {
+    indiceSlideDicas++;
+    mostrarSlideDicas(indiceSlideDicas);
+}, 5000);
+</script>
 </body>
 </html>
