@@ -5,8 +5,12 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F4F6F0;
@@ -560,7 +564,7 @@ section#inicio {
 /* ============================================
    CARROSSEL DE CAMPANHAS
    ============================================ */
-.slideshow-campanhas {
+.slideshow-campanhas, .slideshow-dicas {
     position: relative;
     width: 100%;
     max-width: 500px;
@@ -571,12 +575,12 @@ section#inicio {
 }
 
 /* Cada slide fica escondido por padrão */
-.slide-campanha {
+.slide-campanha, .slide-dicas {
     display: none;
     width: 100%;
 }
 
-.slide-campanha img {
+.slide-campanha img, .slide-dicas img {
     width: 100%;
     height: auto;
     display: block;
@@ -591,14 +595,22 @@ section#inicio {
     animation-duration: 1s;
 }
 
-@keyframes fadeCampanha {
+/* Animação de fade ao trocar */
+.fade-dicas {
+    animation-name: fadeDicas;
+    animation-duration: 1s;
+}
+
+@keyframes fadeCampanha, .fadeDicas {
     from { opacity: 0.4; }
     to   { opacity: 1; }
 }
 
 /* Setas de navegação */
 .prev-campanha,
-.next-campanha {
+.next-campanha,
+.prev-dicas,
+.next-dicas {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -787,10 +799,17 @@ section#inicio {
     }
 }
 
+<<<<<<< HEAD
 /* Container Principal do Carrossel de Dicas */
 
 /* Container Principal */
 .carousel-container-dicas {
+=======
+/* ============================================
+   CARROSSEL DE DICAS
+   ============================================ */
+.slideshow-dicas {
+>>>>>>> 371a85891c075eecd398748625fca24299359c88
     position: relative;
     max-width: 100%;
     height: 350px;
@@ -805,6 +824,7 @@ section#inicio {
     background: transparent;
 }
 
+<<<<<<< HEAD
 /* Imagens */
 .carousel-img-dicas {
     width: 100%;
@@ -821,13 +841,23 @@ section#inicio {
 
 /* Slides */
 .carousel-slide-dicas {
+=======
+/* Cada slide fica escondido por padrão */
+.slide-dicas {
+>>>>>>> 371a85891c075eecd398748625fca24299359c88
     display: none;
     width: 100%;
     height: 100%;
     position: relative;
 }
 
+<<<<<<< HEAD
 .carousel-slide-dicas.active {
+=======
+.slide-dicas img {
+    width: 100%;
+    height: auto;
+>>>>>>> 371a85891c075eecd398748625fca24299359c88
     display: block;
 }
 
@@ -844,6 +874,7 @@ section#inicio {
     text-align: center;
 }
 
+<<<<<<< HEAD
 .dica-overlay p {
     margin: 0;
     font-size: 1.1rem;
@@ -853,6 +884,23 @@ section#inicio {
 
 /* Botões Laterais (Setas) */
 .carousel-btn-dicas {
+=======
+/* Animação de fade ao trocar */
+.fade-dicas {
+    animation-name: fadeDicas;
+    animation-duration: 1s;
+}
+
+@keyframes fade-dicas {
+    from { opacity: 0.4; }
+    to   { opacity: 1; }
+}
+
+/* Setas de navegação */
+.prev-dicas,
+.next-dicas {
+    cursor: pointer;
+>>>>>>> 371a85891c075eecd398748625fca24299359c88
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -861,6 +909,7 @@ section#inicio {
     color: white;
     border: none;
 
+<<<<<<< HEAD
     width: 42px;
     height: 42px;
     padding: 0;
@@ -913,6 +962,27 @@ section#inicio {
 
 .dot-dicas.active, 
 .dot-dicas:hover {
+=======
+.prev-dicas { left: 8px; }
+.next-dicas { right: 8px; }
+
+.prev-dicas:hover,
+.next-dicas:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Bolinhas indicadoras */
+.dots-dicas {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    left: 0;
+}
+
+.dot-c:hover,
+.dot-c.ativo-c {
+>>>>>>> 371a85891c075eecd398748625fca24299359c88
     background-color: #ffffff;
     transform: scale(1.2);
 }

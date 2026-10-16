@@ -178,3 +178,113 @@ GROUP BY agrupar_colunas
 HAVING condição_agrupar
 ORDER BY colunas
 LIMIT quantidade;
+
+---------------------------------------------------------------------------
+-- PARTE II - RELAÇÕES ENTRE ENTIDADES
+-- JOINS - consulta de entidades relacionadas
+-- INNER JOIN - retorna registros que possuem correspondência entre duas tabelas
+-- Ex 1: pedidos com o nome do cliente
+SELECT P.id_pedido, P.data_pedido, C.nome AS cliente, P.valor_total 
+FROM pedido AS P
+INNER JOIN cliente AS C  
+ON C.id_cliente = P.id_cliente;
+
+-- OBS: Relacione o cliente cujo id_cliente é igual ao id_cliente feito no pedido
+-- Apelidos como referências ou alias - P e C são aliases que deixam a consulta com várias tabelas mais curtas e legíveis.
+
+---------------------------------------------------------------------------
+-- Ex 2.1: todos os clientes, incluindo quem nunca comprou
+-- LEFT JOIN - mantem todos os registros da esquerda, mesmo sem correspondência na direita
+SELECT C.nome, P.id_pedido, P.data_pedido
+FROM cliente AS C
+LEFT JOIN pedido AS P 
+ON P.id_cliente = C.id_cliente
+ORDER BY C.nome;
+
+-- Ex 2.2: clientes sem pedidos
+SELECT C.id_cliente, C.nome 
+FROM cliente AS C 
+LEFT JOIN pedido AS P  
+ON P.id_cliente = C.id_cliente
+WHERE P.id_pedido IS NULL;
+
+---------------------------------------------------------------------------
+-- Ex 3.1: itens de pedido com nome de produto 
+-- JOIN com três tabelas
+SELECT P.id_pedido, PR.nome AS produto, IP.quantidade, IP.preco_unitario,
+IP.quantidade * IP.preco_unitario AS subtotal
+FROM pedido AS P 
+INNER JOIN item_pedido AS IP 
+ON IP.id_pedido = P.id_pedido
+INNER JOIN produto AS PR 
+ON PR.id_produto = IP.id_produto 
+ORDER BY P.id_pedido;
+
+-- Ex 3.2: produto e nome de sua categoria
+SELECT PR.nome AS produto, CA.nome AS categoria, PR.preco 
+FROM produto AS PR 
+INNER JOIN categoria AS CA 
+ON CA.id_categoria = PR.id_categoria
+ORDER BY CA.nome, PR.nome;
+
+---------------------------------------------------------------------------
+-- Ex 4.1: quantidade de produtos por categoria
+-- Agregação e JOIN
+SELECT CA.nome AS categoria, COUNT(PR.id_produto) AS qnt_produtos
+FROM categoria AS CA  
+LEFT JOIN produto AS PR 
+ON PR.id_categoria = CA.id_categoria
+GROUP BY CA.id_categoria, CA.nome
+ORDER BY qnt_produtos DESC;
+
+-- Ex 4.2: total de compras por cliente
+SELECT C.nome AS cliente, COUNT(P.id_pedido) AS qnt_pedidos, SUM(P.valor_total) AS total_comprado 
+FROM cliente AS C 
+INNER JOIN pedido AS P 
+ON P.id_cliente = C.id_cliente
+WHERE P.status_pedido = 'ABERTO'
+GROUP BY C.id_cliente, C.nome 
+ORDER BY total_comprado;
+
+---------------------------------------------------------------------------
+-- Ex 5: várias entidades ou tabelas em uma consulta de relatório
+-- Relatório completo do pedido
+SELECT P.id_pedido, DATE_FORMAT(P.data_pedido, '%d %m %Y %H:%i') AS data, 
+C.nome AS cliente, PR.nome AS produto, IP.quantidade, IP.preco_unitario, 
+IP.quantidade * IP.preco_unitario AS subtotal
+FROM pedido AS P 
+INNER JOIN cliente AS C 
+ON C.id_cliente = P.id_cliente 
+INNER JOIN item_pedido AS IP 
+ON IP.id_pedido = P.id_pedido 
+INNER JOIN produto AS PR 
+ON PR.id_produto = IP.id_produto
+ORDER BY P.id_pedido, PR.nome;
+
+-- DATE_FORMAT(P.data_pedido, '%d %m %Y %H:%i') - Padrão de formatação Brasil
+-- D = dia
+-- M = mês
+-- Y = ano
+-- H = hora
+-- i = minutos
+
+---------------------------------------------------------------------------
+-- Ex 6: (CASE) permite criar classificações baseadas em regras
+-- CASE - criar classificações em resultados
+SELECT nome, preco,
+CASE 
+WHEN preco < 8.00 THEN 'ECONÔMICO'
+WHEN preco <= 15.00 THEN 'INTERMEDIÁRIO'
+ELSE 'PREMIUM'
+END AS faixa_precos
+FROM produto
+ORDER BY preco;
+
+---------------------------------------------------------------------------
+-- Ex 7: é uma consulta dentro de uma outra consulta 
+-- Subconsulta
+-- Produtos acima do preço médio
+SELECT nome, preco 
+FROM produto 
+WHERE preco > (SELECT AVG(preco) FROM produto)
+ORDER BY preco DESC;

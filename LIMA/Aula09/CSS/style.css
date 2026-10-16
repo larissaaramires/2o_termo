@@ -1,12 +1,64 @@
+/* VÁRIAVEIS PARA FORMATAÇÃO */
+/* CRIAÇÃO DE LAYOUT DE CORES  */
+/* ROOT é um espaço utilizado para declarar variáveis */
+
+:root {
+    /* Paleta de cores */
+    --espresso: #2B170D;
+    --caramelo: #C66A1A;
+    --marrom: #4A341C;
+    --creme: #F3E6D7;
+    --marfim: #FFF9F3;
+    --taupe: #9A887A;
+    --texto: #1E140F;
+    --branco: #FFFFFF;
+}
+
+/* Configurações Básicas */
+* {
+    box-sizing: border-box;
+    /* Aplicar em tudo  */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: "Raleway", sans-serif;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
+    color: var(--texto);
+    background-color: var(--marfim);
+    line-height: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Formatação de Fontes e Tamanhos */
+h1, h2, h3 {
+    margin-top: 0;
+    color: var(--espresso);
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
 }
 
 /* Cabeçalho */
 .cabecalho {
-    background-color: #2B170D;
+    background-color: var(--espresso);
     padding: 30px 10px;
     display: flex;
     align-items: center;
@@ -14,16 +66,24 @@ body {
 }
 
 nav a {
-    color: rgb(255, 255, 255);
+    color: var(--branco);
     text-decoration: none;
     margin-left: 80px;
     margin: 20px;
+    font-weight: 500;
 }
 
+.menu a:hover {
+    color: var(--caramelo);
+}
+
+.menu a:focus-visible {
+    outline: 3px solid var(--caramelo);
+}
 
 /* Início */
 .banner {
-    background-color: #F3E6D7;
+    background-color: var(--creme);
     margin: 30px;
     padding: 10px 8px;
     display: flex;
@@ -32,12 +92,12 @@ nav a {
 }
 
 .subtitulo {
-    color: #C66A1A;
+    color: var(--caramelo);
     margin: 20px;
 }
 
 .laranja {
-    color: #C66A1A;
+    color: var(--caramelo);
     font-weight: 1000;
     margin: 20px;
 }
@@ -53,7 +113,7 @@ header p {
 }
 
 button {
-    background-color: #C66A1A;
+    background-color: var(--caramelo);
     padding: 12px 25px;
     border: none;
     border-radius: 25px;
@@ -96,6 +156,7 @@ button a {
 
 .sobreCabecalho h2 {
     justify-content: flex-end;
+    color: var(--branco);
     margin: 20px;
 }
 
@@ -204,6 +265,7 @@ button a {
 
 .ambienteConteudo h2 {
     margin: 20px;
+    color: var(--branco);
 }
 
 .ambienteConteudo img {
@@ -226,3 +288,4 @@ button a {
 .contatoConteudo h2 {
     margin: 20px;
 }
+
