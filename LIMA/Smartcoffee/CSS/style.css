@@ -1,16 +1,41 @@
 body {
-    font-family: "Raleway", sans-serif;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #F4F6F0;
+    line-height: 1.5;
 }
 
-/* Cabeçalho */
+/* Cabeçalho e Rodapé */
 .cabecalho {
     background-color: #2B170D;
     padding: 30px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+footer .rodape {
+    background-color: #2B170D;
+    padding: 20px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+footer h1 {
+    color: aliceblue;
+    margin: 10px;
+    font-size: 1.6rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
 }
 
 nav a {
@@ -20,6 +45,9 @@ nav a {
     margin: 20px;
 }
 
+nav a:hover {
+    opacity: 0.75;
+}
 
 /* Início */
 .banner {
@@ -111,7 +139,11 @@ button a {
     justify-content: flex-start;
 }
 
-/* Produtos */
+
+/* ============================================
+   PRODUTOS
+   ============================================ */
+
 .cafesConteudo {
     background-color: #F3E6D7;
     margin: 30px;
@@ -121,6 +153,7 @@ button a {
     align-items: center;
 }
 
+/* Cabeçalho */
 .cafeCabecalho {
     text-align: center;
     margin-bottom: 25px;
@@ -138,10 +171,11 @@ button a {
     text-align: center;
 }
 
+/* Lista de produtos */
 .listaProdutos {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -149,46 +183,115 @@ button a {
 .listaProdutos ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 25px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+/* Cartões */
 .cardProduto {
     width: 220px;
+    box-sizing: content-box;
     background-color: #54371f;
     color: white;
+    padding: 20px;
+    margin: 0;
     transition: 0.3s;
     cursor: pointer;
-    margin: 0;
-    padding: 20px;
 }
 
-.cardProduto:hover  {
+/* Efeito ao passar o mouse */
+.cardProduto:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
-.cardProduto img {
-    width: 100%;
-    height: 125px;
+/* Remove as margens do figure */
+.cardProduto figure {
     margin: 0;
     padding: 0;
-    object-fit: cover;
+    width: 100%;
+}
+
+/* Link da imagem */
+.cardProduto figure a {
     display: block;
 }
 
-.cardProduto h3 {
-    font-size: 20px;
-    margin: 18px 20px 10px;
+/* Imagens dos produtos */
+.cardProduto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
+/* Título dos produtos */
+.cardProduto h3 {
+    font-size: 20px;
+    margin: 18px 0 10px;
+}
+
+/* Descrição dos produtos */
 .cardProduto p {
     font-size: 16px;
-    margin: 0 20px 20px 20px;
-    margin-bottom: 15px;
+    margin: 0 0 15px;
 }
+
+
+/* ============================================
+   RODAPÉ COMPACTO NO CELULAR
+   ============================================ */
+@media (max-width: 600px) {
+
+    footer {
+        margin: 0;
+        padding: 0;
+        background-color: #2B170D;
+    }
+
+    footer .rodape {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        margin: 0;
+        padding: 12px 10px;
+        box-sizing: border-box;
+    }
+
+    footer .rodape h1 {
+        font-size: 1.3rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .rodape nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px 12px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .rodape nav a {
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 
 
 /* Ambiente  */
@@ -218,11 +321,562 @@ button a {
 .contatoConteudo {
     background-color: #F3E6D7;
     margin: 30px;
-    padding: 10px 8px;
+    padding: 40px;
     display: flex;
-    align-items: center;    
+    justify-content: space-between;
+    align-items: center;
 }
 
-.contatoConteudo h2 {
+.contatoCabecalho {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.contatoCabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contatoCabecalho h2,
+.contatoCabecalho p {
+    margin: 0;
+}
+
+.contatoCabecalho p {
+    margin-top: 15px;
+}
+
+.contatoConteudo button {
+    cursor: pointer;
+    transition: background 0.2s;
+    background-color: #C66A1A;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
     margin: 20px;
+}
+
+.contatoConteudo button a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contatoConteudo button:hover {
+    background-color: #7a4d32;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+.contatoForm {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* ============================================
+   RESPONSIVIDADE — TABLET (até 900px)
+   ============================================ */
+@media (max-width: 900px) {
+
+    /* CABEÇALHO */
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .cabecalho nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* INÍCIO */
+    section#inicio.banner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        margin: 20px 14px;
+        padding: 28px 20px;
+        min-height: auto;
+    }
+
+    .inicioCabecalho {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .inicioCabecalho h1 {
+        font-size: 2rem;
+    }
+
+    .bannerImagem {
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .bannerImagem img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* SOBRE NÓS */
+    .sobreConteudo {
+        gap: 25px;
+        margin: 20px 14px;
+        padding: 28px 20px;
+    }
+
+    .sobreImg,
+    .sobreCabecalho {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .sobreImg img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* PRODUTOS */
+    .cafesConteudo {
+        margin: 20px 14px;
+        padding: 28px 20px;
+    }
+
+    .listaProdutos ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* AMBIENTE */
+    .ambienteConteudo {
+        gap: 25px;
+        margin: 20px 14px;
+        padding: 28px 20px;
+    }
+
+    .ambienteCabecalho,
+    .ambienteImg {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .ambienteImg img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* CONTATO */
+    .contatoConteudo {
+        gap: 25px;
+        margin: 20px 14px;
+        padding: 28px 20px;
+    }
+
+    .contatoCabecalho,
+    .contatoForm {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .contatoCabecalho h2 {
+        font-size: 1.6rem;
+    }
+
+    .contatoForm input,
+    .contatoForm textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* RODAPÉ */
+    footer .rodape {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .rodape h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .rodape nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE — CELULAR (até 600px)
+   ============================================ */
+@media (max-width: 600px) {
+
+    /* CABEÇALHO */
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .cabecalho img {
+        max-width: 130px;
+        height: auto;
+    }
+
+    .cabecalho nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cabecalho nav a {
+        margin: 3px 5px;
+        font-size: 14px;
+    }
+
+    /* INÍCIO */
+    section#inicio.banner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        margin: 14px 8px;
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .inicioCabecalho {
+        width: 100%;
+        flex: none;
+        text-align: center;
+    }
+
+    .inicioCabecalho h1 {
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
+        line-height: 1.2;
+    }
+
+    .inicioCabecalho p {
+        font-size: 0.95rem;
+    }
+
+    .bannerImagem {
+        width: 100%;
+        flex: none;
+        margin: 0;
+    }
+
+    .bannerImagem img {
+        display: block;
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    /* SOBRE NÓS */
+    .sobreConteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        margin: 14px 8px;
+        padding: 20px 14px;
+    }
+
+    .sobreImg {
+        width: 100%;
+        margin: 0;
+    }
+
+    .sobreImg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sobreCabecalho {
+        width: 100%;
+    }
+
+    .sobreCabecalho h2 {
+        font-size: 1.4rem;
+    }
+
+    .sobreCabecalho p {
+        font-size: 0.95rem;
+    }
+
+    /* PRODUTOS */
+    .cafesConteudo {
+        margin: 14px 8px;
+        padding: 20px 14px;
+    }
+
+    .cafeCabecalho h2 {
+        font-size: 1.4rem;
+    }
+
+    .listaProdutos {
+        width: 100%;
+    }
+
+    .listaProdutos ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        width: 100%;
+    }
+
+    .listaProdutos li {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .cardProduto {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cardProduto figure {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .cardProduto img {
+        width: 100%;
+        max-width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    /* AMBIENTE */
+    .ambienteConteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        margin: 14px 8px;
+        padding: 20px 14px;
+    }
+
+    .ambienteCabecalho {
+        width: 100%;
+    }
+
+    .ambienteCabecalho h2 {
+        font-size: 1.4rem;
+    }
+
+    .ambienteCabecalho p {
+        font-size: 0.95rem;
+    }
+
+    .ambienteImg {
+        width: 100%;
+        margin: 0;
+    }
+
+    .ambienteImg img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* CONTATO */
+    .contatoConteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+        margin: 14px 8px;
+        padding: 20px 14px;
+    }
+
+    .contatoCabecalho {
+        width: 100%;
+    }
+
+    .contatoCabecalho h2 {
+        font-size: 1.4rem;
+    }
+
+    .contatoCabecalho p {
+        font-size: 0.95rem;
+    }
+
+    .contatoForm {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contatoForm input,
+    .contatoForm textarea,
+    .contatoForm button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* RODAPÉ */
+    footer {
+        padding: 25px 15px;
+    }
+
+    footer .rodape {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        text-align: center;
+    }
+
+    .rodape h1 {
+        font-size: 1.5rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .rodape nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px 15px;
+        width: 100%;
+    }
+
+    .rodape nav a {
+        font-size: 14px;
+        margin: 0;
+        white-space: nowrap;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE — TELAS PEQUENAS (até 380px)
+   ============================================ */
+@media (max-width: 380px) {
+
+    /* CABEÇALHO */
+    .cabecalho nav a {
+        font-size: 12px;
+    }
+
+    /* INÍCIO */
+    .inicioCabecalho h1 {
+        font-size: 1.6rem;
+    }
+
+    .inicioCabecalho p {
+        font-size: 0.9rem;
+    }
+
+    /* SOBRE */
+    .sobreCabecalho h2 {
+        font-size: 1.2rem;
+    }
+
+    /* PRODUTOS */
+    .cafesConteudo {
+        padding: 15px 10px;
+    }
+
+    .cafeCabecalho h2 {
+        font-size: 1.2rem;
+    }
+
+    .cardProduto {
+        padding: 15px;
+    }
+
+    .cardProduto img {
+        height: 150px;
+    }
+
+    /* AMBIENTE */
+    .ambienteCabecalho h2 {
+        font-size: 1.2rem;
+    }
+
+    /* CONTATO */
+    .contatoConteudo {
+        padding: 15px 10px;
+    }
+
+    .contatoCabecalho h2 {
+        font-size: 1.2rem;
+    }
+
+    .contatoCabecalho p {
+        font-size: 0.9rem;
+    }
+
+    .contatoForm {
+        gap: 8px;
+    }
+
+    .contatoForm button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* RODAPÉ */
+    footer {
+        padding: 20px 10px;
+    }
+
+    .rodape h1 {
+        font-size: 1.3rem;
+    }
+
+    .rodape nav {
+        gap: 8px 12px;
+    }
+
+    .rodape nav a {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .contatoForm button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 12px;
+        box-sizing: border-box;
+        align-self: stretch;
+    }
 }
