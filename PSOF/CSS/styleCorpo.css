@@ -445,6 +445,22 @@ section#inicio {
     border: 2px solid #884C9E;
 }
 
+/* Descarte: especiais */
+.cartao-volumoso .residuosFront {
+    background-color: #FBE9D7;
+    border: 2px solid #B86F36;
+}
+
+.cartao-obras .residuosFront {
+    background-color: #F1E4D9;
+    border: 2px solid #9C6B4F;
+}
+
+.cartao-verde .residuosFront {
+    background-color: #E2F0D2;
+    border: 2px solid #648A3D;
+}
+
 /* ============================================
    ECOPONTO
    ============================================ */
@@ -561,6 +577,70 @@ section#inicio {
 .conscientizacaoCabecalho2 li {
     margin: 8px 0;
 }
+
+/* ============================================
+   CONTATO
+   ============================================ */
+.contatoConteudo {
+    background-color: #71bb8d41;
+    margin: 30px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contatoCabecalho {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.contatoCabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contatoCabecalho h2,
+.contatoCabecalho p {
+    margin: 0;
+}
+
+.contatoCabecalho p {
+    margin-top: 15px;
+}
+
+.contatoConteudo button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contatoConteudo button a {
+    color: white;
+    text-decoration: none;
+}
+
+.contatoConteudo button:hover {
+    background-color: #218838;
+}
+
+.contatoForm {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+   
 /* ============================================
    CARROSSEL DE CAMPANHAS
    ============================================ */
@@ -682,6 +762,7 @@ section#inicio {
         margin: 0 3px;
     }
 }
+
 /* ============================================
    RESPONSIVIDADE — TABLET (até 900px)
    ============================================ */
@@ -691,7 +772,8 @@ section#inicio {
     .inicioDescarte,
     .inicioEcoponto,
     .inicioConscientizacao,
-    .inicioConscientizacao2 {
+    .inicioConscientizacao2,
+    .contatoConteudo {
         margin: 20px 14px;
         padding: 28px 20px;
     }
@@ -710,6 +792,20 @@ section#inicio {
         text-align: center;
         margin: 0;
     }
+
+    .contatoConteudo {
+        gap: 25px;
+    }
+
+    .contatoCabecalho,
+    .contato-form {
+        min-width: 0;
+    }
+
+    .contatoCabecalho h2 {
+        font-size: 1.6rem;
+    }
+
 }
 
 /* ============================================
@@ -721,7 +817,8 @@ section#inicio {
     .inicioDescarte,
     .inicioEcoponto,
     .inicioConscientizacao,
-    .inicioConscientizacao2 {
+    .inicioConscientizacao2,
+    .contatoConteudo {
         margin: 14px 8px;
         padding: 20px 14px;
     }
@@ -768,6 +865,34 @@ section#inicio {
     .descarteConteudo {
         gap: 18px;
     }
+
+    .contatoConteudo {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .contatoCabecalho {
+        width: 100%;
+    }
+
+    .contatoCabecalho h2 {
+        font-size: 1.4rem;
+    }
+
+    .contatoCabecalho p {
+        font-size: 0.95rem;
+    }
+
+    .contatoForm {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contatoForm button {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 /* ============================================
@@ -784,6 +909,28 @@ section#inicio {
 
     nav a {
         font-size: 13px;
+    }
+
+    /* CONTATO */
+    .contatoConteudo {
+        padding: 15px 10px;
+    }
+
+    .contatoCabecalho h2 {
+        font-size: 1.2rem;
+    }
+
+    .contatoCabecalho p {
+        font-size: 0.9rem;
+    }
+
+    .contatoForm {
+        gap: 8px;
+    }
+
+    .contatoForm button {
+        font-size: 14px;
+        padding: 10px;
     }
 }
 

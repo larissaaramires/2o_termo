@@ -545,7 +545,7 @@
             </article>
         </section>
 
-        <!-- ============ DESCARTE: Perigosos ============ -->
+        <!-- ============ DESCARTE: Especiais ============ -->
         <section class="inicioDescarte">
 
             <header class="descarteCabecalho">
@@ -556,7 +556,7 @@
             <article class="descarteConteudo">
 
                 <!-- Cartão 1: Residuos Volumosos -->
-                <div class="residuos flip-card cartao-volumosos">
+                <div class="residuos flip-card cartao-volumoso">
                     <div class="flip-card-inner">
                         <div class="residuosFront">
                             <h3>Móveis Velhos, colchões e Eletrodomésticos</h3>
@@ -567,16 +567,16 @@
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
                         <div class="residuosBack">
-                            <img src="./Imagens/descartePlasticos.jpg" alt="Resíduos Perigosos">
+                            <img src="./Imagens/descarteMoveis.jpg" alt="Resíduos Especiais">
                         </div>
                     </div>
                 </div>
 
                 <!-- Cartão 2: Entulho de Construção -->
-                <div class="residuos flip-card cartao-entulho">
+                <div class="residuos flip-card cartao-obras">
                     <div class="flip-card-inner">
                         <div class="residuosFront">
-                            <h3>Restos de Obra, Tijolos, Azulejos e Cimento.</h3>
+                            <h3>Restos de Obra, Tijolos, Azulejos e Cimento</h3>
                             <p>
                                 Ensaque em pequenas quantidades e entregue 
                                 nos Pontos de Entrega Voluntária (PEV/Ecoponto).
@@ -584,7 +584,7 @@
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteCaixasEPapeis.jpg" alt="Resíduos Perigosos">
+                            <img src="./Imagens/descarteObras.jpg" alt="Resíduos Especiais">
                         </div>
                     </div>
                 </div>
@@ -593,7 +593,7 @@
                 <div class="residuos flip-card cartao-verde">
                     <div class="flip-card-inner">
                         <div class="residuosFront">
-                            <h3>Podas de Árvores, Jardinagem e Folhagens.</h3>
+                            <h3>Podas de Árvores, Jardinagem e Folhagens</h3>
                             <p>
                                 Ensaque ou amarre em fardos para compostagem ou 
                                 solicite recolha agendada.
@@ -601,7 +601,7 @@
                             <span class="dica">Clique para ver a imagem ↻</span>
                         </div>
                         <div class="residuosBack">
-                            <img src="./Imagens/descarteLatas.png" alt="Resíduos Perigosos">
+                            <img src="./Imagens/descarteVerdes.jpg" alt="Resíduos Especiais">
                         </div>
                     </div>
                 </div>
@@ -700,7 +700,7 @@
         <section id="dicas" class="inicioConscientizacao2">
 
             <header class="conscientizacaoCabecalho2">
-                <p class="subtitulo">CONSCIENTIZAÇÃO</p>
+                <p class="subtitulo">SUSTENTABILIDADE NA PRÁTICA</p>
                 <h2>Dicas</h2>
                 <ul>
                     <li>♻️ Separe os resíduos recicláveis dos orgânicos.</li>
@@ -748,6 +748,30 @@
                     </div>
                 </div>
             </div>
+
+        </section>
+
+
+        <section id="contato" class="contatoConteudo">
+
+            <header class="contatoCabecalho">
+                <p class="subtitulo">CONTATO</p>
+                <h2>Fale com a gente</h2>
+                <p>Tem dúvidas, sugestões ou quer fazer um evento? Envie mensagem.</p>
+            </header>
+
+            <form class="contatoForm">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem"></textarea>
+           
+                <button><a href="#">Enviar Mensagem</a></button>
+            </form>
 
         </section>
 
@@ -921,43 +945,46 @@
         });
     </script>
 
-    <script>let indiceSlideDicas = 0;
+    <script>
+        let indiceSlideDicas = 0;
 
-function mostrarSlideDicas(n) {
-    const slides = document.querySelectorAll('.carousel-slide-dicas');
-    const dots = document.querySelectorAll('.dot-dicas');
+        function mostrarSlideDicas(n) {
+            const slides = document.querySelectorAll('.carousel-slide-dicas');
+            const dots = document.querySelectorAll('.dot-dicas');
 
-    if (slides.length === 0) return;
+            if (slides.length === 0) return;
 
-    if (n >= slides.length) {
-        indiceSlideDicas = 0;
-    }
-    if (n < 0) {
-        indiceSlideDicas = slides.length - 1;
-    }
+            if (n >= slides.length) {
+                indiceSlideDicas = 0;
+            }
+            if (n < 0) {
+                indiceSlideDicas = slides.length - 1;
+            }
 
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
 
-    slides[indiceSlideDicas].classList.add('active');
-    dots[indiceSlideDicas].classList.add('active');
-}
+            slides[indiceSlideDicas].classList.add('active');
+            dots[indiceSlideDicas].classList.add('active');
+        }
 
-function mudarSlideDicas(direcao) {
-    indiceSlideDicas += direcao;
-    mostrarSlideDicas(indiceSlideDicas);
-}
+        function mudarSlideDicas(direcao) {
+            indiceSlideDicas += direcao;
+            mostrarSlideDicas(indiceSlideDicas);
+        }
 
-function atualizarSlideDicas(indice) {
-    indiceSlideDicas = indice;
-    mostrarSlideDicas(indiceSlideDicas);
-}
+        function atualizarSlideDicas(indice) {
+            indiceSlideDicas = indice;
+            mostrarSlideDicas(indiceSlideDicas);
+        }
 
-// Transição automática a cada 5 segundos
-setInterval(() => {
-    indiceSlideDicas++;
-    mostrarSlideDicas(indiceSlideDicas);
-}, 5000);
-</script>
+        // Transição automática a cada 5 segundos
+        setInterval(() => {
+            indiceSlideDicas++;
+            mostrarSlideDicas(indiceSlideDicas);
+        }, 5000);
+
+    </script>
+
 </body>
 </html>
