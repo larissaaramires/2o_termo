@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Paleta de cores */
+    --areia: #F4F6F0;
+    --caramelo: #C66A1A;
+    --marrom: #4A341C;
+    --creme: #F3E6D7;
+    --marfim: #FFF9F3;
+    --taupe: #9A887A;
+    --texto: #1E140F;
+    --branco: #FFFFFF;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -13,7 +25,7 @@ body {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F4F6F0;
+    background-color: var(--areia);
     line-height: 1.5;
 }
 
@@ -445,6 +457,22 @@ section#inicio {
     border: 2px solid #884C9E;
 }
 
+/* Descarte: especiais */
+.cartao-volumoso .residuosFront {
+    background-color: #FBE9D7;
+    border: 2px solid #B86F36;
+}
+
+.cartao-obras .residuosFront {
+    background-color: #F1E4D9;
+    border: 2px solid #9C6B4F;
+}
+
+.cartao-verde .residuosFront {
+    background-color: #E2F0D2;
+    border: 2px solid #648A3D;
+}
+
 /* ============================================
    ECOPONTO
    ============================================ */
@@ -561,10 +589,74 @@ section#inicio {
 .conscientizacaoCabecalho2 li {
     margin: 8px 0;
 }
+
+/* ============================================
+   CONTATO
+   ============================================ */
+.contatoConteudo {
+    background-color: #71bb8d41;
+    margin: 30px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contatoCabecalho {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.contatoCabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contatoCabecalho h2,
+.contatoCabecalho p {
+    margin: 0;
+}
+
+.contatoCabecalho p {
+    margin-top: 15px;
+}
+
+.contatoConteudo button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contatoConteudo button a {
+    color: white;
+    text-decoration: none;
+}
+
+.contatoConteudo button:hover {
+    background-color: #218838;
+}
+
+.contatoForm {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+   
 /* ============================================
    CARROSSEL DE CAMPANHAS
    ============================================ */
-.slideshow-campanhas, .slideshow-dicas {
+.slideshow-campanhas {
     position: relative;
     width: 100%;
     max-width: 500px;
@@ -575,12 +667,12 @@ section#inicio {
 }
 
 /* Cada slide fica escondido por padrão */
-.slide-campanha, .slide-dicas {
+.slide-campanha {
     display: none;
     width: 100%;
 }
 
-.slide-campanha img, .slide-dicas img {
+.slide-campanha img {
     width: 100%;
     height: auto;
     display: block;
@@ -601,16 +693,19 @@ section#inicio {
     animation-duration: 1s;
 }
 
-@keyframes fadeCampanha, .fadeDicas {
+@keyframes fadeCampanha {
+    from { opacity: 0.4; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeDicas {
     from { opacity: 0.4; }
     to   { opacity: 1; }
 }
 
 /* Setas de navegação */
 .prev-campanha,
-.next-campanha,
-.prev-dicas,
-.next-dicas {
+.next-campanha {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -679,14 +774,6 @@ section#inicio {
         margin: 0 3px;
     }
 }
-
-/* ============================================
-   CONTATO
-   ============================================ */
-.contatoConteudo {
-    background-color: ;
-}
-
 /* ============================================
    RESPONSIVIDADE — TABLET (até 900px)
    ============================================ */
@@ -696,7 +783,8 @@ section#inicio {
     .inicioDescarte,
     .inicioEcoponto,
     .inicioConscientizacao,
-    .inicioConscientizacao2 {
+    .inicioConscientizacao2,
+    .contatoConteudo {
         margin: 20px 14px;
         padding: 28px 20px;
     }
@@ -715,6 +803,20 @@ section#inicio {
         text-align: center;
         margin: 0;
     }
+
+    .contatoConteudo {
+        gap: 25px;
+    }
+
+    .contatoCabecalho,
+    .contato-form {
+        min-width: 0;
+    }
+
+    .contatoCabecalho h2 {
+        font-size: 1.6rem;
+    }
+
 }
 
 /* ============================================
@@ -726,7 +828,8 @@ section#inicio {
     .inicioDescarte,
     .inicioEcoponto,
     .inicioConscientizacao,
-    .inicioConscientizacao2 {
+    .inicioConscientizacao2,
+    .contatoConteudo {
         margin: 14px 8px;
         padding: 20px 14px;
     }
@@ -773,6 +876,34 @@ section#inicio {
     .descarteConteudo {
         gap: 18px;
     }
+
+    .contatoConteudo {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .contatoCabecalho {
+        width: 100%;
+    }
+
+    .contatoCabecalho h2 {
+        font-size: 1.4rem;
+    }
+
+    .contatoCabecalho p {
+        font-size: 0.95rem;
+    }
+
+    .contatoForm {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contatoForm button {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 /* ============================================
@@ -789,6 +920,28 @@ section#inicio {
 
     nav a {
         font-size: 13px;
+    }
+
+    /* CONTATO */
+    .contatoConteudo {
+        padding: 15px 10px;
+    }
+
+    .contatoCabecalho h2 {
+        font-size: 1.2rem;
+    }
+
+    .contatoCabecalho p {
+        font-size: 0.9rem;
+    }
+
+    .contatoForm {
+        gap: 8px;
+    }
+
+    .contatoForm button {
+        font-size: 14px;
+        padding: 10px;
     }
 }
 
@@ -808,82 +961,112 @@ section#inicio {
 }
 
 /* ============================================
-   CARROSSEL DE DICAS
+   CARROSSEL DE DICAS — versão compatível com index.html
    ============================================ */
-.slideshow-dicas {
+.carousel-container-dicas {
     position: relative;
-    width: 100%;
-    max-width: 500px;
-    flex: 1 1 300px;
+    max-width: 100%;
+    height: 350px;
+    margin: 20px 0;
     overflow: hidden;
-    border-radius: 8px;
-    margin: 0 auto;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    background: transparent;
 }
 
-/* Cada slide fica escondido por padrão */
-.slide-dicas {
+.carousel-img-dicas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-slide-dicas {
     display: none;
     width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-.slide-dicas img {
-    width: 100%;
-    height: auto;
+.carousel-slide-dicas.active {
     display: block;
+}
+
+.dica-overlay {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    padding: 12px 20px;
     border-radius: 8px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    text-align: center;
 }
 
-/* Animação de fade ao trocar */
-.fade-dicas {
-    animation-name: fadeDicas;
-    animation-duration: 1s;
+.dica-overlay p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
-@keyframes fade-dicas {
-    from { opacity: 0.4; }
-    to   { opacity: 1; }
-}
-
-/* Setas de navegação */
-.prev-dicas,
-.next-dicas {
-    cursor: pointer;
+.carousel-btn-dicas {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: auto;
-    padding: 12px 16px;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-weight: bold;
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.35);
-    border-radius: 4px;
-    user-select: none;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    line-height: 1;
+    border: none;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    z-index: 10;
 }
 
-.prev-dicas { left: 8px; }
-.next-dicas { right: 8px; }
-
-.prev-dicas:hover,
-.next-dicas:hover {
-    background-color: rgba(0, 0, 0, 0.75);
+.carousel-btn-dicas:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Bolinhas indicadoras */
-.dots-dicas {
-    text-align: center;
+.carousel-btn-dicas.prev-btn { left: 15px; }
+.carousel-btn-dicas.next-btn { right: 15px; }
+
+.carousel-dots-dicas {
     position: absolute;
-    bottom: 10px;
-    width: 100%;
-    left: 0;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
 }
 
-.dot-c:hover,
-.dot-c.ativo-c {
+.dot-dicas {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.dot-dicas.active,
+.dot-dicas:hover {
     background-color: #ffffff;
+    transform: scale(1.2);
 }
