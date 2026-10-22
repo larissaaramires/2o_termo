@@ -302,10 +302,10 @@ button a {
     display: flex;
     align-items: center;    
     color: aliceblue;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
-.ambienteConteudo h2 {
+.ambienteCabecalho {
     margin: 20px;
 }
 
@@ -330,16 +330,10 @@ button a {
 .contatoCabecalho {
     display: flex;
     flex-wrap: wrap; 
-    align-items: center;
-    gap: 20px;
-    flex: 1;
-}
-
-.contatoCabecalho {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    flex: 1;
 }
 
 .contatoCabecalho h2,
