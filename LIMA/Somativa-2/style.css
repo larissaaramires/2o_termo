@@ -1,0 +1,367 @@
+:root {
+    --AzulEscuro: rgb(0, 30, 56);
+    --AzulPreto: rgb(10, 21, 31);
+    --Branco: #fff;
+    --Rosa: #af0075;
+    --RosaEscuro: #830057;
+    --Azul: rgb(0, 63, 122);
+    --AzulClaro: rgb(124, 192, 255);
+    --Cinza: rgb(209, 209, 209);
+    --Dourado: rgb(141, 103, 0);
+}
+
+body {
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--AzulEscuro);
+}
+
+img {
+    width: 400px;
+    height: 350px;
+    display: block;
+}
+
+.cabecalho, footer {
+    background-color: var(--AzulPreto);
+    color: var(--Branco);
+    padding: 20px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.cabecalho h2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 2;
+}
+
+nav a {
+    color: var(--Branco);
+    text-decoration: none;
+    margin: 4px 8px;
+    font-size: 15px;
+    transition: opacity 0.2s;
+}
+
+.cabecalho button {
+    background-color: var(--AzulPreto);
+    color: var(--Branco);
+    border-color: var(--Rosa);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cabecalho button:hover {
+    background-color: var(--RosaEscuro);
+    border-color: var(--Rosa);
+}
+
+.rosa {
+    color: var(--Rosa);
+}
+
+h1 {
+    color: var(--Branco);
+    margin: 40px;
+}
+
+main h2 {
+   color: var(--Branco);
+    margin: 40px; 
+}
+
+li {
+    color: var(--Branco);
+    text-decoration: none;
+}
+
+.subtitulo {
+    color: var(--AzulClaro);
+    margin: 40px;
+}
+
+.subtituloQuadro {
+    color: var(--Dourado);
+    margin: 40px;
+}
+
+p {
+    color: var(--Cinza);
+    margin: 40px;
+
+}
+
+button a {
+    color: var(--Branco);
+    text-decoration: none;
+}
+
+/* Início */
+.inicio {
+    margin: 30px;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inicio img {
+    display: block;
+    height: 350px;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.inicio button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--Rosa);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin: 40px;
+}
+
+.inicio button:hover {
+    background-color: var(--RosaEscuro);
+}
+
+
+.cabecalhoInicio {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* classicos */
+.classicos {
+    background-color: var(--AzulPreto);
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalhoClassicos {
+    padding: 20px;
+    margin: 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.quadroClassicos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.quadroClassicos ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cardClassicos {
+    width: 220px;
+    height: 100%;
+    margin-bottom: 100px;
+    box-sizing: content-box;
+    background-color: var(--Azul);
+    color: var(--Branco);
+    padding: 20px;
+    margin: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cardClassicos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+.cardClassicos figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.cardClassicos figure a {
+    display: block;
+}
+
+.cardClassicos img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.cardClassicos h3 {
+    align-items: center;
+}
+
+.cardClassicos p {
+    margin: 20px;
+}
+
+/* herois  */
+.herois {
+    margin: 30px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabecalhoHerois {
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.quadroHerois {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.quadroHerois ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cardHerois {
+    width: 220px;
+    height: 100%;
+    margin-bottom: 100px;
+    box-sizing: content-box;
+    background-color: var(--Azul);
+    color: var(--Branco);
+    padding: 20px;
+    margin: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cardHerois:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.cardHerois figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.cardHerois figure a {
+    display: block;
+}
+
+.cardHerois img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.cardHerois h3 {
+    align-items: center;
+}
+
+.cardHerois p {
+    margin: 20px;
+}
+
+/* hoje */
+.hoje {
+    background-color: var(--AzulPreto);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imgHoje1 img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.quadroHoje {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* sobre  */
+.sobre {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            120deg,
+            var(--RosaEscuro),
+            var(--AzulPreto)
+        )
+}
+
+footer {
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.assinaturaRodape {
+    display: flex;
+    align-items: center;
+
+}
