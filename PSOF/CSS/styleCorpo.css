@@ -6,16 +6,34 @@
 }
 
 :root {
-    /* Paleta de cores */
-    --areia: #F4F6F0;
-    --menta: #198a44ec;
-    --preto: #1E140F;
-    --branco: #FFFFFF;
-    --cinza: 
-    --marrom: #4A341C;
-    --creme: #F3E6D7;
-    --marfim: #FFF9F3;
-    --taupe: #9A887A;
+    --Off-white: #F4F6F0;
+    --Esmeralda: #198a44ec;
+    --Preto: #1E140F;
+    --Branco: #FFFFFF;
+    --Prata: #bbb;
+    --Cinza: #717171;
+    --Sálvia: #71bb8d41;
+    --Musgo:#005f05;
+    --Eucalipto: #c6dacf;
+    --Areia: #E8D5C4;
+    --Gelo: #E3F2FD;
+    Rosa-claro — #FFEBEE
+    Cinza-claro — #EEEEEE
+    Bege — #EFEBE9
+    Neve — #F5F5F5
+    Menta — #E8F5E9
+    Lavanda — #E8EAF6
+    Água — #E0F2F1
+    Lilás — #F3E5F5
+    Marfim — #F0F4E8
+    Rosé — #F7EDEF
+    Pêssego — #FCEAE6
+    Baunilha — #FFF8D9
+    Turquesa-claro — #E5F5F2
+    Creme — #FFF0E2
+    Azul-neblina — #E9EDFA
+    Orquídea — #F3E8F8
+    Damasco — #FBE9D7
 }
 
 html {
@@ -26,7 +44,7 @@ body {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--areia);
+    background-color: var(--Off-white);
     line-height: 1.5;
 }
 
@@ -40,7 +58,7 @@ img {
    CABEÇALHO E RODAPÉ
    ============================================ */
 .cabecalho, footer .rodape {
-    background-color: var(--menta);
+    background-color: var(--Esmeralda);
     padding: 20px 16px;
     display: flex;
     flex-wrap: wrap;
@@ -50,7 +68,7 @@ img {
 }
 
 header h1, footer h1 {
-    color: var(--branco);
+    color: var(--Branco);
     margin: 10px;
     font-size: 1.6rem;
 }
@@ -63,7 +81,7 @@ nav {
 }
 
 nav a {
-    color: var(--branco);
+    color: var(--Branco);
     text-decoration: none;
     margin: 4px 8px;
     font-size: 15px;
@@ -102,13 +120,13 @@ nav a:hover {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: var(--branco);
+    color: var(--Branco);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    background-color: var(--preto);
+    background-color: var(--Preto);
     text-decoration: none;
 }
 
@@ -118,11 +136,11 @@ nav a:hover {
 }
 
 .prev:hover, .next:hover {
-    background-color: var(--preto);
+    background-color: var(--Preto);
 }
 
 .text {
-    color: var(--branco);
+    color: var(--Branco);
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
@@ -132,12 +150,12 @@ nav a:hover {
 }
 
 .numbertext {
-    color: var(--branco);
+    color: var(--Branco);
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-    background-color: var(--preto);
+    background-color: var(--Preto);
     border-radius: 0 0 4px 0;
 }
 
@@ -146,14 +164,14 @@ nav a:hover {
     height: 15px;
     width: 15px;
     margin: 0 3px;
-    background-color: #bbb;
+    background-color: var(--Prata);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-    background-color: #717171;
+    background-color: var(--Cinza);
 }
 
 .fade {
@@ -170,7 +188,7 @@ nav a:hover {
    SEÇÃO INÍCIO
    ============================================ */
 section#inicio {
-    background-color: #71bb8d41;
+    background-color: var(--Sálvia);
     margin: 30px;
     padding: 40px;
 }
@@ -213,7 +231,7 @@ section#inicio {
 }
 
 .quadros {
-    background-color: #71bb8d41;
+    background-color: var(--Sálvia);
     flex: 1 1 250px;
     max-width: 100%;
     padding: 25px;
@@ -237,7 +255,7 @@ section#inicio {
 .inicioEcoponto,
 .inicioConscientizacao,
 .inicioConscientizacao2 {
-    background-color: #71bb8d41;
+    background-color: var(--Sálvia);
     margin: 30px;
     padding: 40px;
     border-radius: 8px;
@@ -255,7 +273,7 @@ section#inicio {
 }
 
 .subtitulo {
-    color: #005f05;
+    color: var(--Musgo);
     font-weight: bold;
     letter-spacing: 1px;
     margin: 0 0 6px;
@@ -300,7 +318,7 @@ section#inicio {
 .flip-card:hover,
 .quadros:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 15px 25px var(--Preto);
 }
 
 .flip-card-inner {
@@ -329,8 +347,8 @@ section#inicio {
 
 /* Frente: texto */
 .residuosFront {
-    background-color: #c6dacf;
-    color: #17251c;
+    background-color: var(--Eucalipto);
+    color: var(--Preto);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -359,7 +377,7 @@ section#inicio {
 /* Verso: imagem */
 .residuosBack {
     transform: rotateY(180deg);
-    background-color: #c6dacf;
+    background-color: var(--Eucalipto);
 }
 
 .residuosBack img {
