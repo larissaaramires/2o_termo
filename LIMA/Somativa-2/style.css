@@ -124,6 +124,7 @@ button a {
     padding: 10px 8px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .inicio img {
@@ -150,12 +151,11 @@ button a {
 
 
 .cabecalhoInicio {
-    display: flex;
-    justify-content: flex-start;
-    flex: 1;
-    flex-wrap: wrap;
+    padding: 20px;
+    margin: 40px;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 25px;;
 }
 
 
@@ -446,19 +446,19 @@ footer {
     justify-content: space-between;
 }
 
-footer h2 {
+.footer1 h2 {
     display: flex;
     justify-content: flex-start;
 }
 
-footer nav {
+.footer1 nav {
     display: flex;
     justify-content: flex-end;
     flex: 2;
 }
 
 
-footer nav a {
+.footer1 nav a {
     color: var(--Dourado);
     text-decoration: none;
     margin: 4px 8px;
@@ -466,7 +466,7 @@ footer nav a {
     transition: opacity 0.2s;
 } 
 
-.assinaturaRodape {
+.footer2 {
     display: flex;
     text-align: center;
 } 
