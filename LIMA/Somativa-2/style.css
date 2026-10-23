@@ -1,0 +1,520 @@
+:root {
+    --AzulEscuro: rgb(0, 30, 56);
+    --AzulPreto: rgb(10, 21, 31);
+    --Branco: #fff;
+    --Rosa: #af0075;
+    --RosaEscuro: #830057;
+    --Azul: rgb(0, 63, 122);
+    --AzulClaro: rgb(124, 192, 255);
+    --Cinza: rgb(209, 209, 209);
+    --Dourado: rgb(141, 103, 0);
+    --RoxoPreto: rgb(28, 0, 46);
+}
+
+body {
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:
+        linear-gradient(
+            120deg,
+            var(--AzulEscuro),
+            var(--AzulPreto)
+        );
+}
+
+img {
+    width: 400px;
+    height: 350px;
+    display: block;
+}
+
+.cabecalho {
+    background-color: var(--AzulPreto);
+    color: var(--Branco);
+    padding: 20px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.cabecalho h2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 2;
+}
+
+nav a {
+    color: var(--Branco);
+    text-decoration: none;
+    margin: 4px 8px;
+    font-size: 15px;
+    transition: opacity 0.2s;
+}
+
+.cabecalho button {
+    background-color: var(--AzulPreto);
+    color: var(--Branco);
+    border-color: var(--Rosa);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cabecalho button:hover {
+    background-color: var(--RosaEscuro);
+    border-color: var(--Rosa);
+}
+
+.rosa {
+    color: var(--Rosa);
+}
+
+h1 {
+    color: var(--Branco);
+    margin: 40px;
+}
+
+main h2 {
+   color: var(--Branco);
+    margin: 40px; 
+}
+
+li {
+    color: var(--Branco);
+    text-decoration: none;
+}
+
+.subtitulo {
+    color: var(--AzulClaro);
+    margin: 40px;
+}
+
+.subtituloQuadro {
+    color: var(--Dourado);
+    margin: 40px;
+}
+
+p {
+    color: var(--Cinza);
+    margin: 40px;
+
+}
+
+button a {
+    color: var(--Branco);
+    text-decoration: none;
+}
+
+/* Início */
+.inicio {
+    background:
+        linear-gradient(
+            120deg,
+            var(--RoxoPreto),
+            var(--AzulPreto)
+        );
+    margin: 0;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inicio img {
+    display: block;
+    height: 350px;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.inicio button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--Rosa);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin: 40px;
+}
+
+.inicio button:hover {
+    background-color: var(--RosaEscuro);
+}
+
+
+.cabecalhoInicio {
+    padding: 20px;
+    margin: 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;;
+}
+
+
+/* classicos */
+.classicos {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+.cabecalhoClassicos {
+    padding: 20px;
+    margin: 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.quadroClassicos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+}
+
+.quadroClassicos ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cardClassicos {
+    width: 220px;
+    height: auto;
+    margin-bottom: 100px;
+    box-sizing: content-box;
+    background:
+        linear-gradient(
+            120deg,
+            var(--Azul),
+            var(--AzulPreto)
+        );
+    color: var(--Branco);
+    padding: 20px;
+
+    margin: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cardClassicos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+.cardClassicos figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.cardClassicos figure a {
+    display: block;
+}
+
+.cardClassicos img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.cardClassicos h3 {
+    align-items: center;
+}
+
+.cardClassicos p {
+    margin: 20px;
+}
+
+/* herois  */
+.herois {
+    background:
+        linear-gradient(
+            120deg,
+            var(--RoxoPreto),
+            var(--AzulPreto)
+        );
+    margin: 0px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.cabecalhoHerois {
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.quadroHerois {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.quadroHerois ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cardHerois {
+    gap: 50px;
+    width: 220px;
+    height: auto;
+    margin-bottom: 100px;
+    box-sizing: content-box;
+    background:
+        linear-gradient(
+            120deg,
+            var(--Azul),
+            var(--AzulPreto)
+        );
+    color: var(--Branco);
+    padding: 20px;
+    margin: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cardHerois:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.cardHerois figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.cardHerois figure a {
+    display: block;
+}
+
+.cardHerois img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.cardHerois h3 {
+    align-items: center;
+}
+
+.cardHerois p {
+    margin: 20px;
+}
+
+/* hoje */
+.hoje {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imgHoje1 img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+    flex: 1;
+    
+    
+}
+
+.quadroHoje {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cardHoje1 {
+    background-color: var(--AzulEscuro);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cardHoje {
+
+    background-color: var(--AzulEscuro);
+    color: var(--Branco);
+    padding: 20px;
+
+}
+
+.cardHoje:hover, .cardHoje1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.cardHoje figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.cardHoje figure a {
+    display: block;
+}
+
+.cardHoje img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.cardHoje h3 {
+    align-items: center;
+}
+
+.cardHoje p {
+    margin: 20px;
+}
+
+/* sobre  */
+.sobre {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            120deg,
+            var(--RoxoPreto),
+            var(--AzulEscuro),
+            var(--AzulPreto)
+        )
+}
+
+footer {
+    background-color: var(--AzulPreto);
+    color: var(--Branco);
+    padding: 20px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.footer1 h2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer1 nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 2;
+}
+
+
+.footer1 nav a {
+    color: var(--Dourado);
+    text-decoration: none;
+    margin: 4px 8px;
+    font-size: 15px;
+    transition: opacity 0.2s;
+} 
+
+.footer2 {
+    display: flex;
+    text-align: center;
+} 
+
+@media (max-width: 900px) {
+    section#inicio,
+    .classicos,
+    .herois,
+    .hoje,
+    .sobre {
+        margin: 20px 14px;
+        padding: 28px 20px;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        margin: 3px 5px;
+        font-size: 14px;
+    }
+
+    .textoInicio h2 {
+        font-size: 1.35rem;
+    }
+
+    .textoInicio p {
+        font-size: 0.95rem;
+    }
+
+    .classicos header h1, .classicos header p {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .quadroClassicos,
+    .quadroHerois,
+    .quadroHoje {
+        gap: 18px;
+        grid-template-columns: 1fr;
+    }
+
+  
+}
+
+@media (max-width: 600px) {
+      .imgInicio {
+        flex-direction: column;
+    }
+}

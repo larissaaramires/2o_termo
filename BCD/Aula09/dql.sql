@@ -288,3 +288,36 @@ SELECT nome, preco
 FROM produto 
 WHERE preco > (SELECT AVG(preco) FROM produto)
 ORDER BY preco DESC;
+
+---------------------------------------------------------------------------
+-- DEMONSTRAÇÃO GUIADA - EVOLUINDO EM UMA CONSULTA
+-- PASSO 01 - VISUALIZAR PRODUTOS
+SELECT * FROM produto;
+
+-- PASSO 02 - SOMENTE O NECESSÁRIO
+SELECT nome, preco FROM produto;
+
+-- PASSO 03 - FILTRAR 
+SELECT nome, preco FROM produto
+where preco >= 10.00;
+
+-- PASSO 04 - ORDENAR VALORES OU INFORMAÇÕES
+SELECT nome, preco FROM produto
+where preco >= 10.00
+ORDER BY preco DESC;
+
+-- PASSO 05 - MOSTRAR CATEGORIA 
+SELECT PR.nome as produto, CA.nome as categoria, PR.preco
+FROM produto as PR
+INNER JOIN categoria as CA 
+ON CA.id_categoria = PR.id_categoria
+WHERE PR.preco >= 10
+ORDER BY PR.preco DESC;
+
+-- PASSO 06 - PERGUNTAS GERENCIADAS
+SELECT CA.nome as categoria, COUNT(PR.id_produto) as produto, ROUND(AVG(PR.preco), 2) as preco_medio
+FROM categoria as CA 
+INNER JOIN produto as PR
+ON PR.id_categoria = CA.id_categoria
+GROUP BY CA.id_categoria, CA.nome 
+ORDER BY preco_medio DESC;

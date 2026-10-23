@@ -134,7 +134,6 @@ WHERE P.id_pedido IS NULL;
 -- 21. Informe quantos pedidos FINALIZADOS cada cliente realizou e quanto
 --     cada cliente gastou. Ordene do maior gasto para o menor.
 
-
 -- 22. Mostre a quantidade de produtos e o preço médio de cada categoria.
 
 

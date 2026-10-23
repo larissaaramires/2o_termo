@@ -104,3 +104,56 @@ INSERT INTO categoria (nome) VALUES
 ('Excluir Depois');
 DELETE FROM categoria
 where id_categoria = 10;
+
+-- PARTE D - INTEGRIDADE E ERROS CONTROLADOS
+-- Execute uma tentativa por vez. Depois deixe o comando problemático comentado.
+
+-- 17. Tente inserir um produto com id_categoria = 9999.
+-- Qual restrição impediu a operação?
+INSERT INTO produto (nome, preco, ativo, id_categoria) VALUES
+('Chá  Gelado', 15.00, TRUE, 999);
+-- Não tem esse id de categoria
+
+-- 18. Tente cadastrar um cliente usando 'larissa@email.com'.
+-- Qual restrição impediu a operação?
+INSERT INTO cliente (nome, email, telefone, cidade, ativo) VALUES
+('Larissa Souza', 'larissa@email.com', '199999999', 'Campinas', true)
+-- Já existe cliente com esse email
+
+-- 19. Tente criar um pedido com id_cliente = 9999.
+-- Qual restrição impediu a operação?
+INSERT INTO pedido (data_pedido, status_pedido, valor_total, id_cliente) VALUES
+(now(), 'ABERTO', 39.90, 999);
+-- Não tem esse id de cliente
+
+-- 20. Escreva em comentários a diferença entre os três erros anteriores.
+-- O erro da 17 e 19 é que não existe o id que tentei cadastrar o produto e pedido, já da 18 o erro foi que já existia um cliente salvo com aquele email
+
+-- PARTE E - DESAFIO COMPLETO COM TRANSAÇÃO
+
+-- 21. Inicie uma transação.
+START TRANSACTION;
+
+-- 22. Dentro dela, cadastre um cliente, um pedido e dois itens relacionados.
+-- cliente
+INSERT INTO cliente (nome, email, telefone, cidade, ativo) VALUES
+('Vitória', 'vitoria@email.com', '199999999', 'Campinas', true);
+-- pedido
+INSERT INTO pedido (data_pedido, status_pedido, valor_total, id_cliente) VALUES
+(now(), 'ABERTO', 39.90, 23);
+-- itens 
+SELECT * FROM cliente;
+-- 23. Faça uma consulta com JOIN comprovando que os registros existem
+--     enquanto a transação está aberta.
+
+
+-- 24. Execute ROLLBACK e depois use SELECT para provar que o cadastro foi desfeito.
+
+
+-- 25. Repita o processo com novos dados e finalize usando COMMIT.
+--     Depois consulte os registros persistidos.
+
+
+-- DESAFIO EXTRA
+-- 26. Escolha uma situação realista do SmartCoffee que exija INSERT + UPDATE
+--     ou UPDATE + DELETE lógico. Descreva a regra de negócio e implemente.

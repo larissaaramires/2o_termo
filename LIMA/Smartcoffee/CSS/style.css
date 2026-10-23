@@ -156,7 +156,7 @@ button a {
 /* Cabeçalho */
 .cafeCabecalho {
     text-align: center;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 
 .cafeCabecalho .subtitulo {
