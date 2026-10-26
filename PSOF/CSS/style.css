@@ -4,12 +4,81 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
+
+p {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+
+:root {
+    --Amarelo-ouro: #C49A18;
+    --Areia: #E8D5C4;
+    --Azul-ardosia: #5367A5;
+    --Azul-indigo: #3949AB;
+    --Azul-neblina: #E9EDFA;
+    --Azul-vivo: #1976D2;
+    --Água: #E0F2F1;
+    --Baunilha: #FFF8D9;
+    --Bege: #EFEBE9;
+    --Branco: #FFFFFF;
+    --Branco-transparente: rgba(255, 255, 255, 0.6);
+    --Cinza: #717171;
+    --Cinza-claro: #EEEEEE;
+    --Cinza-grafite: #616161;
+    --Cinza-prata: #ccc;
+    --Creme: #FFF0E2;
+    --Damasco: #FBE9D7;
+    --Esmeralda: #198a44ec;
+    --Eucalipto: #c6dacf;
+    --Gelo: #E3F2FD;
+    --Grafite: #333;
+    --Laranja-bronze: #B86F36;
+    --Laranja-terra: #C46A25;
+    --Lavanda: #E8EAF6;
+    --Lilás: #F3E5F5;
+    --Marfim: #F0F4E8;
+    --Marrom-cafe: #795548;
+    --Marrom-caramelo: #9C6B4F;
+    --Menta: #E8F5E9;
+    --Musgo: #005f05;
+    --Neve: #F5F5F5;
+    --Off-white: #F4F6F0;
+    --Orquídea: #F3E8F8;
+    --Pêssego: #FCEAE6;
+    --Prata: #bbb;
+    --Preto: #1E140F;
+    --Rosa-antigo: #9B5D68;
+    --Rosa-claro: #FFEBEE;
+    --Rosé: #F7EDEF;
+    --Roxo-uva: #884C9E;
+    --Roxo-vibrante: #8E24AA;
+    --Sálvia: #71bb8d41;
+    --Turquesa-claro: #E5F5F2;
+    --Verde-esmeralda-escuro: #218838;
+    --Verde-floresta: #2E7D32;
+    --Verde-folha: #28a745;
+    --Verde-mar: #00897B;
+    --Verde-menta-claro: #b9e3c8;
+    --Verde-musgo-claro: #648A3D;
+    --Verde-nevoa: #e9f5ed;
+    --Verde-oliva: #6D8B4E;
+    --Verde-pastel: #d4edda;
+    --Verde-turquesa: #328C83;
+    --Vermelho-coral: #D35445;
+    --Vermelho-forte: #C62828;
+}
+
 
 .cabecalho {
     width: 100vw;
@@ -19,7 +88,7 @@ body {
     flex-direction: column;
     justify-content: center;
     padding-left: 5%;
-    color: white;
+    color: var(--Branco);
 }
 
 header img {
@@ -39,12 +108,6 @@ header::before {
     left: 0;
     width: 55%;
     height: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(5, 48, 40, 0.95),
-        rgba(5, 48, 40, 0.55),
-        transparent
-    );
     z-index: -1;
 }
 
@@ -63,8 +126,12 @@ header p {
 .acessarSite {
     width: 170px;
     padding: 12px 25px;
-    background-color: white;
-    border: 2px solid #b9e3c8;
+    background: linear-gradient(
+        90deg,
+        var(--Verde-folha),
+        var(--Verde-floresta)
+    );
+    border: 2px solid var(--Esmeralda);
     border-radius: 25px;
     font-size: 16px;
     font-weight: bold;
@@ -73,14 +140,15 @@ header p {
 }
 
 .acessarSite a {
-    color: #234d43;
+    color: var(--Preto);
     text-decoration: none;
     font-weight: 500;
 }
 
 .acessarSite:hover {
-    background-color: #a6e2a6a8;
+    background: var(--Verde-menta-claro);
+    border: 2px solid var(--Sálvia);
     transform: translateY(-3px);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 12px var(--Preto);
 }
 
