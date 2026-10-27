@@ -1,0 +1,150 @@
+body {
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f4f3;
+}
+
+p {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+.cabecalho {
+    background-color: #2B170D;
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-left: 80px;
+    margin: 20px;
+}
+
+nav a:hover {
+    opacity: 0.75;
+}
+
+button {
+    background-color: #C66A1A;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #7a4d32;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+button a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.salgados header,
+.doces header,
+.bebidas header {
+    margin: 50px; 
+}
+
+
+.salgados li,
+.doces li,
+.bebidas li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.salgados li h3,
+.doces li h3,
+.bebidas li h3,
+.salgados li p,
+.doces li p,
+.bebidas li p {
+    width: 60%;
+}
+
+.imgComidas img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.salgados li,
+.doces li,
+.bebidas li {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    align-items: center;
+    padding: 25px;
+}
+
+/* Título */
+.salgados li h3,
+.doces li h3,
+.bebidas li h3 {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+}
+
+/* Imagem */
+.salgados li .imgComidas,
+.doces li .imgComidas,
+.bebidas li .imgComidas {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    width: 220px;
+    margin: 0;
+}
+
+.salgados li .imgComidas img,
+.doces li .imgComidas img,
+.bebidas li .imgComidas img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.bebidas h2 {
+    margin: 10px;
+}
