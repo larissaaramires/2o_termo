@@ -5,16 +5,63 @@
     box-sizing: border-box;
 }
 
+
 :root {
-    /* Paleta de cores */
-    --areia: #F4F6F0;
-    --caramelo: #C66A1A;
-    --marrom: #4A341C;
-    --creme: #F3E6D7;
-    --marfim: #FFF9F3;
-    --taupe: #9A887A;
-    --texto: #1E140F;
-    --branco: #FFFFFF;
+    --Amarelo-ouro: #C49A18;
+    --Areia: #E8D5C4;
+    --Azul-ardosia: #5367A5;
+    --Azul-indigo: #3949AB;
+    --Azul-neblina: #E9EDFA;
+    --Azul-vivo: #1976D2;
+    --Água: #E0F2F1;
+    --Baunilha: #FFF8D9;
+    --Bege: #EFEBE9;
+    --Branco: #FFFFFF;
+    --Branco-transparente: rgba(255, 255, 255, 0.6);
+    --Cinza: #717171;
+    --Cinza-claro: #EEEEEE;
+    --Cinza-grafite: #616161;
+    --Cinza-prata: #ccc;
+    --Creme: #FFF0E2;
+    --Damasco: #FBE9D7;
+    --Esmeralda: #198a44ec;
+    --Eucalipto: #c6dacf;
+    --Gelo: #E3F2FD;
+    --Grafite: #333;
+    --Laranja-bronze: #B86F36;
+    --Laranja-terra: #C46A25;
+    --Lavanda: #E8EAF6;
+    --Lilás: #F3E5F5;
+    --Marfim: #F0F4E8;
+    --Marrom-cafe: #795548;
+    --Marrom-caramelo: #9C6B4F;
+    --Menta: #E8F5E9;
+    --Musgo: #005f05;
+    --Neve: #F5F5F5;
+    --Off-white: #F4F6F0;
+    --Orquídea: #F3E8F8;
+    --Pêssego: #FCEAE6;
+    --Prata: #bbb;
+    --Preto: #1E140F;
+    --Rosa-antigo: #9B5D68;
+    --Rosa-claro: #FFEBEE;
+    --Rosé: #F7EDEF;
+    --Roxo-uva: #884C9E;
+    --Roxo-vibrante: #8E24AA;
+    --Sálvia: #71bb8d41;
+    --Turquesa-claro: #E5F5F2;
+    --Verde-esmeralda-escuro: #218838;
+    --Verde-floresta: #2E7D32;
+    --Verde-folha: #28a745;
+    --Verde-mar: #00897B;
+    --Verde-menta-claro: #b9e3c8;
+    --Verde-musgo-claro: #648A3D;
+    --Verde-nevoa: #e9f5ed;
+    --Verde-oliva: #6D8B4E;
+    --Verde-pastel: #d4edda;
+    --Verde-turquesa: #328C83;
+    --Vermelho-coral: #D35445;
+    --Vermelho-forte: #C62828;
 }
 
 html {
@@ -25,7 +72,7 @@ body {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--areia);
+    background-color: var(--Off-white);
     line-height: 1.5;
 }
 
@@ -35,11 +82,31 @@ img {
     display: block;
 }
 
+p {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
 /* ============================================
    CABEÇALHO E RODAPÉ
    ============================================ */
 .cabecalho, footer .rodape {
-    background-color: #198a44ec;
+    background: linear-gradient(
+        90deg,
+        var(--Musgo),
+        var(--Esmeralda)
+    );
     padding: 20px 16px;
     display: flex;
     flex-wrap: wrap;
@@ -49,7 +116,7 @@ img {
 }
 
 header h1, footer h1 {
-    color: aliceblue;
+    color: var(--Branco);
     margin: 10px;
     font-size: 1.6rem;
 }
@@ -62,7 +129,7 @@ nav {
 }
 
 nav a {
-    color: aliceblue;
+    color: var(--Branco);
     text-decoration: none;
     margin: 4px 8px;
     font-size: 15px;
@@ -70,14 +137,18 @@ nav a {
 }
 
 nav a:hover {
-    opacity: 0.75;
+    color: var(--Eucalipto);
+}
+
+nav a {
+    transition: 0.3s;
 }
 
 /* ============================================
    CARROSSEL
    ============================================ */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 1600px;
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -90,7 +161,7 @@ nav a:hover {
 .mySlides img {
     width: 100%;
     height: auto;
-    max-height: 500px;
+    max-height: 600px;
     object-fit: cover;
 }
 
@@ -100,28 +171,28 @@ nav a:hover {
     top: 50%;
     width: auto;
     margin-top: -22px;
-    padding: 16px;
-    color: white;
+    padding: 12px;
+    color: var(--Branco);
     font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    font-size: 16px;
+    transition: 0.3s;
+    border-radius: 5px;
     user-select: none;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--Preto);
     text-decoration: none;
 }
 
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 5px;
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--Preto);
 }
 
 .text {
-    color: #f2f2f2;
+    color: var(--Branco);
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
@@ -131,12 +202,12 @@ nav a:hover {
 }
 
 .numbertext {
-    color: #f2f2f2;
+    color: var(--Branco);
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--Preto);
     border-radius: 0 0 4px 0;
 }
 
@@ -145,23 +216,23 @@ nav a:hover {
     height: 15px;
     width: 15px;
     margin: 0 3px;
-    background-color: #bbb;
+    background-color: var(--Prata);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-    background-color: #717171;
+    background-color: var(--Esmeralda);
 }
 
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 0.8s;
 }
 
 @keyframes fade {
-    from { opacity: .4; }
+    from { opacity: .7; }
     to   { opacity: 1; }
 }
 
@@ -169,7 +240,12 @@ nav a:hover {
    SEÇÃO INÍCIO
    ============================================ */
 section#inicio {
-    background-color: #71bb8d41;
+    background: linear-gradient(
+        135deg,
+        var(--Eucalipto),
+        var(--Sálvia),
+        var(--Esmeralda)
+    );
     margin: 30px;
     padding: 40px;
 }
@@ -212,7 +288,8 @@ section#inicio {
 }
 
 .quadros {
-    background-color: #71bb8d41;
+    background-color: var(--Eucalipto);
+    border: 2px solid var(--Esmeralda);
     flex: 1 1 250px;
     max-width: 100%;
     padding: 25px;
@@ -236,7 +313,12 @@ section#inicio {
 .inicioEcoponto,
 .inicioConscientizacao,
 .inicioConscientizacao2 {
-    background-color: #71bb8d41;
+    background: linear-gradient(
+        135deg,
+        var(--Eucalipto),
+        var(--Sálvia),
+        var(--Esmeralda)
+    );
     margin: 30px;
     padding: 40px;
     border-radius: 8px;
@@ -254,7 +336,7 @@ section#inicio {
 }
 
 .subtitulo {
-    color: #005f05;
+    color: var(--Musgo);
     font-weight: bold;
     letter-spacing: 1px;
     margin: 0 0 6px;
@@ -299,7 +381,7 @@ section#inicio {
 .flip-card:hover,
 .quadros:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 15px 25px var(--Preto);
 }
 
 .flip-card-inner {
@@ -328,8 +410,8 @@ section#inicio {
 
 /* Frente: texto */
 .residuosFront {
-    background-color: #c6dacf;
-    color: #17251c;
+    background-color: var(--Eucalipto);
+    color: var(--Preto);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -358,7 +440,7 @@ section#inicio {
 /* Verso: imagem */
 .residuosBack {
     transform: rotateY(180deg);
-    background-color: #c6dacf;
+    background-color: var(--Eucalipto);
 }
 
 .residuosBack img {
@@ -373,104 +455,123 @@ section#inicio {
 
 /* Domiciliares */
 .cartao-organicos .residuosFront {
-    background-color: #E8D5C4;
-    border: 2px solid #795548;
+    background-color: var(--Areia);
+    border: 2px solid var(--Marrom-cafe);
 }
+
 .cartao-reciclaveis .residuosFront {
-    background-color: #E3F2FD;
-    border: 2px solid #1976D2;
+    background-color: var(--Gelo);
+    border: 2px solid var(--Azul-vivo);
 }
+
 .cartao-perigosos .residuosFront {
-    background-color: #FFEBEE;
-    border: 2px solid #C62828;
+    background-color: var(--Rosa-claro);
+    border: 2px solid var(--Vermelho-forte);
 }
+
 .cartao-rejeitos .residuosFront {
-    background-color: #EEEEEE;
-    border: 2px solid #616161;
+    background-color: var(--Cinza-claro);
+    border: 2px solid var(--Cinza-grafite);
 }
+
 
 /* Especiais */
 .cartao-volumosos .residuosFront {
-    background-color: #EFEBE9;
-    border: 2px solid #795548;
+    background-color: var(--Bege);
+    border: 2px solid var(--Marrom-cafe);
 }
+
 .cartao-entulho .residuosFront {
-    background-color: #F5F5F5;
-    border: 2px solid #757575;
+    background-color: var(--Neve);
+    border: 2px solid var(--Cinza);
 }
+
 .cartao-verdes .residuosFront {
-    background-color: #E8F5E9;
-    border: 2px solid #2E7D32;
+    background-color: var(--Menta);
+    border: 2px solid var(--Verde-floresta);
 }
+
 
 /* Recicláveis */
 .cartao-plasticos .residuosFront {
-    background-color: #E3F2FD;
-    border: 2px solid #1976D2;
+    background-color: var(--Gelo);
+    border: 2px solid var(--Azul-vivo);
 }
+
 .cartao-papeis .residuosFront {
-    background-color: #E8EAF6;
-    border: 2px solid #3949AB;
+    background-color: var(--Lavanda);
+    border: 2px solid var(--Azul-indigo);
 }
+
 .cartao-aluminio .residuosFront {
-    background-color: #E0F2F1;
-    border: 2px solid #00897B;
+    background-color: var(--Água);
+    border: 2px solid var(--Verde-mar);
 }
+
 .cartao-vidro .residuosFront {
-    background-color: #F3E5F5;
-    border: 2px solid #8E24AA;
+    background-color: var(--Lilás);
+    border: 2px solid var(--Roxo-vibrante);
 }
+
 
 /* Descarte: orgânicos e rejeitos */
 .organicos .residuosFront {
-    background-color: #F0F4E8;
-    border: 2px solid #6D8B4E;
+    background-color: var(--Marfim);
+    border: 2px solid var(--Verde-oliva);
 }
+
 .lixo-banheiro .residuosFront {
-    background-color: #F7EDEF;
-    border: 2px solid #9B5D68;
+    background-color: var(--Rosé);
+    border: 2px solid var(--Rosa-antigo);
 }
+
 
 /* Descarte: perigosos */
 .pilhas-baterias .residuosFront {
-    background-color: #FCEAE6;
-    border: 2px solid #D35445;
+    background-color: var(--Pêssego);
+    border: 2px solid var(--Vermelho-coral);
 }
+
 .lampadas .residuosFront {
-    background-color: #FFF8D9;
-    border: 2px solid #C49A18;
+    background-color: var(--Baunilha);
+    border: 2px solid var(--Amarelo-ouro);
 }
+
 .medicamentos .residuosFront {
-    background-color: #E5F5F2;
-    border: 2px solid #328C83;
+    background-color: var(--Turquesa-claro);
+    border: 2px solid var(--Verde-turquesa);
 }
+
 .oleo-cozinha .residuosFront {
-    background-color: #FFF0E2;
-    border: 2px solid #C46A25;
+    background-color: var(--Creme);
+    border: 2px solid var(--Laranja-terra);
 }
+
 .lixo-eletronico .residuosFront {
-    background-color: #E9EDFA;
-    border: 2px solid #5367A5;
+    background-color: var(--Azul-neblina);
+    border: 2px solid var(--Azul-ardosia);
 }
+
 .produtos-quimicos .residuosFront {
-    background-color: #F3E8F8;
-    border: 2px solid #884C9E;
+    background-color: var(--Orquídea);
+    border: 2px solid var(--Roxo-uva);
 }
+
 
 /* Descarte: especiais */
 .cartao-volumoso .residuosFront {
-    background-color: #FBE9D7;
-    border: 2px solid #B86F36;
+    background-color: var(--Damasco);
+    border: 2px solid var(--Laranja-bronze);
 }
 
 .cartao-obras .residuosFront {
-    background-color: #F1E4D9;
-    border: 2px solid #9C6B4F;
+    background-color: var(--Areia);
+    border: 2px solid var(--Marrom-caramelo);
 }
 
 .cartao-verde .residuosFront {
-    background-color: #E2F0D2;
-    border: 2px solid #648A3D;
+    background-color: var(--Menta);
+    border: 2px solid var(--Verde-musgo-claro);
 }
 
 /* ============================================
@@ -486,18 +587,17 @@ section#inicio {
 
 /* Consulta de CEP */
 .container-consulta-lixo {
-    background: #ffffff;
+    background: var(--Branco);
     max-width: 450px;
     margin: 30px auto 0 auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px var(--Preto);
     text-align: center;
-    border: 2px solid #28a745;
+    border: 2px solid var(--Verde-folha);
 }
 
 .container-consulta-lixo p {
-    color: #333;
+    color: var(--Grafite);
     margin-bottom: 15px;
 }
 
@@ -513,15 +613,15 @@ section#inicio {
     width: 65%;
     min-width: 0;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--Cinza-prata);
     border-radius: 4px;
 }
 
 .container-consulta-lixo button {
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #28a745;
-    color: white;
+    background-color: var(--Verde-folha);
+    color: var(--Branco);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -529,13 +629,13 @@ section#inicio {
 }
 
 .container-consulta-lixo button:hover {
-    background-color: #218838;
+    background-color: var(--Verde-esmeralda-escuro);
 }
 
 .container-consulta-lixo .resultado {
     margin-top: 20px;
     padding: 15px;
-    background-color: #e9f5ed;
+    background-color: var(--Verde-nevoa);
     border-radius: 6px;
     text-align: left;
     display: none;
@@ -543,7 +643,7 @@ section#inicio {
 
 .container-consulta-lixo .resultado hr {
     border: 0;
-    border-top: 1px solid #d4edda;
+    border-top: 1px solid var(--Verde-pastel);
     margin: 10px 0;
 }
 
@@ -594,7 +694,12 @@ section#inicio {
    CONTATO
    ============================================ */
 .contatoConteudo {
-    background-color: #71bb8d41;
+    background: linear-gradient(
+        135deg,
+        var(--Eucalipto),
+        var(--Sálvia),
+        var(--Esmeralda)
+    );
     margin: 30px;
     padding: 40px;
     display: flex;
@@ -629,7 +734,11 @@ section#inicio {
 .contatoConteudo button {
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #28a745;
+    background: linear-gradient(
+        90deg,
+        var(--Verde-folha),
+        var(--Verde-floresta)
+    );
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -637,12 +746,13 @@ section#inicio {
 }
 
 .contatoConteudo button a {
-    color: white;
+    color: var(--Branco);
     text-decoration: none;
 }
 
 .contatoConteudo button:hover {
-    background-color: #218838;
+    transform: translateY(-3px);
+    background-color: var(--Verde-esmeralda-escuro);
 }
 
 .contatoForm {
@@ -709,18 +819,17 @@ section#inicio {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     width: auto;
-    padding: 12px 16px;
-    color: white;
+    margin-top: -22px;
+    padding: 12px;
+    color: var(--Branco);
     font-weight: bold;
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.35);
-    border-radius: 4px;
+    font-size: 16px;
+    transition: 0.3s;
+    border-radius: 5px;
     user-select: none;
-    transition: background-color 0.3s ease;
+    background-color: var(--Preto);
     text-decoration: none;
-    line-height: 1;
 }
 
 .prev-campanha { left: 8px; }
@@ -728,7 +837,7 @@ section#inicio {
 
 .prev-campanha:hover,
 .next-campanha:hover {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: var(--Preto);
 }
 
 /* Bolinhas indicadoras */
@@ -745,7 +854,7 @@ section#inicio {
     height: 12px;
     width: 12px;
     margin: 0 4px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--Branco-transparente);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.4s ease;
@@ -753,7 +862,7 @@ section#inicio {
 
 .dot-c:hover,
 .dot-c.ativo-c {
-    background-color: #ffffff;
+    background-color: var(--Off-white);
 }
 
 /* Ajustes para telas pequenas */
@@ -1005,10 +1114,10 @@ section#inicio {
     bottom: 40px;
     left: 20px;
     right: 20px;
-    background: rgba(0, 0, 0, 0.65);
-    color: #ffffff;
+    background: var(--Preto);
+    color: var(--Branco);
     padding: 12px 20px;
-    border-radius: 8px;
+    border-radius: 5px;
     text-align: center;
 }
 
@@ -1019,27 +1128,24 @@ section#inicio {
 }
 
 .carousel-btn-dicas {
+    cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    width: 42px;
-    height: 42px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
+    width: auto;
+    margin-top: -22px;
+    padding: 12px;
+    color: var(--Branco);
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
     border-radius: 5px;
-    transition: background-color 0.3s;
-    z-index: 10;
+    user-select: none;
+    background-color: var(--Preto);
+    text-decoration: none;
 }
 
 .carousel-btn-dicas:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--Preto);
 }
 
 .carousel-btn-dicas.prev-btn { left: 15px; }
@@ -1059,7 +1165,7 @@ section#inicio {
     cursor: pointer;
     height: 10px;
     width: 10px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--Branco-transparente);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.3s, transform 0.2s;
@@ -1067,6 +1173,6 @@ section#inicio {
 
 .dot-dicas.active,
 .dot-dicas:hover {
-    background-color: #ffffff;
+    background-color: var(--Off-white);
     transform: scale(1.2);
 }

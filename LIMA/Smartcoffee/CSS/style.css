@@ -6,6 +6,22 @@ body {
     line-height: 1.5;
 }
 
+p {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
 /* Cabeçalho e Rodapé */
 .cabecalho {
     background-color: #2B170D;
@@ -80,7 +96,10 @@ header p {
     margin: 20px;
 }
 
-button {
+.inicioCabecalho button, 
+.sobreCabecalho button, 
+.ambienteCabecalho button, 
+.contatoForm button {
     background-color: #C66A1A;
     padding: 12px 25px;
     border: none;
@@ -92,13 +111,19 @@ button {
     margin: 20px;
 }
 
-button:hover {
+.inicioCabecalho button:hover, 
+.sobreCabecalho button:hover, 
+.ambienteCabecalho button:hover, 
+.contatoForm button:hover {
     background-color: #7a4d32;
     transform: translateY(-3px);
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
 }
 
-button a {
+.inicioCabecalho button a, 
+.sobreCabecalho button a, 
+.ambienteCabecalho button a, 
+.contatoForm button a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 500;
@@ -177,6 +202,17 @@ button a {
     justify-content: center;
     width: 100%;
     margin: 0;
+    padding: 0;
+}
+
+.listaProdutos button a {
+    text-decoration: none;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+}
+
+.listaProdutos button {
+    border: none;
+    background: none;
     padding: 0;
 }
 
