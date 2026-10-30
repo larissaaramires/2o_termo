@@ -244,3 +244,16 @@ COMMIT;
 -- Excluir livro com histórico de empréstimos - integridade referencial = já que não pode excluir livros com histórico.
 -- Gravar empréstimo e falhar na redução do estoque - transação = seria transação pois para gravar seria 'start TRANSACTION'.
 -- Emprestar livro cuja quantidade disponível seja zero - regra da aplicação = já que é uma regra para ser aplicada.
+
+START TRANSACTION;
+SELECT * FROM emprestimo;
+UPDATE usuario
+SET id_emprestimo = '1, 4, 7'
+WHERE id_emprestimo = 1;
+UPDATE usuario
+SET id_emprestimo = '2, 5'
+WHERE id_emprestimo = 4;
+UPDATE usuario
+SET id_emprestimo = '3, 6'
+WHERE id_emprestimo = 2;
+COMMIT;
