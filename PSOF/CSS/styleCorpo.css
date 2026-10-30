@@ -148,7 +148,7 @@ nav a {
    CARROSSEL
    ============================================ */
 .slideshow-container {
-    max-width: 1600px;
+    max-width: 2000px;
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -161,7 +161,7 @@ nav a {
 .mySlides img {
     width: 100%;
     height: auto;
-    max-height: 600px;
+    max-height: 700px;
     object-fit: cover;
 }
 
@@ -239,6 +239,11 @@ nav a {
 /* ============================================
    SEÇÃO INÍCIO
    ============================================ */
+
+/* =====================================
+   SEÇÃO INÍCIO - WASTEWISE
+===================================== */
+
 section#inicio {
     background: linear-gradient(
         135deg,
@@ -248,43 +253,87 @@ section#inicio {
     );
     margin: 30px;
     padding: 40px;
+    box-sizing: border-box;
+    border-radius: 12px;
 }
 
+/* Conteúdo principal */
 .conteudoInicio {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    gap: 35px;
+}
+
+/* Primeiro texto + imagem */
+.inicioPrincipal {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 40px;
+    width: 100%;
 }
 
-.conteudoInicio > * {
-    flex: 1 1 300px;
+/* Primeiro texto */
+.textoInicio {
+    flex: 1;
+    min-width: 0;
 }
 
-.textoInicio h2 {
-    margin: 10px 0;
+.textoInicio h2,
+.textoImportancia h2 {
     font-size: 1.8rem;
+    margin: 0 0 20px;
+    line-height: 1.3;
 }
 
-.textoInicio p {
-    margin: 10px 0;
+.textoInicio p,
+.textoImportancia p {
     font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    text-align: left;
+}
+
+/* Imagem */
+.inicioImg {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inicioImg img {
+    display: block;
     width: 100%;
+    max-width: 500px;
     height: auto;
-    margin: 0;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-/* Quadros do início */
+/* Segundo texto - abaixo da imagem */
+.textoImportancia {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.textoImportancia p {
+    max-width: 100%;
+}
+
+/* =====================================
+   QUADROS DO INÍCIO
+===================================== */
+
 .inicioQuadros {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .quadros {
@@ -292,17 +341,121 @@ section#inicio {
     border: 2px solid var(--Esmeralda);
     flex: 1 1 250px;
     max-width: 100%;
+    min-width: 0;
     padding: 25px;
     text-align: center;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 .quadros h3 {
+    font-size: 1.3rem;
     margin: 10px 0;
 }
 
 .quadros p {
+    font-size: 1rem;
+    line-height: 1.6;
     margin: 10px 0;
+}
+
+/* =====================================
+   RESPONSIVIDADE - TABLETS
+===================================== */
+
+@media (max-width: 900px) {
+
+    section#inicio {
+        margin: 20px;
+        padding: 30px;
+    }
+
+    .inicioPrincipal {
+        gap: 25px;
+    }
+
+    .textoInicio h2,
+    .textoImportancia h2 {
+        font-size: 1.6rem;
+    }
+
+    .inicioImg img {
+        max-width: 100%;
+    }
+
+    .quadros {
+        flex: 1 1 220px;
+    }
+}
+
+/* =====================================
+   RESPONSIVIDADE - CELULARES
+===================================== */
+
+@media (max-width: 600px) {
+
+    section#inicio {
+        margin: 10px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .conteudoInicio {
+        gap: 25px;
+    }
+
+    .inicioPrincipal {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .textoInicio,
+    .textoImportancia {
+        width: 100%;
+    }
+
+    .textoInicio h2,
+    .textoImportancia h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .textoInicio p,
+    .textoImportancia p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .inicioImg {
+        width: 100%;
+    }
+
+    .inicioImg img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .inicioQuadros {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .quadros {
+        width: 100%;
+        flex: none;
+        padding: 20px;
+    }
+
+    .quadros h3 {
+        font-size: 1.2rem;
+    }
+
+    .quadros p {
+        font-size: 0.95rem;
+    }
 }
 
 /* ============================================
