@@ -1,4 +1,4 @@
--- Active: 1788519228169@@127.0.0.1@3308@smartcoffee_dml_larissa
+-- Active: 1794485352621@@127.0.0.1@3308@mysql
 drop database if EXISTS smartcoffee_dml_larissa;
 create database smartcoffee_dml_larissa;
 use smartcoffee_dml_larissa;
