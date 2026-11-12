@@ -143,6 +143,7 @@ INSERT INTO pedido (data_pedido, status_pedido, valor_total, id_cliente) VALUES
 (now(), 'ABERTO', 39.90, 23);
 -- itens 
 SELECT * FROM cliente;
+
 -- 23. Faça uma consulta com JOIN comprovando que os registros existem
 --     enquanto a transação está aberta.
 
