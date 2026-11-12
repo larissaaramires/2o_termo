@@ -186,17 +186,69 @@ ON J.id_jogo = L.id_jogo
 WHERE status_locacao = 'ABERTA';
 
 -- 20. GROUP BY
-SELECT C.nome AS cliente, COUNT(L.id_cliente) AS qnt_locacoes
+SELECT C.nome AS cliente, COUNT(L.id_locacao) AS qnt_locacoes
 FROM cliente AS C
 INNER JOIN locacao AS L
-ON E.id_usuario = U.id_usuario
-GROUP BY U.id_usuario, U.nome
-ORDER BY qnt_emprestimos
+ON C.id_cliente = L.id_cliente
+GROUP BY C.id_cliente, C.nome
+ORDER BY qnt_locacoes
 ASC;
 
 -- 21. LEFT JOIN
-SELECT U.nome AS usuario, COUNT(E.id_usuario) AS qnt_emprestimos
-FROM usuario AS U 
-INNER JOIN emprestimo AS E
-ON E.id_usuario = U.id_usuario
-GROUP BY U.id_usuario, U.nome;
+SELECT C.nome AS cliente, COUNT(L.id_locacao) AS qnt_locacoes
+FROM cliente AS C
+LEFT JOIN locacao AS L
+ON L.id_cliente = C.id_cliente
+GROUP BY C.id_cliente, C.nome
+ORDER BY qnt_locacoes
+ASC;
+
+-- FASE 4
+-- Transação de locação
+start TRANSACTION;
+INSERT INTO locacao (data_retirada, data_prevista, data_devolucao, status_locacao, id_cliente, id_jogo) VALUES
+(now(), '2026-12-12', null, 'ABERTA', 4, 6);
+UPDATE jogo
+set quantidade_disponivel = (quantidade_disponivel - 1)
+where id_jogo = 6;
+SELECT * FROM jogo;
+COMMIT;
+
+-- 23. ROLLBACK
+START TRANSACTION;
+UPDATE jogo
+set quantidade_disponivel = (quantidade_disponivel - 10)
+where id_jogo = 6;
+SELECT * FROM jogo;
+ROLLBACK;
+
+-- 24. SAVEPOINT
+START TRANSACTION;
+UPDATE jogo
+set quantidade_disponivel = (quantidade_disponivel + 2)
+where id_jogo = 6;
+SAVEPOINT qnt_total_estoque;
+
+UPDATE jogo
+set quantidade_disponivel = (quantidade_disponivel - 4)
+where id_jogo = 4;
+ROLLBACK TO SAVEPOINT qnt_total_estoque;
+
+-- 25. Transação de devolução
+START TRANSACTION;
+SELECT * FROM jogo;
+UPDATE locacao
+set status_locacao = 'DEVOLVIDA',
+    data_devolucao = '2026-11-12'
+WHERE id_locacao = 10;
+UPDATE jogo
+set quantidade_disponivel = (quantidade_disponivel + 1)
+where id_jogo = 6;
+COMMIT;
+
+-- Análise técnica
+-- A - para não ter email repetido usamos unique, de email unico
+-- B - para não ter codigo repetido usamos unique, de codigo unico
+-- C - para não ter estoque negativo usamos o check, para checar se é maior que 0
+-- D - para não ter locação de cliente inexistente usamos o id do cliente, que só permite algum existente, ao contrario, da erro
+-- E - usamos on delete restrict para impedir que jogos com históricos sejam restringidos
