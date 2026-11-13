@@ -12,10 +12,8 @@ body {
     --branco: white;
     --off-white: #ececec;
     --azul-escuro: #00163f;
-    /* --roxo-escuro: #2b0063; */
     --roxo: #8532c9;
     --azul: #123699;
-    --azul-claro: #7ebfd89d;
 }
 
 .cabecalho, footer {
@@ -68,7 +66,13 @@ nav a:hover {
 }
 
 .inicio {
-    background-color: var(--azul-claro);
+    background:
+    linear-gradient(
+        120deg,
+        var(--azul-escuro),
+        var(--azul),
+        var(--roxo)
+    );
     margin: 20px;
 }
 
@@ -76,20 +80,22 @@ nav a:hover {
     margin: 20px;
     display: flex;
     justify-content: center;
+    color: var(--branco);
 }
 
 .inicio h2 {
     margin: 20px;
-    padding: 10px;
+    padding: 30px;
     display: flex;
     justify-content: center;
+    color: var(--branco);
 }
 
 .inicio button {
     width: 200px;
     padding: 12px 25px;
-    background-color: var(--azul);
-    border: 2px solid var(--azul-escuro);
+    background-color: var(--azul-escuro);
+    border: 2px solid var(--roxo);
     border-radius: 25px;
     font-size: 16px;
     font-weight: bold;
