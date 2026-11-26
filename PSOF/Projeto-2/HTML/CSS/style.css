@@ -37,6 +37,10 @@ body {
     color: var(--Branco-Gelo);
 }
 
+.cabecalho span {
+    color: var(--Laranja-Escuro);
+}
+
 header img {
     position: absolute;
     top: 0;
@@ -58,7 +62,7 @@ header::before {
 }
 
 header h1 {
-    font-size: 60px;
+    font-size: 80px;
     margin-bottom: 35px;
 }
 
@@ -79,7 +83,6 @@ header h2 {
     padding: 12px 25px;
     background: linear-gradient(
         90deg,
-        var(--Laranja-Preto),
         var(--Laranja-Muito-Escuro),
         var(--Laranja-Escuro)
     );
