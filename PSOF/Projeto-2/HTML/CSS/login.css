@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--Laranja-Preto);
+    justify-content: center;
+    align-items: center;
+    color: var(--Branco);
+}
+
+:root {
+    --Preto: #0B0B0B;
+    --Grafite: #252525;
+    --Cinza-Escuro: #454545;
+    --Cinza-Médio: #808080;
+    --Cinza-Claro: #D9D9D9;
+    --Branco-Gelo: #F5F5F5;
+    --Branco: #FFFFFF;
+    --Laranja: #FF8C00;
+    --Laranja-Escuro: #D35400;
+    --Laranja-Muito-Escuro:#923a00;
+    --Laranja-Preto: #532201;
+}
+
+form {
+    background-color: var(--Laranja-Muito-Escuro);
+    border-radius: 20px;
+    border: 2px solid var(--Preto);
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+}
+
+.acessarSite {
+    width: 170px;
+    padding: 12px 25px;
+    background: linear-gradient(
+        90deg,
+        var(--Laranja-Preto),
+        var(--Laranja-Escuro)
+    );
+    border: 2px solid var(--Preto);
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 20px;    
+}
+
+.acessarSite a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.acessarSite:hover {
+    background: linear-gradient(
+        90deg,
+        var(--Laranja-Preto),
+        var(--Laranja-Escuro)
+    );
+    border: 2px solid var(--Preto);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px var(--Branco-Gelo);
+    transform: translateY(-10px);
+}

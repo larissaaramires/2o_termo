@@ -22,7 +22,8 @@ body {
     --Branco: #FFFFFF;
     --Laranja: #FF8C00;
     --Laranja-Escuro: #D35400;
-    --Laranja-Preto: #923a00;
+    --Laranja-Muito-Escuro:#923a00;
+    --Laranja-Preto: #532201;
 }
 
 .cabecalho {
@@ -33,7 +34,7 @@ body {
     flex-direction: column;
     justify-content: center;
     padding-left: 5%;
-    color: var(--Branco);
+    color: var(--Branco-Gelo);
 }
 
 header img {
@@ -79,6 +80,7 @@ header h2 {
     background: linear-gradient(
         90deg,
         var(--Laranja-Preto),
+        var(--Laranja-Muito-Escuro),
         var(--Laranja-Escuro)
     );
     border: 2px solid var(--Preto);
