@@ -95,7 +95,7 @@ header h2 {
 }
 
 .login a {
-    color: rgb(0, 0, 0);
+    color: var(--Branco-Gelo);
     text-decoration: none;
     font-weight: 500;
 }
