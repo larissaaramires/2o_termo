@@ -6,7 +6,7 @@
 
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -20,10 +20,11 @@ body {
     --Cinza-Claro: #D9D9D9;
     --Branco-Gelo: #F5F5F5;
     --Branco: #FFFFFF;
-    --Laranja: #FF8C00;
+    --Laranja: #FF8000;
     --Laranja-Escuro: #D35400;
     --Laranja-Muito-Escuro:#923a00;
     --Laranja-Preto: #532201;
+    --Laranja-Avermelhado: #e64b00;
 }
 
 .cabecalho {
@@ -83,8 +84,8 @@ header h2 {
     padding: 12px 25px;
     background: linear-gradient(
         90deg,
-        var(--Laranja-Muito-Escuro),
-        var(--Laranja-Escuro)
+        var(--Laranja),
+        var(--Laranja-Avermelhado)
     );
     border: 2px solid var(--Preto);
     border-radius: 25px;
@@ -97,18 +98,19 @@ header h2 {
 .login a {
     color: var(--Branco-Gelo);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
+}
+
+.login span {
+    margin-left: 10px;
+    font-size: 20px;
+    color: white;
 }
 
 .login:hover {
-    background: linear-gradient(
-        90deg,
-        var(--Laranja-Preto),
-        var(--Laranja-Escuro)
-    );
     border: 2px solid var(--Preto);
     transform: scale(1.1);
-    box-shadow: 0px 0px 20px var(--Branco-Gelo);
+    box-shadow: 0px 0px 20px var(--Laranja-Escuro);
     transform: translateY(-10px);
 }
 

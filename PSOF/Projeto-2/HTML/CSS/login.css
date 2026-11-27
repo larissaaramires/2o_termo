@@ -1,19 +1,18 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-
 body {
-    margin: 0;
     min-height: 100vh;
+    background: linear-gradient(120deg, #080808, #242424);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--Preto);
-    font-family: "Poppins", sans-serif;
-    color: var(--Branco);
+    color: white;
 }
 
 :root {
@@ -24,66 +23,178 @@ body {
     --Cinza-Claro: #D9D9D9;
     --Branco-Gelo: #F5F5F5;
     --Branco: #FFFFFF;
-    --Laranja: #FF8C00;
+    --Laranja: #FF8000;
     --Laranja-Escuro: #D35400;
     --Laranja-Muito-Escuro:#923a00;
     --Laranja-Preto: #532201;
+    --Laranja-Avermelhado: #e64b00;
 }
 
-.cabecalho span {
-    color: var(--Laranja-Escuro);
+.container {
+    width: 850px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
 }
 
-form {
-    background-color: var(--Laranja-Muito-Escuro);
-    box-shadow: 0px 0px 20px var(--Laranja);
-    border-radius: 20px;
-    border: 2px solid var(--Preto);
-    width: 120%;
-    max-width: 900px;
-    padding: 30px;
-    box-sizing: border-box;
+.boas-vindas {
+    width: 45%;
+    color: white;
 }
 
-form:hover {
-    box-shadow: 0px 0px 20px var(--Laranja-Escuro);
-}
-
-form input {
-    height: 30px;
-    font-size: 18px;
-}
-
-.acessarSite {
-    width: 170px;
-    padding: 12px 25px;
-    background: linear-gradient(
-        90deg,
-        var(--Laranja-Preto),
-        var(--Laranja-Escuro)
-    );
-    border: 2px solid var(--Preto);
-    border-radius: 25px;
-    font-size: 16px;
+.boas-vindas h1 {
+    font-size: 58px;
+    margin-bottom: 5px;
     font-weight: bold;
+}
+
+.boas-vindas h2 {
+    font-size: 75px;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+.boas-vindas span {
+    color: #f06a00;
+}
+
+.linha {
+    width: 180px;
+    height: 5px;
+    background: #f06a00;
+    margin: 25px 0;
+    border-radius: 5px;
+}
+
+.boas-vindas p {
+    font-size: 20px;
+    color: #ccc;
+}
+
+.login {
+    width: 390px;
+    padding: 40px;
+    background: rgba(15, 15, 15, 0.9);
+    border: 2px solid #f06a00;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(240, 106, 0, 0.4);
+    text-align: center;
+}
+
+.carro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.carro img {
+    width: 180px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.login h2 {
+    font-size: 25px;
+    margin-bottom: 35px;
+    color: white;
+    font-weight: bold;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.login label {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.login input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    background: #222;
+    border: 1px solid #555;
+    border-radius: 12px;
+    color: white;
+    outline: none;
+    font-size: 15px;
     transition: 0.3s;
-    margin: 20px;    
 }
 
-.acessarSite a {
-    color: var(--Branco-Gelo);
-    text-decoration: none;
-    font-weight: 500;
+.login input:focus {
+    border-color: #f06a00;
+    box-shadow: 0 0 10px rgba(240, 106, 0, 0.3);
 }
 
-.acessarSite:hover {
+.login input::placeholder {
+    color: #888;
+}
+
+.login button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
     background: linear-gradient(
         90deg,
-        var(--Laranja-Preto),
-        var(--Laranja-Escuro)
+        #ff8000,
+        #e64b00
     );
-    border: 2px solid var(--Preto);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 20px var(--Branco-Gelo);
-    transform: translateY(-10px);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+.login button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgba(240, 106, 0, 0.6);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px var(--Laranja-Avermelhado);
+}
+
+.login button span {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+@media (max-width: 750px) {
+    .container {
+        width: 90%;
+        flex-direction: column;
+        gap: 35px;
+        padding: 30px 0;
+    }
+
+    .boas-vindas {
+        width: 100%;
+        text-align: center;
+    }
+
+    .boas-vindas h1 {
+        font-size: 30px;
+    }
+
+    .boas-vindas h2 {
+        font-size: 42px;
+    }
+
+    .linha {
+        margin: 20px auto;
+    }
+
+    .login {
+        width: 100%;
+        max-width: 390px;
+    }
+}
+
