@@ -30,6 +30,10 @@ body {
     --Laranja-Preto: #532201;
 }
 
+.cabecalho span {
+    color: var(--Laranja-Escuro);
+}
+
 form {
     background-color: var(--Laranja-Muito-Escuro);
     box-shadow: 0px 0px 20px var(--Laranja);
@@ -48,12 +52,6 @@ form:hover {
 form input {
     height: 30px;
     font-size: 18px;
-}
-
-.cabecalho h2,
-.cabecalho h3 {
-    display: flex;
-    justify-content: center;
 }
 
 .acessarSite {
