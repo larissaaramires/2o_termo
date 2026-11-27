@@ -11,7 +11,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: var(--Laranja-Preto);
+    background-color: var(--Preto);
     justify-content: center;
     align-items: center;
     color: var(--Branco);
